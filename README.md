@@ -1,0 +1,2 @@
+# Bloodstained
+Bloodstained Randomizer Enhancement
