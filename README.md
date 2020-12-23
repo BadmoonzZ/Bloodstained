@@ -21,3 +21,5 @@ There is some base logic to ensure early progression.
 To play, start a randomizer seed.
 Ensure that enemy shards are not shuffled.
 Ensure that the shop and crafter are not shuffled.
+
+Note: Serializer and UnrealPak tools provided by ithinkandicode
