@@ -3,8 +3,8 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
-Updates Jan 23, 2021.
-BRotN_Randomizer_022.7z contains workable GUI for generating a seed.
+Updates Jan 24, 2021.
+BRotN_Randomizer_023.7z contains workable GUI for generating a seed.
 Requires .NET runtime 3.0 to run serializer scripts.
 
 about.txt included in zip has some more information.
