@@ -11,6 +11,8 @@ namespace textcopier2
     //we might also want to start creating flags and bools like. zangetsuto required = true.
     public class TreasureChest
     {
+        public string ChestName { get; set; }
+
         public string RareItemId { get; set; }
         public string RareItemQuantity { get; set; }
         public string RareItemRate { get; set; }
@@ -31,11 +33,18 @@ namespace textcopier2
         public string CoinOverride { get; set; }
         public string CoinRate { get; set; }
 
+        public string ItemType { get; set; }
+
+        public int ChestId { get; set; }
+
         public bool RequiresZangetsuto { get; set; }
+        public bool RequiresDeepSinker { get; set; }
 
 
         public TreasureChest()
         {
+            ChestName = "Unnamed";
+
             RareItemId = "None";
             RareItemQuantity = "0";
             RareItemRate = "0.0";
@@ -54,9 +63,12 @@ namespace textcopier2
 
             CoinType = "None";
             CoinOverride = "0";
-            CoinRate = "0.0";
+            CoinRate = "100.0";
+
+            ChestId = 0;
 
             RequiresZangetsuto = false;
+            RequiresDeepSinker = false;
         }
     }
 }

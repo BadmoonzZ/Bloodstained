@@ -23,503 +23,54 @@ namespace textcopier2
                 crafterLine[i - 1] = "    \"Key\": \"ShipMap\",";
                 crafterLine[i + 2] = "      \"CraftItemId\": \"ShipMap\",";
             }
+
+            //this makes it so the original last item is no longer the end of the json table.
+            crafterLine[19620] = "  },";
+            crafterLine[19621] = "  {";
+        }
+
+        public static void WriteLastLine(string modcraftfile , List<string> listofitems ,  List<string> spoilerarray)
+        {
+            using (StreamWriter w = File.AppendText(modcraftfile))
+            {
+                //w.WriteLine("  },");
+                //w.WriteLine("  {");
+                w.WriteLine("    \"Key\": \"" + listofitems[468] + "\",");
+                w.WriteLine("    \"Value\": {");
+                w.WriteLine("      \"Type\": \"ECraftType::Craft\",");
+                w.WriteLine("      \"CraftItemId\": \"" + listofitems[468] + "\",");
+                w.WriteLine("      \"CraftValue\": 1,");
+                w.WriteLine("      \"RankMin\": 0,");
+                w.WriteLine("      \"RankMax\": 0,");
+                w.WriteLine("      \"Ingredient1Id\": \"BatFeather\",");
+                w.WriteLine("      \"Ingredient1Total\": 1,");
+                w.WriteLine("      \"Ingredient2Id\": \"MeltedBone\",");
+                w.WriteLine("      \"Ingredient2Total\": 1,");
+                w.WriteLine("      \"Ingredient3Id\": \"None\",");
+                w.WriteLine("      \"Ingredient3Total\": 0,");
+                w.WriteLine("      \"Ingredient4Id\": \"None\",");
+                w.WriteLine("      \"Ingredient4Total\": 0,");
+                w.WriteLine("      \"OpenKeyRecipeID\": \"None\",");
+                w.WriteLine("      \"openCondition\": \"EPBCraftRequirement::None\",");
+                w.WriteLine("      \"openParameter\": 0,");
+                w.WriteLine("      \"firstTimeBonusSpecialEffectId\": \"None\",");
+                w.WriteLine("      \"FirstBonusType\": [],");
+                w.WriteLine("      \"FirstBonusValue\": [],");
+                w.WriteLine("      \"Alkhahest\": 1");  //yes the last item is always 1.  you are welcome.
+                w.WriteLine("    }");
+                w.WriteLine("  }");
+                w.WriteLine("]");
+            }
+            spoilerarray.Add(468 + " - " + listofitems[468] + " - " + 1 + " - requires " + "None" + " - crafting costs : " + "BatFeather , MeltedBone");
         }
 
         //move more functtions here
 
-        //list of items
-        public static List<string> CreateListOfItems()
-        {
+     
 
-
-            List<string> listofitems = new List<string>
-            {
-                //
-                "Tunic",
-                "Skinbreastplate",
-                "Countrydress",
-                "Copperbreastplate",
-                "Chemisedress",
-                "Scalearmor",
-                "Ironbreastplate",
-                "Brigandine",
-                "IronMansApron",
-                "KungFuBest",
-                "Teadress",
-                "Chainmail",
-                "Beastleather",
-                "Maturedress",
-                "Shovelarmorsarmor",
-                "LamellarArmor",
-                "CrusadeArmor",
-                "Steelbreastplate",
-                "RidingHabit",
-                "DuelBrest",
-                "Silverbreastplate",
-                "Assassinvest",
-                "Featherrobe",
-                "VoronezDress",
-                "Cureus",
-                "Crystalscale",
-                "BreastplateofAguilar",
-                "DragonScale",
-                "Goldbreastplate",
-                "SpikeBreast",
-                "Silkdress",
-                "GloriousBreast",
-                "ShiningBreast",
-                "Ashinbacostume",
-                "Caracilis",
-                "Crimsondress",
-                "ImperialArmor",
-                "Shieldless",
-                "Coronationdress",
-                "Valkyriedress",
-                "AriesHorns",
-                "Headband",
-                "PirateTriangleCap",
-                "DurahanMaherm",
-                "Circlet",
-                "Garbohat",
-                "Santacap",
-                "Beastberet",
-                "CatEars",
-                "CowboyHat",
-                "WolfHood",
-                "Circletoffire",
-                "Icecirclet",
-                "Thunderscirclet",
-                "FeatherCrown",
-                "BraveBeret",
-                "Crowhat",
-                "GadgetBand",
-                "SilverTiara",
-                "Magushat",
-                "Cutebeastberet",
-                "BunnyEars",
-                "Dentistshat",
-                "Maidheadband",
-                "Westernhat",
-                "ribbon",
-                "Flightcapoftraveler",
-                "HermitsBeret",
-                "KitsuneMask",
-                "DemonHorns",
-                "ElderTiara",
-                "Recyclehat",
-                "Pleiades",
-                "ValkyrieTiara",
-                "HumptyDumpty",
-                "LoveOfBenki",
-                "Plan9FOSpace",
-                "Mega64Head",
-                "Muffler",
-                "Turbinemuffler",
-                "Batwing",
-                "Outlinestyle",
-                "Made-to-order",
-                "Usagimuffler",
-                "FaerieScarf",
-                "Sendomuffler",
-                "Firemuffler",
-                "TalismanScarf",
-                "OvertheRainbow",
-                "Elfearcap",
-                "Eyeglasses",
-                "Enlargedglasses",
-                "Horuseyes",
-                "sunglasses",
-                "Bottleglasses",
-                "Measurementglasses",
-                "Gebelsglasses",
-                "Stonemask",
-                "Crowmask",
-                "DanceMask",
-                "Breathingforcedmask",
-                "NoseEyeglasses",
-                "Transformationmask",
-                "OfudaTalisman",
-                "HeyI’mGrump",
-                "I’mNotSoGrump",
-                "AKindaFunnyMask",
-                "BigMustache",
-                "PlagueDoctorFace",
-                "The-BazMask",
-                "RustedRing",
-                "Ring",
-                "Necklace",
-                "Safering",
-                "UnicornRing",
-                "Flamering",
-                "Icering",
-                "Thunderring",
-                "Criticalring",
-                "AssassinsRing",
-                "LethalityRing",
-                "Walkerking",
-                "Cursering",
-                "Striderbelt",
-                "Silvermanring",
-                "RoseRing",
-                "SkullNecklace",
-                "Moonring",
-                "WeightedRing",
-                "Speedstar",
-                "CutpursesRing",
-                "PlunderersRing",
-                "Goldmanring",
-                "Riskring",
-                "DemonNecklace",
-                "Adversityring",
-                "Blackbelt",
-                "Gamblersring",
-                "WarlocksNecklace",
-                "RingofSolomon",
-                //
-                "Alkhahest",
-                "Sulfur",
-                "Saltpeter",
-                "Mercury",
-                "Sulfate",
-                "Gunpowder",
-                "Ectoplasm",
-                "Bronze",
-                "Iron",
-                "Obsidian",
-                "Steel",
-                "Silver",
-                "DamascusSteel",
-                "Mithril",
-                "Platinum",
-                "Clystal",
-                "Gold",
-                "Hihiirokane",
-                "Orichalcum",
-                "Hemp",
-                "Cotton",
-                "Felt",
-                "Silk",
-                "Leather",
-                "Halite",
-                "ElmLumber",
-                "OakLumber",
-                "WalnutLumber",
-                "MahoganyLumber",
-                "CypressLumber",
-                "Ruby",
-                "Sapphire",
-                "Emerald",
-                "Diamond",
-                "Bixbite",
-                "Alexandrite",
-                "8BitCoin",
-                "16BitCoin",
-                "32BitCoin",
-                "Medal022",
-                "Recklesslimb",
-                "SharpRazor",
-                "DevilBookPaperStrip",
-                "deathBringerDebris",
-                "Mimicchairdebris",
-                "MonsterBirdTears",
-                "Cyhyraethtear",
-                "Lamastutear",
-                "Giantratteeth",
-                "Batfang",
-                "DemonDogFang",
-                "Ivory",
-                "Devilsfang",
-                "Gusionfang",
-                "Marbasfang",
-                "Gieremundfang",
-                "Wolfclaw",
-                "Dragonclaw",
-                "Apenail",
-                "Chicomecoatlhorn",
-                "Gaaphorn",
-                "Gamiginhoof",
-                "Glashtynhoof",
-                "MeltedBone",
-                "Dragonbone",
-                "Knightbone",
-                "Bloodybone",
-                "MeltingSkull",
-                "Jeneralskull",
-                "Warriorskull",
-                "Bloodyskull",
-                "Mimicshell",
-                "Dethtrapshell",
-                "CannonDebris",
-                "Gargoyledebris",
-                "Gamiginhair",
-                "Glashtynhair",
-                "ManeLion",
-                "Marbasmane",
-                "MonsterBirdHair",
-                "ThunderbirdFeathers",
-                "WindFeathers",
-                "Haagentifeather",
-                "BatFeather",
-                "Toadwing",
-                "Gaapwing",
-                "Giantrattail",
-                "DevilRoyalTail",
-                "Lilimtail",
-                "Lamastutail",
-                "Lilimear",
-                "Dineseawing",
-                "Tytaniawing",
-                "FairyPowder",
-                "TytaniaPoisonedNeedle",
-                "Dragonscales",
-                "Abyssguardianbastard",
-                "DemonCloth",
-                "Assasincloth",
-                "Lerajecloth",
-                "Ninjacloth",
-                "DemonDogSkin",
-                "MonkeyFur",
-                "Buerfur",
-                "Wolfmanfur",
-                "Decarabialeather",
-                "DevilBookLeather",
-                "Decimaleather",
-                "Silverwolffur",
-                "Gusionfur",
-                "Poisontoadeye",
-                "Evileye",
-                "SeekerEye",
-                "DevilRoyalEyeball",
-                "ToadHeart",
-                "BelialHeart",
-                "EligosHeart",
-                "AbyssguardianHeart",
-                "MurmurHeart",
-                "Toadfluid",
-                "Misteriousfluid",
-                //
-                "Potion",
-                "HighPotion",
-                "ExPotion",
-                "Ether",
-                "HighEther",
-                "ExEther",
-                "Mithridate",
-                "HolyWater",
-                "Stonethaw",
-                "Poison",
-                "Waystone",
-                "Panacea",
-                "FaerieMedicine",
-                "FaerieElixir",
-                "FaerieAllheal",
-                "FaeriePanacea",
-                "SeedCorn",
-                "SeedRice",
-                "SeedPotato",
-                //
-                "KungFuShoes",
-                "BattleBoots",
-                "KillerBoots",
-                "Toyshoes",
-                "Assaultsollette",
-                "Rabbitboots",
-                "Dragonshoes",
-                "Hermesshoes",
-                "Decapitator",
-                "CoolShoesOfMrNarita",
-                "CoolShoesOfMrNarita2",
-                "CoolShoesOfMrNarita3",
-                "IceSlewShoes",
-                "IceSlewShoes2",
-                "IceSlewShoes3",
-                "PoisonSpikeShoes",
-                "PoisonSpikeShoes2",
-                "PoisonSpikeShoes3",
-                "Knife",
-                "Baselard",
-                "Kukuri",
-                "PoisonKukri",
-                "Swordbreaker",
-                "ManGauche",
-                "Calnwenan",
-                "Mandaupasar",
-                "Rapier",
-                "Epe",
-                "Stinger",
-                "Miserikorde",
-                "Cazilk",
-                "Juwuse",
-                "CrystalSword",
-                "CrystalSword2",
-                "CrystalSword3",
-                "ShortSword",
-                "LongSword",
-                "WolfBalt",
-                "Halper",
-                "invisible",
-                "Mulgres",
-                "Redumbrella",
-                "Burtgang",
-                "Flagarach",
-                "Hoffdo",
-                "Dineslave",
-                "Florenberg",
-                "Armas",
-                "Caradoborg",
-                "Liddyl",
-                "HuntedBrad",
-                "Broadsword",
-                "SwordWhip",
-                "BradBlingerLv1",
-                "ShieldWeapon",
-                "ShieldWeapon2",
-                "ShieldWeapon3",
-                "XrossBrade",
-                "XrossBrade2",
-                "XrossBrade3",
-                "BradeOfEU",
-                "BradeOfEU2",
-                "BradeOfEU3",
-                "LightSaber",
-                "LightSaber2",
-                "LightSaber3",
-                "JodoSwordLight",
-                "JodoSwordLight2",
-                "JodoSwordLight3",
-                "SpearCutDownAside",
-                "SpearCutDownAside2",
-                "SpearCutDownAside3",
-                "ClockSowrd",
-                "LoveOfPizza",
-                "KongSword",
-                "SwordOfTheMushroom",
-                "PowerSword",
-                "SilverAndBlackSword",
-                "DungeonNightSword",
-                "EvilTheSword",
-                "ValkyrieSword",
-                "Mace",
-                "Morgenstern",
-                "McAutil",
-                "Yagurushi",
-                "Aimur",
-                "Charwell",
-                "Mistrutein",
-                "StickOfMagiGirl",
-                "StickOfMagiGirl2",
-                "StickOfMagiGirl3",
-                "RemoteDart",
-                "OracleBlade",
-                "WalalSoulimo",
-                "ValralAltar",
-                "Claymore",
-                "Perex",
-                "Flanders",
-                "OutsiderKnightSword",
-                "Valdish",
-                "SteamFlatWideEnd",
-                "Gram",
-                "Gambanttain",
-                "Lohengrin",
-                "Sherdar",
-                "LightningBolt",
-                "Karadanda",
-                "Durandal",
-                "DiesIle",
-                "TurmericBasara",
-                "Exactor",
-                "DeathBringer",
-                "DeathBringer2",
-                "DeathBringer3",
-                "SacredSword",
-                "SacredSword2",
-                "SacredSword3",
-                "ChargeWideEnd",
-                "ChargeWideEnd2",
-                "ChargeWideEnd3",
-                "DrillWideEnd",
-                "DrillWideEnd2",
-                "DrillWideEnd3",
-                "PetrifactionSword",
-                "PetrifactionSword2",
-                "PetrifactionSword3",
-                "Dull",
-                "Noda",
-                "Tsurumaru",
-                "ShiroTorujiro",
-                "Lightningoff",
-                "OgreWoodenSword",
-                "Tadanako",
-                //"Swordsman",  //you cant craft or dismantle zangetsuto.  at least not right now.
-                "MikazukiMaen",
-                "Truesixteenthnight",
-                "Spear",
-                "Reims",
-                "Partizan",
-                "Excavator",
-                "Triplet",
-                "ShingoGempo",
-                "Coldgrindingsaw",
-                "Aradovar",
-                "Nibbleheim",
-                "GunungNil",
-                "Gayalsals",
-                "IcePillarSpear",
-                "IcePillarSpear2",
-                "IcePillarSpear3",
-                "LoveOfFairyDragon",
-                "LoveOfFairyDragon2",
-                "LoveOfFairyDragon3",
-                "Awhip",
-                "Ibarakaswhip",
-                "FireWhip",
-                "BlackRockHell",
-                "Snakebyte",
-                "BeastKiller",
-                "Albireo",
-                "Andromeda",
-                "WhipsOfLightDarkness",
-                "WhipsOfLightDarkness2",
-                "WhipsOfLightDarkness3",
-                "Musketon",
-                "Branderbus",
-                "Tanegasima",
-                "Trador",
-                "Carvalin",
-                "Betelgeuse",
-                "Ursula",
-                "Adrastea",
-                "TrustMusket",
-                "TrustMusket2",
-                "TrustMusket3",
-                //
-                "Softpoint",
-                "Hollowpoint",
-                "ArmorPiercing",
-                "Firebullet",
-                "Icebullet",
-                "ThunderRounds",
-                "SilverBullets",
-                "WeaponbaneRounds",
-                "ShieldbaneRounds",
-                "PoisonRounds",
-                "PetrifyingRounds",
-                "CurseRounds",
-                "Shotshell",
-                "CriticalBullet",
-                "DiamondBullets",
-                //
-            };
-
-        return listofitems;
-
-        }
-
-        //
         //takes two lists.  one list of shards that need to be placed, and a second list to fill in the remainder.
         //needs error checking added to see if the two lists are the wrong size...
-        public static List<string> FindCraftableShards(List<string> unplacedshards, List<string> fillershards)
+        public static List<string> FindCraftableShards(List<string> unplacedshards, List<string> fillershards , Random rndshard)
         {
             List<string> combinedlist = unplacedshards;
             // find count of unplaced shards, then do 12- x, then find x shards from filler that are != to current list.
@@ -527,7 +78,9 @@ namespace textcopier2
             if (x < 0)
             { x = 0; };
 
-            //need to randomize fillershards
+            //might not need to randomize fillershards
+            fillershards = fillershards.OrderBy(i => rndshard.Next()).ToList();
+
             bool alreadyexists = false;
 
             for (int i = 0; i < x; i++)
@@ -544,9 +97,12 @@ namespace textcopier2
             return combinedlist;
         }
 
-        public static List<string> FindUnusedShardsAsCraftingMats(List<string> craftingshards, List<string> fillershards)
+        public static List<string> FindUnusedShardsAsCraftingMats(List<string> craftingshards, List<string> fillershards , Random rndshard)
         {
             List<string> materials = new List<string>();
+            
+            //need to randomize fillershards
+            fillershards = fillershards.OrderBy(i => rndshard.Next()).ToList();
 
             for (int i = 0; i < 12; i++)
             {
@@ -564,7 +120,7 @@ namespace textcopier2
 
         //
         //takes the list of shards you want to become craftable and a list of shards as ingredients and writes them to the crafter json
-        public static void WriteCraftedShards(List<string> listtowrite , List<string> ingredients, List<string> itemingredients , string jsontowrite)
+        public static void WriteCraftedShards(List<string> listtowrite , List<string> ingredients, List<string> itemingredients , string jsontowrite , List<string> spoilerlog)
         {
             for (int i = 0; i < 12; i++)
             {
@@ -581,7 +137,7 @@ namespace textcopier2
                     w.WriteLine("      \"RankMax\": 0,");
                     w.WriteLine("      \"Ingredient1Id\": \"" + ingredients[i] +"\",");
                     w.WriteLine("      \"Ingredient1Total\": 1,");
-                    w.WriteLine("      \"Ingredient2Id\": \"" + itemingredients[i] + "\",");  //needs to be randomized
+                    w.WriteLine("      \"Ingredient2Id\": \"" + itemingredients[i] + "\",");
                     w.WriteLine("      \"Ingredient2Total\": 1,");
                     w.WriteLine("      \"Ingredient3Id\": \"None\",");
                     w.WriteLine("      \"Ingredient3Total\": 0,");
@@ -598,6 +154,7 @@ namespace textcopier2
                     w.WriteLine("  },");
                     w.WriteLine("  {");
                 }
+                spoilerlog.Add(listtowrite[i] + " unlocked by: " + ingredients[i]);
             }
         }
 

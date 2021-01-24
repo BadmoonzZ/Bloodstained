@@ -12,36 +12,37 @@ namespace textcopier2
         public static List<int> GetLineNumbers()
         {
             List<int> shopProduced = new List<int>();
+            int sizeofentry = 22;
 
-            for (int i = 12; i < 1150;)
+            for (int i = 12; i < 1205;)
             {
                 shopProduced.Add(i);
-                i = i + 21;
+                i = i + sizeofentry;
             }
-            for (int i = 1461; i < 2540;)
+            for (int i = 1530; i < 2660;)
             {
                 shopProduced.Add(i);
-                i = i + 21;
+                i = i + sizeofentry;
             }
-            for (int i = 2580; i < 4120;)  //this includes no purchaseable 8bits
+            for (int i = 2702; i < 4337;)  //this includes no purchaseable 8bits
             {
                 shopProduced.Add(i);
-                i = i + 21;
+                i = i + sizeofentry;
             }
-            for (int i = 4404; i < 7600;)
+            for (int i = 4632; i < 7980;)
             {
                 shopProduced.Add(i);
-                i = i + 21;
+                i = i + sizeofentry;
             }
-            for (int i = 7644; i < 10825;) //this includes some non purchasable items such as i am gump
+            for (int i = 8026; i < 11355;) //this includes some non purchasable items such as i am gump
             {
                 shopProduced.Add(i);
-                i = i + 21;
+                i = i + sizeofentry;
             }
-            for (int i = 12789; i < 14794;)
+            for (int i = 13416; i < 15514;)
             {
                 shopProduced.Add(i);
-                i = i + 21;
+                i = i + sizeofentry;
             }
 
             return shopProduced;
@@ -56,7 +57,7 @@ namespace textcopier2
                 shopLine[shopProduced[i] - 1] = "      \"Producted\": \"Event_01_001_0000\",";
                 if(shopLine[shopProduced[i] - 2] == "      \"sellPrice\": 0,")
                 {
-                    int newsellprice = rnd.Next(2000,5600); //random this
+                    int newsellprice = rnd.Next(2000,5600);
                     shopLine[shopProduced[i] - 2] = "      \"sellPrice\": " + newsellprice + ",";
                     shopLine[shopProduced[i] - 3] = "      \"buyPrice\": " + newsellprice * 10 + ",";
                     spoilerarray.Add("Price adjusted " + newsellprice);
@@ -69,7 +70,7 @@ namespace textcopier2
                 shopLine[shopProduced[i] - 1] = "      \"Producted\": \"Event_06_001_0000\",";
                 if (shopLine[shopProduced[i] - 2] == "      \"sellPrice\": 0,")
                 {
-                    int newsellprice = rnd.Next(2000, 5600); //random this
+                    int newsellprice = rnd.Next(2000, 5600);
                     shopLine[shopProduced[i] - 2] = "      \"sellPrice\": " + newsellprice + ",";
                     shopLine[shopProduced[i] - 3] = "      \"buyPrice\": " + newsellprice * 10 + ",";
                     spoilerarray.Add("Price adjusted " + newsellprice);

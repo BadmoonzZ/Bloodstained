@@ -24,7 +24,7 @@ namespace textcopier2
             RareIngreditentQuantity = "1",
             RareIngredientRate = "8.0",
 
-            DatatableLineNumber = 12928,
+            DatatableLineNumber = 13445,
             FriendlyName = "Aello",
             EarlyEnemy = true,
         };
@@ -33,7 +33,7 @@ namespace textcopier2
             ShardId = "Ceruleansplash",
             ShardRate = "3.0",
 
-            DatatableLineNumber = 12828,
+            DatatableLineNumber = 13341,
             FriendlyName = "Seama",
             EarlyEnemy = true,
         };
@@ -42,7 +42,7 @@ namespace textcopier2
             ShardId = "FireCannon",
             ShardRate = "2.0",
 
-            DatatableLineNumber = 12878,
+            DatatableLineNumber = 13393,
             FriendlyName = "Cannon Morte",
             EarlyEnemy = true,
         };
@@ -51,7 +51,7 @@ namespace textcopier2
             ShardId = "FireCannon",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12903,
+            DatatableLineNumber = 13419,
             FriendlyName = "Cannon Morte 100",
             EarlyEnemy = true,
         };
@@ -60,7 +60,7 @@ namespace textcopier2
             ShardId = "SummonAme",
             ShardRate = "2.0",
 
-            DatatableLineNumber = 12953,
+            DatatableLineNumber = 13471,
             FriendlyName = "Ghost",
             EarlyEnemy = true,
         };
@@ -69,7 +69,7 @@ namespace textcopier2
             ShardId = "Headfail",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 12978,
+            DatatableLineNumber = 13497,
             FriendlyName = "Dullahammer",
             EarlyEnemy = true,
         };
@@ -78,7 +78,7 @@ namespace textcopier2
             ShardId = "SummonRat",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13003,
+            DatatableLineNumber = 13523,
             FriendlyName = "Giant Rat",
             EarlyEnemy = true,
         };
@@ -87,7 +87,7 @@ namespace textcopier2
             ShardId = "BoonsLore",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13028,
+            DatatableLineNumber = 13549,
             FriendlyName = "Bone Morte",
             EarlyEnemy = true,
         };
@@ -96,7 +96,7 @@ namespace textcopier2
             ShardId = "SummonButt",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13053,
+            DatatableLineNumber = 13575,
             FriendlyName = "Bat",
             EarlyEnemy = true,
         };
@@ -105,7 +105,7 @@ namespace textcopier2
             ShardId = "SummonGilemund",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13078,
+            DatatableLineNumber = 13601,
             FriendlyName = "Giermund",
             EarlyEnemy = true,
         };
@@ -114,7 +114,7 @@ namespace textcopier2
             ShardId = "HelleTicalGrinder",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13103,
+            DatatableLineNumber = 13627,
             FriendlyName = "Blood Grinder Knight",
             EarlyEnemy = true,
         };
@@ -123,7 +123,7 @@ namespace textcopier2
             ShardId = "SwordMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13128,
+            DatatableLineNumber = 13653,
             FriendlyName = "Sabnock",
             EarlyEnemy = true,
         };
@@ -132,7 +132,7 @@ namespace textcopier2
             ShardId = "EntangleBind",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13153,
+            DatatableLineNumber = 13679,
             FriendlyName = "Moco Weed",
             EarlyEnemy = true,
         };
@@ -141,7 +141,7 @@ namespace textcopier2
             ShardId = "Releasetoade",
             ShardRate = "3.0",
 
-            DatatableLineNumber = 13178,
+            DatatableLineNumber = 13705,
             FriendlyName = "Toad",
             EarlyEnemy = true,
         };
@@ -150,7 +150,7 @@ namespace textcopier2
             ShardId = "SummonYorkton",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13203,
+            DatatableLineNumber = 13731,
             FriendlyName = "Plume Parma",
             EarlyEnemy = true,
         };
@@ -159,7 +159,7 @@ namespace textcopier2
             ShardId = "StraightArrow",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13228,
+            DatatableLineNumber = 13757,
             FriendlyName = "Barbatos",
             EarlyEnemy = true,
         };
@@ -168,7 +168,7 @@ namespace textcopier2
             ShardId = "FamiliaCarabos",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13253,
+            DatatableLineNumber = 13783,
             FriendlyName = "Carabose",
         };
         public static EnemyDropTable Simian = new EnemyDropTable
@@ -176,7 +176,7 @@ namespace textcopier2
             ShardId = "SummonApe",
             ShardRate = "3.0",
 
-            DatatableLineNumber = 13278,
+            DatatableLineNumber = 13809,
             FriendlyName = "Simian",
         };
         public static EnemyDropTable Zagan = new EnemyDropTable
@@ -184,7 +184,7 @@ namespace textcopier2
             ShardId = "CraftMastery",
             ShardRate = "2.0",
 
-            DatatableLineNumber = 13303,
+            DatatableLineNumber = 13835,
             FriendlyName = "Zagan",
 
         };
@@ -193,7 +193,7 @@ namespace textcopier2
             ShardId = "GratefulAssist",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13328,
+            DatatableLineNumber = 13861,
             FriendlyName = "Poltergeist",
             EarlyEnemy = true,
         };
@@ -202,7 +202,7 @@ namespace textcopier2
             ShardId = "Acidgouache",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13353,
+            DatatableLineNumber = 13887,
             FriendlyName = "Ordog",
             EarlyEnemy = true,
         };
@@ -211,7 +211,7 @@ namespace textcopier2
             ShardId = "Petrey",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13378,
+            DatatableLineNumber = 13913,
             FriendlyName = "Gargoyle",
             EarlyEnemy = true,
         };
@@ -220,7 +220,7 @@ namespace textcopier2
             ShardId = "KnifeMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13403,
+            DatatableLineNumber = 13939,
             FriendlyName = "Killer Barber",
             EarlyEnemy = true,
         };
@@ -229,7 +229,7 @@ namespace textcopier2
             ShardId = "INTEnhance",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13428,
+            DatatableLineNumber = 13965,
             FriendlyName = "Demon",
             EarlyEnemy = true,
         };
@@ -238,7 +238,7 @@ namespace textcopier2
             ShardId = "SummonBuell",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13453,
+            DatatableLineNumber = 13991,
             FriendlyName = "Buer",
             EarlyEnemy = true,
         };
@@ -247,7 +247,7 @@ namespace textcopier2
             ShardId = "LigaStreyma",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13478,
+            DatatableLineNumber = 14017,
             FriendlyName = "Nyabon",
             EarlyEnemy = true,
         };
@@ -256,7 +256,7 @@ namespace textcopier2
             ShardId = "SummonBugs",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13503,
+            DatatableLineNumber = 14043,
             FriendlyName = "Scythe Mite",
         };
         public static EnemyDropTable DullahammerHead = new EnemyDropTable
@@ -264,7 +264,7 @@ namespace textcopier2
             ShardId = "SummonDurahanMaHead",
             ShardRate = "2.0",
 
-            DatatableLineNumber = 13528,
+            DatatableLineNumber = 14069,
             FriendlyName = "Dullahammer Head",
             EarlyEnemy = true,
         };
@@ -273,7 +273,7 @@ namespace textcopier2
             ShardId = "SummonBuell",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13553,
+            DatatableLineNumber = 14095,
             FriendlyName = "Buer Armor",
         };
         public static EnemyDropTable Wolfman = new EnemyDropTable
@@ -281,7 +281,7 @@ namespace textcopier2
             ShardId = "Beastguard",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13578,
+            DatatableLineNumber = 14121,
             FriendlyName = "Wolfman",
         };
         public static EnemyDropTable Decarabia = new EnemyDropTable
@@ -289,7 +289,7 @@ namespace textcopier2
             ShardId = "CircleRipper",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13603,
+            DatatableLineNumber = 14147,
             FriendlyName = "Decarabia",
         };
         public static EnemyDropTable ShovelArmor = new EnemyDropTable
@@ -297,7 +297,7 @@ namespace textcopier2
             ShardId = "Shovelshooter",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13628,
+            DatatableLineNumber = 14173,
             FriendlyName = "Shovel Armor",
         };
         public static EnemyDropTable ThunderElemental = new EnemyDropTable
@@ -305,7 +305,7 @@ namespace textcopier2
             ShardId = "ResistThunder",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13653,
+            DatatableLineNumber = 14199,
             FriendlyName = "Thunder Elemental",
         };
         public static EnemyDropTable CarrageMorte = new EnemyDropTable
@@ -313,7 +313,7 @@ namespace textcopier2
             ShardId = "GunMastery",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13678,
+            DatatableLineNumber = 14225,
             FriendlyName = "Carriage Morte",
         };
         public static EnemyDropTable Dantalion = new EnemyDropTable
@@ -321,7 +321,7 @@ namespace textcopier2
             ShardId = "FamiliaDantalion",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13703,
+            DatatableLineNumber = 14251,
             FriendlyName = "Dantalion",
         };
         public static EnemyDropTable RulSha = new EnemyDropTable
@@ -329,7 +329,7 @@ namespace textcopier2
             ShardId = "Sacredshade",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13728,
+            DatatableLineNumber = 14277,
             FriendlyName = "Rul Sha",
         };
         public static EnemyDropTable Malediction = new EnemyDropTable
@@ -337,7 +337,7 @@ namespace textcopier2
             ShardId = "ResistPetri",
             ShardRate = "2.0",
 
-            DatatableLineNumber = 13753,
+            DatatableLineNumber = 14303,
             FriendlyName = "Malediction",
         };
         public static EnemyDropTable Celano = new EnemyDropTable
@@ -345,7 +345,7 @@ namespace textcopier2
             ShardId = "TepesOsius",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13778,
+            DatatableLineNumber = 14329,
             FriendlyName = "Celano",
         };
         public static EnemyDropTable ShieldOutsider = new EnemyDropTable
@@ -353,7 +353,7 @@ namespace textcopier2
             ShardId = "Aimingshield",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13803,
+            DatatableLineNumber = 14355,
             FriendlyName = "Shield Outsider",
         };
         public static EnemyDropTable Lili = new EnemyDropTable
@@ -361,7 +361,7 @@ namespace textcopier2
             ShardId = "ChangeBunny",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 13828,
+            DatatableLineNumber = 14381,
             FriendlyName = "Lili",
         };
         public static EnemyDropTable Assassin = new EnemyDropTable
@@ -369,7 +369,7 @@ namespace textcopier2
             ShardId = "ShootingDagger",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13853,
+            DatatableLineNumber = 14407,
             FriendlyName = "Assassin",
         };
         public static EnemyDropTable Dragon = new EnemyDropTable
@@ -377,7 +377,7 @@ namespace textcopier2
             ShardId = "DragonicRage",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 13878,
+            DatatableLineNumber = 14433,
             FriendlyName = "Dragon",
         };
         public static EnemyDropTable Kunekune = new EnemyDropTable
@@ -385,7 +385,7 @@ namespace textcopier2
             ShardId = "Resistcurse",
             ShardRate = "12.0",
 
-            DatatableLineNumber = 13903,
+            DatatableLineNumber = 14459,
             FriendlyName = "Kunekune",
         };
         public static EnemyDropTable PoisonToad = new EnemyDropTable
@@ -393,7 +393,7 @@ namespace textcopier2
             ShardId = "ResistPoison",
             ShardRate = "3.0",
 
-            DatatableLineNumber = 13928,
+            DatatableLineNumber = 14485,
             FriendlyName = "Poison Toad",
         };
         public static EnemyDropTable Sidhe = new EnemyDropTable
@@ -401,7 +401,7 @@ namespace textcopier2
             ShardId = "Healing",
             ShardRate = "3.0",
 
-            DatatableLineNumber = 13953,
+            DatatableLineNumber = 14511,
             FriendlyName = "Sidhe",
         };
         public static EnemyDropTable BomberMorte = new EnemyDropTable
@@ -409,7 +409,7 @@ namespace textcopier2
             ShardId = "BaudRideBlast",
             ShardRate = "10.0",
 
-            DatatableLineNumber = 13978,
+            DatatableLineNumber = 14537,
             FriendlyName = "Bomber Morte",
         };
         public static EnemyDropTable Mimic = new EnemyDropTable
@@ -417,7 +417,7 @@ namespace textcopier2
             ShardId = "Moneyispower",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14003,
+            DatatableLineNumber = 14563,
             FriendlyName = "Mimic",
         };
         public static EnemyDropTable Puppy = new EnemyDropTable
@@ -425,7 +425,7 @@ namespace textcopier2
             ShardId = "ResistBrow",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14028,
+            DatatableLineNumber = 14589,
             FriendlyName = "Gusian",
         };
         public static EnemyDropTable ChairMimic = new EnemyDropTable
@@ -433,7 +433,7 @@ namespace textcopier2
             ShardId = "SummonChair",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 14053,
+            DatatableLineNumber = 14615,
             FriendlyName = "Chair Mimic",
         };
         public static EnemyDropTable Lierja = new EnemyDropTable
@@ -441,7 +441,7 @@ namespace textcopier2
             ShardId = "ChaserArrow",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14078,
+            DatatableLineNumber = 14641,
             FriendlyName = "Lierja",
         };
         public static EnemyDropTable BloodBringer = new EnemyDropTable
@@ -449,7 +449,7 @@ namespace textcopier2
             ShardId = "FamiliaBradBringer",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14103,
+            DatatableLineNumber = 14667,
             FriendlyName = "Bloodbringer",
         };
         public static EnemyDropTable LanceArmor = new EnemyDropTable
@@ -457,7 +457,7 @@ namespace textcopier2
             ShardId = "SpearMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14128,
+            DatatableLineNumber = 14693,
             FriendlyName = "Lance Armor",
         };
         public static EnemyDropTable TomokoDeath = new EnemyDropTable
@@ -465,7 +465,7 @@ namespace textcopier2
             ShardId = "Upbeatheat",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14153,
+            DatatableLineNumber = 14719,
             FriendlyName = "Tomoko Death",
         };
         public static EnemyDropTable TriwheelBuer = new EnemyDropTable
@@ -473,7 +473,7 @@ namespace textcopier2
             ShardId = "FamiliaBuell",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14178,
+            DatatableLineNumber = 14475,
             FriendlyName = "Triwheel Buer",
         };
         public static EnemyDropTable Gamigin = new EnemyDropTable
@@ -481,7 +481,7 @@ namespace textcopier2
             ShardId = "KickMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14203,
+            DatatableLineNumber = 14771,
             FriendlyName = "Gamigin",
         };
         public static EnemyDropTable Titania = new EnemyDropTable
@@ -489,7 +489,7 @@ namespace textcopier2
             ShardId = "MNDEnhance",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14228,
+            DatatableLineNumber = 14797,
             FriendlyName = "Titania",
         };
         public static EnemyDropTable AxeOutsider = new EnemyDropTable
@@ -497,7 +497,7 @@ namespace textcopier2
             ShardId = "ThrowAxe",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14253,
+            DatatableLineNumber = 14823,
             FriendlyName = "Axe Outsider",
         };
         public static EnemyDropTable EightbitZombie = new EnemyDropTable
@@ -505,7 +505,7 @@ namespace textcopier2
             ShardId = "Zombie8Bit",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14278,
+            DatatableLineNumber = 14849,
             FriendlyName = "Eight Bit Zombie",
         };
         public static EnemyDropTable EightBitGhost = new EnemyDropTable
@@ -513,7 +513,7 @@ namespace textcopier2
             ShardId = "Ghost8Bit",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14303,
+            DatatableLineNumber = 14875,
             FriendlyName = "Eight Bit Ghost",
         };
         public static EnemyDropTable EightBitSkull = new EnemyDropTable
@@ -521,7 +521,7 @@ namespace textcopier2
             ShardId = "EightBitFiree",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14353,
+            DatatableLineNumber = 14901,
             FriendlyName = "Eight Bit Skull",
         };
         public static EnemyDropTable EightBitOverlord = new EnemyDropTable
@@ -529,7 +529,7 @@ namespace textcopier2
             ShardId = "Nightmare8Bit",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14328,
+            DatatableLineNumber = 14927,
             FriendlyName = "Eight Bit Overlord",
         };
         public static EnemyDropTable LightElemental = new EnemyDropTable
@@ -537,7 +537,7 @@ namespace textcopier2
             ShardId = "ResistHorley",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14378,
+            DatatableLineNumber = 14953,
             FriendlyName = "Light Elemental",
         };
         public static EnemyDropTable Ocypete = new EnemyDropTable
@@ -545,7 +545,7 @@ namespace textcopier2
             ShardId = "optimizer",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14403,
+            DatatableLineNumber = 14979,
             FriendlyName = "Ocypete",
         };
         public static EnemyDropTable Cyreath = new EnemyDropTable
@@ -553,7 +553,7 @@ namespace textcopier2
             ShardId = "Deadhowling",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14428,
+            DatatableLineNumber = 15005,
             FriendlyName = "Cyreath",
         };
         public static EnemyDropTable Clam = new EnemyDropTable
@@ -561,7 +561,7 @@ namespace textcopier2
             ShardId = "Resistedge",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14453,
+            DatatableLineNumber = 15031,
             FriendlyName = "Clam",
         };
         public static EnemyDropTable Forneus = new EnemyDropTable
@@ -569,7 +569,7 @@ namespace textcopier2
             ShardId = "VaIsha",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14478,
+            DatatableLineNumber = 15057,
             FriendlyName = "Forneus",
         };
         public static EnemyDropTable Deaseama = new EnemyDropTable
@@ -577,7 +577,7 @@ namespace textcopier2
             ShardId = "Aquastream",
             ShardRate = "10.0",
 
-            DatatableLineNumber = 14503,
+            DatatableLineNumber = 15083,
             FriendlyName = "Deaseama",
         };
         public static EnemyDropTable WaterLeaper = new EnemyDropTable
@@ -585,7 +585,7 @@ namespace textcopier2
             ShardId = "SamonSamHiggin",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14528,
+            DatatableLineNumber = 15109,
             FriendlyName = "Water Leaper",
         };
         public static EnemyDropTable Glyshlyn = new EnemyDropTable
@@ -593,7 +593,7 @@ namespace textcopier2
             ShardId = "Submariner",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 14553,
+            DatatableLineNumber = 15135,
             FriendlyName = "Glyshlyn",
         };
         public static EnemyDropTable Seeker = new EnemyDropTable
@@ -601,7 +601,7 @@ namespace textcopier2
             ShardId = "Detectiveeye",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14578,
+            DatatableLineNumber = 15161,
             FriendlyName = "Seeker",
         };
         public static EnemyDropTable Archdemon = new EnemyDropTable
@@ -609,7 +609,7 @@ namespace textcopier2
             ShardId = "Wisdomwords",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 14603,
+            DatatableLineNumber = 15187,
             FriendlyName = "Archdemon",
         };
         public static EnemyDropTable Amy = new EnemyDropTable
@@ -617,7 +617,7 @@ namespace textcopier2
             ShardId = "CurseDray",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 14628,
+            DatatableLineNumber = 15213,
             FriendlyName = "Amy",
         };
         public static EnemyDropTable Firebuer = new EnemyDropTable
@@ -625,7 +625,7 @@ namespace textcopier2
             ShardId = "CONEnhance",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14653,
+            DatatableLineNumber = 15239,
             FriendlyName = "Firebuer",
         };
         public static EnemyDropTable Vulsha = new EnemyDropTable
@@ -633,7 +633,7 @@ namespace textcopier2
             ShardId = "TissLeif",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14678,
+            DatatableLineNumber = 15265,
             FriendlyName = "Vul Sha",
         };
         public static EnemyDropTable Rocky = new EnemyDropTable
@@ -641,15 +641,15 @@ namespace textcopier2
             ShardId = "Rocky",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 14703,
-            FriendlyName = "Gusian",
+            DatatableLineNumber = 15291,
+            FriendlyName = "Rocky",
         };
         public static EnemyDropTable LivingFossle = new EnemyDropTable
         {
             ShardId = "Resistthrust",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 14728,
+            DatatableLineNumber = 15317,
             FriendlyName = "Living Fossle",
         };
         public static EnemyDropTable DarkElemental = new EnemyDropTable
@@ -657,7 +657,7 @@ namespace textcopier2
             ShardId = "Resistdark",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14753,
+            DatatableLineNumber = 15343,
             FriendlyName = "Dark Elemental",
         };
         public static EnemyDropTable Lamashtu = new EnemyDropTable
@@ -665,7 +665,7 @@ namespace textcopier2
             ShardId = "WhipMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14778,
+            DatatableLineNumber = 15369,
             FriendlyName = "Lamashtu",
         };
         public static EnemyDropTable Macaron = new EnemyDropTable
@@ -673,7 +673,7 @@ namespace textcopier2
             ShardId = "Toxicstorm",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14803,
+            DatatableLineNumber = 15395,
             FriendlyName = "Macaron",
         };
         public static EnemyDropTable BloodBug = new EnemyDropTable
@@ -681,7 +681,7 @@ namespace textcopier2
             ShardId = "RedDowther",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14828,
+            DatatableLineNumber = 15421,
             FriendlyName = "Blood Bug",
         };
         public static EnemyDropTable FireElmental = new EnemyDropTable
@@ -689,7 +689,7 @@ namespace textcopier2
             ShardId = "ResistFire",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14853,
+            DatatableLineNumber = 15447,
             FriendlyName = "Fire Elemental",
         };
         public static EnemyDropTable VolcanoMorte = new EnemyDropTable
@@ -697,7 +697,7 @@ namespace textcopier2
             ShardId = "FireThrower",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14878,
+            DatatableLineNumber = 15473,
             FriendlyName = "Volcano Morte",
         };
         public static EnemyDropTable Hellhound = new EnemyDropTable
@@ -705,7 +705,7 @@ namespace textcopier2
             ShardId = "HellHound",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14903,
+            DatatableLineNumber = 15499,
             FriendlyName = "Hellhound",
         };
         public static EnemyDropTable Zepar = new EnemyDropTable
@@ -713,31 +713,31 @@ namespace textcopier2
             ShardId = "RapidSpear",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14928,
+            DatatableLineNumber = 15525,
             FriendlyName = "Zepar",
-        };
-        public static EnemyDropTable Gusian = new EnemyDropTable
-        {
-            ShardId = "LuckyDrop",
-            ShardRate = "4.0",
-
-            DatatableLineNumber = 14978,
-            FriendlyName = "Gusian",
         };
         public static EnemyDropTable Deathtrap = new EnemyDropTable
         {
             ShardId = "LUKEnhanc",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14953,
+            DatatableLineNumber = 15551,
             FriendlyName = "Deathtrap",
+        };
+        public static EnemyDropTable Gusian = new EnemyDropTable
+        {
+            ShardId = "LuckyDrop",
+            ShardRate = "4.0",
+
+            DatatableLineNumber = 15577,
+            FriendlyName = "Gusian",
         };
         public static EnemyDropTable Gapp = new EnemyDropTable
         {
             ShardId = "STREnhance",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15003,
+            DatatableLineNumber = 15603,
             FriendlyName = "Gaap",
         };
         public static EnemyDropTable Haagenti = new EnemyDropTable
@@ -745,7 +745,7 @@ namespace textcopier2
             ShardId = "PetraBless",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15028,
+            DatatableLineNumber = 15629,
             FriendlyName = "Haagenti",
         };
         public static EnemyDropTable Ninja = new EnemyDropTable
@@ -753,7 +753,7 @@ namespace textcopier2
             ShardId = "HiddenDart",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15053,
+            DatatableLineNumber = 15655,
             FriendlyName = "Ninja",
         };
         public static EnemyDropTable Kamakazi = new EnemyDropTable
@@ -761,7 +761,7 @@ namespace textcopier2
             ShardId = "Tornadoslicer",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15078,
+            DatatableLineNumber = 15681,
             FriendlyName = "Kamikazi",
         };
         public static EnemyDropTable GiantMocoWeed = new EnemyDropTable
@@ -769,7 +769,7 @@ namespace textcopier2
             ShardId = "EntangleBind",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15103,
+            DatatableLineNumber = 15707,
             FriendlyName = "Giant Moco Weed",
         };
         public static EnemyDropTable GiantBat = new EnemyDropTable
@@ -777,7 +777,7 @@ namespace textcopier2
             ShardId = "SummonButt",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15128,
+            DatatableLineNumber = 15733,
             FriendlyName = "Giant Bat",
         };
         public static EnemyDropTable GiantToad = new EnemyDropTable
@@ -785,7 +785,7 @@ namespace textcopier2
             ShardId = "Releasetoade",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15153,
+            DatatableLineNumber = 15759,
             FriendlyName = "Giant Toad",
         };
         public static EnemyDropTable GiantCannon = new EnemyDropTable
@@ -793,7 +793,7 @@ namespace textcopier2
             ShardId = "FireCannon",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15178,
+            DatatableLineNumber = 15785,
             FriendlyName = "Giant Cannon",
         };
         public static EnemyDropTable GiantMorte = new EnemyDropTable
@@ -801,7 +801,7 @@ namespace textcopier2
             ShardId = "None",
             ShardRate = "0.0",
 
-            DatatableLineNumber = 15203,
+            DatatableLineNumber = 15811,
             FriendlyName = "Giant Morte",
         };
         public static EnemyDropTable GiantBuer = new EnemyDropTable
@@ -809,7 +809,7 @@ namespace textcopier2
             ShardId = "FamiliaBuell",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15228,
+            DatatableLineNumber = 15837,
             FriendlyName = "Giant Buer",
         };
         public static EnemyDropTable SilverWolfman = new EnemyDropTable
@@ -817,7 +817,7 @@ namespace textcopier2
             ShardId = "WildScratch",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15253,
+            DatatableLineNumber = 15863,
             FriendlyName = "Silver Wolfman",
         };
         public static EnemyDropTable AbyssalDragon = new EnemyDropTable
@@ -825,7 +825,7 @@ namespace textcopier2
             ShardId = "Voidlay",
             ShardRate = "6.0",
 
-            DatatableLineNumber = 15278,
+            DatatableLineNumber = 15889,
             FriendlyName = "Abyssal Dragon",
         };
         public static EnemyDropTable Marbas = new EnemyDropTable
@@ -833,7 +833,7 @@ namespace textcopier2
             ShardId = "drain",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15303,
+            DatatableLineNumber = 15915,
             FriendlyName = "Marbas",
         };
         public static EnemyDropTable Harrier = new EnemyDropTable
@@ -841,7 +841,7 @@ namespace textcopier2
             ShardId = "Accelerator",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 15328,
+            DatatableLineNumber = 15941,
             FriendlyName = "Harrier",
         };
         public static EnemyDropTable ChariotBuer = new EnemyDropTable
@@ -849,7 +849,7 @@ namespace textcopier2
             ShardId = "GunMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15353,
+            DatatableLineNumber = 15967,
             FriendlyName = "Chariot Buer",
         };
         public static EnemyDropTable IceElemental = new EnemyDropTable
@@ -857,7 +857,7 @@ namespace textcopier2
             ShardId = "Resistice",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15378,
+            DatatableLineNumber = 15993,
             FriendlyName = "Ice Elemental",
         };
         public static EnemyDropTable Tracer = new EnemyDropTable
@@ -865,7 +865,7 @@ namespace textcopier2
             ShardId = "SummonTracer",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15403,
+            DatatableLineNumber = 16019,
             FriendlyName = "Tracer",
         };
         public static EnemyDropTable GussianCannon = new EnemyDropTable
@@ -873,7 +873,7 @@ namespace textcopier2
             ShardId = "GunMastery",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15428,
+            DatatableLineNumber = 16045,
             FriendlyName = "Gussian Cannon",
         };
         public static EnemyDropTable GAxeOutsider = new EnemyDropTable
@@ -881,7 +881,7 @@ namespace textcopier2
             ShardId = "AxStrike",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 15453,
+            DatatableLineNumber = 16071,
             FriendlyName = "G Axe Outsider",
         };
         public static EnemyDropTable DemonLord = new EnemyDropTable
@@ -889,7 +889,7 @@ namespace textcopier2
             ShardId = "FoldShiu",
             ShardRate = "5.0",
 
-            DatatableLineNumber = 15478,
+            DatatableLineNumber = 16097,
             FriendlyName = "Demon Lord",
         };
         public static EnemyDropTable Carpenter = new EnemyDropTable
@@ -897,7 +897,7 @@ namespace textcopier2
             ShardId = "Chiselbalage",
             ShardRate = "15.0",
 
-            DatatableLineNumber = 15503,
+            DatatableLineNumber = 16123,
             FriendlyName = "Master Carpenter",
         };
         public static EnemyDropTable Revenant = new EnemyDropTable
@@ -905,7 +905,7 @@ namespace textcopier2
             ShardId = "RuinBeak",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 15578,
+            DatatableLineNumber = 16201,
             FriendlyName = "Revenant",
         };
         public static EnemyDropTable Revenant2 = new EnemyDropTable
@@ -913,7 +913,7 @@ namespace textcopier2
             ShardId = "RuinBeak",
             ShardRate = "12.0",
 
-            DatatableLineNumber = 15603,
+            DatatableLineNumber = 16227,
             FriendlyName = "Revenant 2",
         };
         public static EnemyDropTable MillionareBane = new EnemyDropTable
@@ -921,7 +921,7 @@ namespace textcopier2
             ShardId = "Jackpot",
             ShardRate = "12.0",
 
-            DatatableLineNumber = 15628,
+            DatatableLineNumber = 16253,
             FriendlyName = "Millionare Bane",
         };
         public static EnemyDropTable Vepar = new EnemyDropTable
@@ -929,7 +929,7 @@ namespace textcopier2
             ShardId = "SwingTentacle",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12503,
+            DatatableLineNumber = 13003,
             FriendlyName = "Vepar",
             EarlyEnemy = true,
         };
@@ -938,7 +938,7 @@ namespace textcopier2
             ShardId = "Bloodsteel",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12528,
+            DatatableLineNumber = 13029,
             FriendlyName = "Bloodless",
         };
         public static EnemyDropTable Craftwork = new EnemyDropTable
@@ -946,7 +946,7 @@ namespace textcopier2
             ShardId = "Demoniccapture",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12553,
+            DatatableLineNumber = 13055,
             FriendlyName = "Craftwork",
         };
         public static EnemyDropTable Bathin = new EnemyDropTable
@@ -954,7 +954,7 @@ namespace textcopier2
             ShardId = "Reflectionray",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12578,
+            DatatableLineNumber = 13081,
             FriendlyName = "Bathin",
         };
         public static EnemyDropTable Gremory = new EnemyDropTable
@@ -962,7 +962,7 @@ namespace textcopier2
             ShardId = "Dimensionshift",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12603,
+            DatatableLineNumber = 13107,
             FriendlyName = "Gremory",
         };
         public static EnemyDropTable GluttonTrain = new EnemyDropTable
@@ -970,7 +970,7 @@ namespace textcopier2
             ShardId = "Hammerknuckle",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12628,
+            DatatableLineNumber = 13133,
             FriendlyName = "Glutton Train",
         };
         public static EnemyDropTable Andrealphus = new EnemyDropTable
@@ -978,7 +978,7 @@ namespace textcopier2
             ShardId = "Doublejump",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12653,
+            DatatableLineNumber = 13159,
             FriendlyName = "Andrealphus",
         };
         public static EnemyDropTable Orobos = new EnemyDropTable
@@ -986,7 +986,7 @@ namespace textcopier2
             ShardId = "Invert",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12678,
+            DatatableLineNumber = 13185,
             FriendlyName = "Orobos",
         };
         public static EnemyDropTable Doppleganger = new EnemyDropTable
@@ -994,7 +994,7 @@ namespace textcopier2
             ShardId = "Shadowtracer",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12703,
+            DatatableLineNumber = 13211,
             FriendlyName = "Doppleganger",
         };
         public static EnemyDropTable OD = new EnemyDropTable
@@ -1002,7 +1002,7 @@ namespace textcopier2
             ShardId = "AccelWorld",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12728,
+            DatatableLineNumber = 13237,
             FriendlyName = "Orlok Dracule",
         };
         public static EnemyDropTable Valefar = new EnemyDropTable
@@ -1010,7 +1010,7 @@ namespace textcopier2
             ShardId = "GoldBarrett",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12778,
+            DatatableLineNumber = 13289,
             FriendlyName = "Valefar",
         };
         public static EnemyDropTable Valic = new EnemyDropTable
@@ -1018,7 +1018,7 @@ namespace textcopier2
             ShardId = "InfernoBrace",
             ShardRate = "100.0",
 
-            DatatableLineNumber = 12803,
+            DatatableLineNumber = 13315,
             FriendlyName = "Valic",
         };
 
@@ -1061,7 +1061,7 @@ namespace textcopier2
                 int linenumbertowrite = 0;
                 string linetowrite = "";
                 linetowrite = "      \"ShardId\": \"" + listofenemies[i].ShardId + "\",";
-                linenumbertowrite = listofenemies[i].DatatableLineNumber + 2;
+                linenumbertowrite = listofenemies[i].DatatableLineNumber + 3;
                 datatable[linenumbertowrite] = linetowrite;
                 //write line to spoiler
                 spoilerlog.Add( listofenemies[i].FriendlyName + " ***** " + listofenemies[i].ShardId);

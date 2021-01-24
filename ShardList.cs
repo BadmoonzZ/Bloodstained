@@ -8,6 +8,7 @@ namespace textcopier2
 {
     class ShardList
     {
+
         public static List<string> GenerateShardList()
         {
             //collect all shards and store in a list
@@ -99,7 +100,6 @@ namespace textcopier2
                 "EntangleBind", // Summon Moco Weed
                 "SummonButt", // Summon Bat
                 "FireCannon", // Flame Cannon
-                "FamiliaBuell", // Summon Buer
                 "WildScratch", // Feral Claws
                 "Voidlay", // Void Ray
                 "drain", // Drain
@@ -140,7 +140,9 @@ namespace textcopier2
                 "GreatSwordMastery", // Greatsword Expertise
                 "JapanSwordMastery", // Katana Expertise
                 "Regeneration", // Regenerate
-                "EnhancedGOLD" // Augment Gold
+                "EnhancedGOLD", // Augment Gold
+
+                "FamiliaArcher" //Summon Archer
             };
 
             return fulllistofshards;
