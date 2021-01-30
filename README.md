@@ -3,6 +3,15 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
+Updates Jan 30, 2021.
+x2 alkahest was missing.  added back in.
+none shard should not spawn on a boss anymore.
+silver bromide cannot spawn on the train or underground lab.
+triwheel buer now has a unique shard and should fix a missing shard.
+hellhound added to the 'nerfed charge' test.
+Pre Alfred save in now always a warp.
+
+
 Updates Jan 24, 2021.
 BRotN_Randomizer_023.7z contains workable GUI for generating a seed.
 Requires .NET runtime 3.0 to run serializer scripts.
