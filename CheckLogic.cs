@@ -29,6 +29,7 @@ namespace textcopier2
             mainmovementshards = mainmovementshards.OrderBy(i => rndshard.Next()).ToList();
             earlyenemieslist[0].ShardId = mainmovementshards[0];
 
+            //also need to add in the removed shard somewhere....
 
             //find the selected early shard and remove it from the list so it doesn't get placed twice.
             fulllistofshards.Remove(mainmovementshards[0]);
@@ -60,17 +61,19 @@ namespace textcopier2
 
         }
 
+
+
         public static List<TreasureChest> BasicZangetsutoPlacement(List<TreasureChest> CheststoCheck , Random seednumber)
         {
             //take the randomized chest list and modify the ID of each chest to be a valid randomizer chest ID for seed 17791.
-            //CheststoCheck = ChestShuffle.ApplySeedID(CheststoCheck, ChestShuffle.seed17791IDs);
-            bool ZImposible = true;     //zangetsuto check
+            bool ZImposible = true;
             while (ZImposible == true)
             {
                 ZImposible = false;
 
                 //first shuffle the list of chests
                 CheststoCheck = CheststoCheck.OrderBy(i => seednumber.Next()).ToList();
+
                 //next take the shuffled list and sequentially modify each chestID to the chest ID for seed 17791.
                 CheststoCheck = ChestShuffle.ApplySeedID(CheststoCheck, ChestShuffle.seed17791IDs);
 
@@ -133,6 +136,25 @@ namespace textcopier2
                             {
                                 ZImposible = true;
                                 //poor check to make bromide also not in a zlock area.
+                            }
+                            break;
+                        case 207: //for extra safety lets make sure bomide cannot be on train too.
+                        case 122:
+                        case 278:
+                        case 105:
+                        case 416:
+                        case 500:
+                        case 309: //and underground sorcery lab
+                        case 298:
+                        case 282:
+                        case 462:
+                        case 355:
+                        case 79:
+                        case 55:
+                        case 113:
+                            if (CheststoCheck[i].RareItemId == "Silverbromide")
+                            {
+                                ZImposible = true;
                             }
                             break;
                         default:

@@ -473,7 +473,7 @@ namespace textcopier2
             ShardId = "FamiliaBuell",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14475,
+            DatatableLineNumber = 14745,
             FriendlyName = "Triwheel Buer",
         };
         public static EnemyDropTable Gamigin = new EnemyDropTable
@@ -1058,11 +1058,10 @@ namespace textcopier2
             for (int i = 0; i < listofenemies.Count(); i++)
             {
                 //write line to json
-                int linenumbertowrite = 0;
-                string linetowrite = "";
-                linetowrite = "      \"ShardId\": \"" + listofenemies[i].ShardId + "\",";
-                linenumbertowrite = listofenemies[i].DatatableLineNumber + 3;
+                string linetowrite = "      \"ShardId\": \"" + listofenemies[i].ShardId + "\",";
+                int linenumbertowrite = listofenemies[i].DatatableLineNumber + 3;
                 datatable[linenumbertowrite] = linetowrite;
+
                 //write line to spoiler
                 spoilerlog.Add( listofenemies[i].FriendlyName + " ***** " + listofenemies[i].ShardId);
             }

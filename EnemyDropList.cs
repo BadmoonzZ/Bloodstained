@@ -1105,7 +1105,7 @@ namespace textcopier2
             RareIngreditentQuantity = "1",
             RareIngredientRate = "10.0",
             CommonIngredientId = "Alkhahest",
-            CommonIngredientQuantity = "1",
+            CommonIngredientQuantity = "2",
             CommonIngredientRate = "12.0",
 
         };

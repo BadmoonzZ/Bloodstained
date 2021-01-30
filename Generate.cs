@@ -90,6 +90,60 @@ namespace textcopier2
                 //guarantee a movement shard to an early enemy.  (this also forces shortcut on craftwork)  //this may also remove a shard. need to check.
                 CheckLogic.BasicEarlyShardPlacement(fulllistofshards, rndshard);
 
+                //this is a workaround to make sure none doesn't end up on a boss. it should take the first crafted shard and put it on that boss.
+                //CheckLogic.EnsureNoNoneOnBoss(listofenemies);
+                int indexofcannon = listofenemies.FindIndex(a => a.FriendlyName == "Cannon Morte");
+                int indexofvepar = listofenemies.FindIndex(a => a.FriendlyName == "Vepar");
+                int indexofbloodless = listofenemies.FindIndex(a => a.FriendlyName == "Bloodless");
+                int indexofbathin = listofenemies.FindIndex(a => a.FriendlyName == "Bathin");
+                int indexofgremory = listofenemies.FindIndex(a => a.FriendlyName == "Gremory");
+                int indexofandrea = listofenemies.FindIndex(a => a.FriendlyName == "Andrealphus");
+                int indexoforobos = listofenemies.FindIndex(a => a.FriendlyName == "Orobos");
+                int indexofdoppleganger = listofenemies.FindIndex(a => a.FriendlyName == "Doppleganger");
+                int indexofvalefar = listofenemies.FindIndex(a => a.FriendlyName == "Valefar");
+                int indexofvalic = listofenemies.FindIndex(a => a.FriendlyName == "Valic");
+
+                if ( listofenemies[indexofcannon].ShardId == "None")
+                {
+                    listofenemies[indexofcannon].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofvepar].ShardId == "None")
+                {
+                    listofenemies[indexofvepar].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofbloodless].ShardId == "None")
+                {
+                    listofenemies[indexofbloodless].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofbathin].ShardId == "None")
+                {
+                    listofenemies[indexofbathin].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofgremory].ShardId == "None")
+                {
+                    listofenemies[indexofgremory].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofandrea].ShardId == "None")
+                {
+                    listofenemies[indexofandrea].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexoforobos].ShardId == "None")
+                {
+                    listofenemies[indexoforobos].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofdoppleganger].ShardId == "None")
+                {
+                    listofenemies[indexofdoppleganger].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofvalefar].ShardId == "None")
+                {
+                    listofenemies[indexofvalefar].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+                if (listofenemies[indexofvalic].ShardId == "None")
+                {
+                    listofenemies[indexofvalic].ShardId = fulllistofshards[listofenemies.Count() + 1];
+                }
+
 
                 //ensures the 100 cannon morte has the same shard as regular cannon morte.
                 List<EnemyDropTable> cannonmorte100 = new List<EnemyDropTable>();
@@ -453,12 +507,24 @@ namespace textcopier2
 
             if (Globals.shullfeSaveWarpOn == true)
             {
-
+                //create a list of savewarps
+                List<SaveWarpRoom> mysavewarps = SaveWarp.allsavewarps;
                 //generate a list of how many saves and warps you want.
                 List<string> roomshelperlist = SaveWarp.Buildroomshelperlist(SaveWarp.roomswarpcount, SaveWarp.roomswarpcount, SaveWarp.roomsloadcount);
                 //randomize the list
                 roomshelperlist = roomshelperlist.OrderBy(i => rndshard.Next()).ToList();
 
+
+                //determine the selected game mode
+                //modify the lsit of savewarprooms based on the mode selected
+                SaveWarp.ApplyNewRooms(SaveWarp.modeselection, mysavewarps, roomshelperlist);
+
+                //call the writeshuffle routine
+                SaveWarp.WriteShuffle(mysavewarps, roomLine, spoilerarray);
+
+
+                //old code
+                /*
                 if (SaveWarp.modeselection == 1 || SaveWarp.modeselection == 3)
                 {
                     spoilerarray.Add("room warps - safe "); //whitespace
@@ -471,6 +537,9 @@ namespace textcopier2
                     SaveWarp.WriteShuffling(SaveWarp.unsafeSaveWarps, roomshelperlist, roomLine, spoilerarray);
                     spoilerarray.Add(""); //whitespace
                 }
+                */
+
+
 
                 File.WriteAllLines(modroomfile, roomLine);
 
@@ -497,6 +566,7 @@ namespace textcopier2
                 shardmasterLine[3750] = "      \"minGradeValue\": 11.0,";  //quarter voidray
                 shardmasterLine[4110] = "      \"minGradeValue\": 17.5,";  //quarter bolide
                 shardmasterLine[4530] = "      \"minGradeValue\": 11.5,";  //quarter tis ro
+                shardmasterLine[1587] = "      \"minGradeValue\": 100.0,";  //half hellhound
 
                 File.WriteAllLines(modshardmasterfile, shardmasterLine);
             }
