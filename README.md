@@ -3,6 +3,12 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
+******************************
+Updaates Feb 21, 2021.
+Caprenter Key can no longer be behind carpenter.
+Guaranteed Accelerator mode added.
+
+******************************
 Updates Jan 30, 2021.
 x2 alkahest was missing.  added back in.
 none shard should not spawn on a boss anymore.
