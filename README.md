@@ -4,7 +4,12 @@ Bloodstained Randomizer Enhancement
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
 ******************************
-Updaates Feb 21, 2021.
+Updates Jul 13, 2021.
+Rhava Bural will drop off Killer Barbers again.
+Minor text changes.
+
+******************************
+Updates Feb 21, 2021.
 Caprenter Key can no longer be behind carpenter.
 Guaranteed Accelerator mode added.
 
