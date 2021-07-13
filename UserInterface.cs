@@ -326,5 +326,25 @@ namespace textcopier2
                 Globals.nerfCharge = false;
             }
         }
+
+        private void Accel_Checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Accel_Checkbox.Checked == true)
+            {
+                Globals.earlyAccel = true;
+            }
+            else
+            {
+                Globals.earlyAccel = false;
+            }
+        }
+
+        //
+        private void EnhanceFormButton_Click(object sender, EventArgs e)
+        {
+            UpgradesForm child = new UpgradesForm();
+            child.Show();
+            //need to add a way to make multiple of these not open.
+        }
     }
 }

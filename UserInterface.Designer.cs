@@ -57,6 +57,8 @@
             this.label_savewarpSum = new System.Windows.Forms.Label();
             this.RedHerring_CheckBox = new System.Windows.Forms.CheckBox();
             this.checkBox_OpenOutput = new System.Windows.Forms.CheckBox();
+            this.Accel_Checkbox = new System.Windows.Forms.CheckBox();
+            this.EnhanceFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Generate_Button
@@ -221,7 +223,7 @@
             this.version_label.Name = "version_label";
             this.version_label.Size = new System.Drawing.Size(43, 9);
             this.version_label.TabIndex = 14;
-            this.version_label.Text = "Version 0.2";
+            this.version_label.Text = "Version 0.5";
             // 
             // QuestsComboBox
             // 
@@ -356,6 +358,7 @@
             // RedHerring_CheckBox
             // 
             this.RedHerring_CheckBox.AutoSize = true;
+            this.RedHerring_CheckBox.Enabled = false;
             this.RedHerring_CheckBox.Location = new System.Drawing.Point(565, 250);
             this.RedHerring_CheckBox.Name = "RedHerring_CheckBox";
             this.RedHerring_CheckBox.Size = new System.Drawing.Size(95, 17);
@@ -378,11 +381,35 @@
             this.checkBox_OpenOutput.Text = "Open Output folder on Generate";
             this.checkBox_OpenOutput.UseVisualStyleBackColor = true;
             // 
+            // Accel_Checkbox
+            // 
+            this.Accel_Checkbox.AutoSize = true;
+            this.Accel_Checkbox.Location = new System.Drawing.Point(565, 274);
+            this.Accel_Checkbox.Name = "Accel_Checkbox";
+            this.Accel_Checkbox.Size = new System.Drawing.Size(139, 17);
+            this.Accel_Checkbox.TabIndex = 29;
+            this.Accel_Checkbox.TabStop = false;
+            this.Accel_Checkbox.Text = "Guaranteed Accelerator";
+            this.Accel_Checkbox.UseVisualStyleBackColor = true;
+            this.Accel_Checkbox.CheckedChanged += new System.EventHandler(this.Accel_Checkbox_CheckedChanged);
+            // 
+            // EnhanceFormButton
+            // 
+            this.EnhanceFormButton.Location = new System.Drawing.Point(565, 218);
+            this.EnhanceFormButton.Name = "EnhanceFormButton";
+            this.EnhanceFormButton.Size = new System.Drawing.Size(95, 23);
+            this.EnhanceFormButton.TabIndex = 30;
+            this.EnhanceFormButton.Text = "Enhancements";
+            this.EnhanceFormButton.UseVisualStyleBackColor = true;
+            this.EnhanceFormButton.Click += new System.EventHandler(this.EnhanceFormButton_Click);
+            // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EnhanceFormButton);
+            this.Controls.Add(this.Accel_Checkbox);
             this.Controls.Add(this.checkBox_OpenOutput);
             this.Controls.Add(this.RedHerring_CheckBox);
             this.Controls.Add(this.label_savewarpSum);
@@ -452,5 +479,7 @@
         private System.Windows.Forms.Label label_savewarpSum;
         private System.Windows.Forms.CheckBox RedHerring_CheckBox;
         private System.Windows.Forms.CheckBox checkBox_OpenOutput;
+        private System.Windows.Forms.CheckBox Accel_Checkbox;
+        private System.Windows.Forms.Button EnhanceFormButton;
     }
 }
