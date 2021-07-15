@@ -342,8 +342,8 @@ namespace textcopier2
         //
         private void EnhanceFormButton_Click(object sender, EventArgs e)
         {
-            UpgradesForm child = new UpgradesForm();
-            child.Show();
+            Enhancements child = new Enhancements();
+            child.ShowDialog();
             //need to add a way to make multiple of these not open.
         }
     }

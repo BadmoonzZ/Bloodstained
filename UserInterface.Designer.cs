@@ -221,9 +221,9 @@
             this.version_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.version_label.Location = new System.Drawing.Point(745, 432);
             this.version_label.Name = "version_label";
-            this.version_label.Size = new System.Drawing.Size(43, 9);
+            this.version_label.Size = new System.Drawing.Size(47, 9);
             this.version_label.TabIndex = 14;
-            this.version_label.Text = "Version 0.5";
+            this.version_label.Text = "Version 0.51";
             // 
             // QuestsComboBox
             // 
@@ -366,6 +366,7 @@
             this.RedHerring_CheckBox.TabStop = false;
             this.RedHerring_CheckBox.Text = "Nerfed Charge";
             this.RedHerring_CheckBox.UseVisualStyleBackColor = true;
+            this.RedHerring_CheckBox.Visible = false;
             this.RedHerring_CheckBox.CheckStateChanged += new System.EventHandler(this.RedHerring_CheckBox_CheckStateChanged);
             // 
             // checkBox_OpenOutput
@@ -384,6 +385,7 @@
             // Accel_Checkbox
             // 
             this.Accel_Checkbox.AutoSize = true;
+            this.Accel_Checkbox.Enabled = false;
             this.Accel_Checkbox.Location = new System.Drawing.Point(565, 274);
             this.Accel_Checkbox.Name = "Accel_Checkbox";
             this.Accel_Checkbox.Size = new System.Drawing.Size(139, 17);
@@ -391,6 +393,7 @@
             this.Accel_Checkbox.TabStop = false;
             this.Accel_Checkbox.Text = "Guaranteed Accelerator";
             this.Accel_Checkbox.UseVisualStyleBackColor = true;
+            this.Accel_Checkbox.Visible = false;
             this.Accel_Checkbox.CheckedChanged += new System.EventHandler(this.Accel_Checkbox_CheckedChanged);
             // 
             // EnhanceFormButton

@@ -36,6 +36,9 @@ namespace textcopier2
             string vanillaShardmaster = "Base\\baseshardmaster.json";
             string modshardmasterfile = "PB_DT_ShardMaster.json";
 
+            string vanillaEnemystats = "Base\\basecharacter.json";
+            string modEnemystatsfile = "PB_DT_CharacterParameterMaster.json";
+
             //create an array of strings for each line in the base files
             string[] arrLine = File.ReadAllLines(vanillafile);
             string[] crafterLine = File.ReadAllLines(vanillacraft);
@@ -44,6 +47,7 @@ namespace textcopier2
             string[] roomLine = File.ReadAllLines(vanillaroom);
             string[] UILine = File.ReadAllLines(vanillaUI);
             string[] shardmasterLine = File.ReadAllLines(vanillaShardmaster);
+            string[] enemystatsLine = File.ReadAllLines(vanillaEnemystats);
 
 
             //get a seed from the GUI, or generate one if null.
@@ -88,6 +92,7 @@ namespace textcopier2
                 fulllistofshards = fulllistofshards.OrderBy(i => rndshard.Next()).ToList();
 
                 //guarantee a movement shard to an early enemy.  (this also forces shortcut on craftwork)  //this may also remove a shard. need to check.
+                //also this just happens to modify listofenemies somehow.
                 CheckLogic.BasicEarlyShardPlacement(fulllistofshards, rndshard);
 
                 //this is a workaround to make sure none doesn't end up on a boss. it should take the first crafted shard and put it on that boss.
@@ -244,8 +249,59 @@ namespace textcopier2
                 for (int i = 0; i < ChestShuffle.seed17791IDs.Count(); i++)
                 {
                     spoilerarray.Add(SpoilerChestsList[i].ChestName + ": " + ShuffledChestsList[i].ChestId.ToString() + " " + ShuffledChestsList[i].RareItemId);
-                }//this needs to be redone.  somehow it has lik 10% failure rate on reporting...
+                }//may contain errors?
                 spoilerarray.Add(""); //white space
+
+                //
+                // INSERT FOR EARLY ACCEL
+                //
+                if (Globals.earlyAccel == true)
+                {
+                    //change first chest to also have accel
+                    ShuffledChestsList[0].CommonIngredientId = "Accelerator";
+                    ShuffledChestsList[0].CommonIngredientRate = "100.0";
+                    ShuffledChestsList[0].CommonIngredientQuantity = "1";
+
+                    spoilerarray.Add("**Early Accelerator enabled**");
+                    spoilerarray.Add("");
+                }
+                else
+                {
+                    //
+                }
+                //
+                // END EARLY ACCEL INSERT
+                //
+                //
+                // INSERT FOR EARLY WEAPON
+                //
+                if (Globals.earlyWeapon == true)
+                {
+                    //first create a list of random weapons, then shuffle it and pick one at random.
+                    List<string> starterweapons = new List<string>
+                    {
+                        "KungFuShoes" , "Knife" , "Rapier" , "ShortSword", "Mace" , "Claymore" , "Dull" , "Spear", "Awhip" , "Musketon",
+                        "IceSlewShoes" , "KongSword" , "ClockSowrd" , "LoveOfPizza" , "SwordOfTheMushroom", "SilverAndBlackSword",
+                        "StickOfMagiGirl" , "DrillWideEnd" , "IcePillarSpear", "WhipsOfLightDarkness",
+                    };
+                    //shuffle list
+                    starterweapons = starterweapons.OrderBy(i => rndshard.Next()).ToList();
+
+                    ShuffledChestsList[0].RareIngreditentId = starterweapons[0]; //in a very rare case potatoseeds will be deleted.
+                    ShuffledChestsList[0].RareIngredientRate = "100.0";
+                    ShuffledChestsList[0].RareIngreditentQuantity = "1";
+
+                    spoilerarray.Add("**Early Weapon enabled**");
+                    spoilerarray.Add(starterweapons[0]);
+                    spoilerarray.Add("");
+                }
+                else
+                {
+                    //
+                }
+                //
+                // END EARLY WEAPON INSERT
+                //
 
                 //then write to the json
                 //find the line number, the i th treasure chest, and write to the json array
@@ -253,6 +309,8 @@ namespace textcopier2
                 {
                     ChestShuffle.WriteTreasureChest(ChestShuffle.FindJsonWriteNumber(ChestShuffle.seed17791IDs[i]), ShuffledChestsList[i], arrLine);
                 }
+
+
 
 
                 flagslabel += "Cs";
@@ -568,6 +626,7 @@ namespace textcopier2
                 shardmasterLine[4530] = "      \"minGradeValue\": 11.5,";  //quarter tis ro
                 shardmasterLine[1587] = "      \"minGradeValue\": 100.0,";  //half hellhound
 
+                spoilerarray.Add("**Nerfed Charge enabled**");
                 File.WriteAllLines(modshardmasterfile, shardmasterLine);
             }
             else
@@ -583,7 +642,18 @@ namespace textcopier2
             //*
             //**********************************************************
 
-            //code
+            if (Globals.chaosDamage == true)
+            {
+
+                ChaosDamage.AllEnemies(enemystatsLine, rndshard);
+
+                spoilerarray.Add("***Chaos Damage enabled***");
+                File.WriteAllLines(modEnemystatsfile, enemystatsLine);
+            }
+            else
+            {
+                //do nothing.  maybe a log output
+            }
 
             //**********************************************************
             //*
@@ -625,7 +695,7 @@ namespace textcopier2
             //**********************************************************
 
             //takes the seed number, and the files you are modifying, then does the work to create a mod.pak file
-            GeneratePak.Generate(recordseednumber, modfile, modcraftfile, modshopfile, modquestfile, modroomfile, modUIfile, modshardmasterfile);
+            GeneratePak.Generate(recordseednumber, modfile, modcraftfile, modshopfile, modquestfile, modroomfile, modUIfile, modshardmasterfile, modEnemystatsfile);
         }
     }
 }

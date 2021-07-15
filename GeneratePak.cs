@@ -11,10 +11,11 @@ namespace textcopier2
 {
     class GeneratePak
     {
-        public static void Generate(string recordseednumber, string dropfile, string craftfile, string shopfile, string questfile, string roomsfile, string UIfile, string shardmasterfile)
+        public static void Generate(string recordseednumber, string dropfile, string craftfile, string shopfile, string questfile, string roomsfile, string UIfile, string shardmasterfile , string enemydmgfile)
         {
             //Initilize.  Create directories and remove old files.
             new FileInfo("Edits\\item\\file.txt").Directory.Create();  //this creates the directories if they don't exist.
+            new FileInfo("Edits\\enemy\\file.txt").Directory.Create();  //this creates the directories if they don't exist.
 
             //if it exists, get rid of the old .bin file.
             string desttemp = "Edits\\PB_DT_DropMaster.bin";
@@ -92,7 +93,34 @@ namespace textcopier2
                 File.Move(shardmasterfile, desttemp);
             }
 
-            
+            //*****
+            desttemp = "Edits\\enemy\\PB_DT_CharacterParameterMaster.bin";
+            if (File.Exists(desttemp))
+            {
+                File.Delete(desttemp);
+                Debug.Write("deleted bin");
+            }
+            else { Debug.Write("did NOT delete bin"); }
+
+            desttemp = "PakContents\\BloodstainedRotN\\Content\\Core\\DataTable\\enemy\\PB_DT_CharacterParameterMaster.uasset";
+            if (File.Exists(desttemp))
+            { File.Delete(desttemp);
+                Debug.Write("deleted uasset");
+            }
+            else { Debug.Write("did NOT delete uasset" ); }
+
+            desttemp = "Edits\\enemy\\" + enemydmgfile;
+            if (File.Exists(desttemp))
+            { File.Delete(desttemp);
+                Debug.Write("deleted json");
+            }
+            else { Debug.Write("did NOT delete json"); }
+
+            if (Globals.chaosDamage == true)
+            {
+                File.Move(enemydmgfile, desttemp);
+            }
+            //*******
 
             //next we want to call the batch files to start the coversion to a pak.
 
@@ -142,6 +170,14 @@ namespace textcopier2
                 if (File.Exists(desttemp))
                 { File.Delete(desttemp); }
                 File.Move(@"Edits\PB_DT_ShardMaster.bin", desttemp);
+            }
+
+            if (Globals.chaosDamage == true)
+            {
+                desttemp = @"PakContents\BloodstainedRotN\Content\Core\DataTable\enemy\PB_DT_CharacterParameterMaster.uasset";
+                if (File.Exists(desttemp))
+                { File.Delete(desttemp); }
+                File.Move(@"Edits\enemy\PB_DT_CharacterParameterMaster.bin", desttemp);
             }
 
 

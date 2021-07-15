@@ -17,6 +17,9 @@ namespace textcopier2
         public static bool shuffleQuestsOn = false;
 
         public static bool nerfCharge = false;
+        public static bool earlyAccel = false;
+        public static bool earlyWeapon = false;
+        public static bool chaosDamage = false;
 
         public static bool writeSpoilerLog = true;
 
