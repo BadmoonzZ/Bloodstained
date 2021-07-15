@@ -3,6 +3,9 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
+Updates Jul 14 2021.
+* Added Guaranteed Weapon option to the first chest.  In a rare case this will overwrite potato seeds.
+* Added Chaos damage mode which will greatly enhance damage of 10% of the regular enemies.
 ******************************
 Updates Jul 13, 2021.
 Rhava Bural will drop off Killer Barbers again.
