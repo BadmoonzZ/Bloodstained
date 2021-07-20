@@ -103,6 +103,7 @@ namespace textcopier2
             
             //need to randomize fillershards
             fillershards = fillershards.OrderBy(i => rndshard.Next()).ToList();
+            fillershards.Remove("None");
 
             for (int i = 0; i < 12; i++)
             {

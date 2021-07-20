@@ -11,12 +11,22 @@ namespace textcopier2
     public class CheckLogic
     {
         //take the first entry in earlylogicenemies (whatever it is) and assign it one of the 6 main movementshards.
+        //this takes a list of shard strings, and makes a new list of movement starhds
+        //then it creates a new list of all the enemies and a new list of the early enemies
+        //next shuffle the early enemies and list of movement shards
+        //then give whatever is the shuffled first enemy in the earlyenemies list the shuffled first movementshard
+        //next modify the list of shards strings by removing the movement shard we added to the early list to prevent duplication
+        //at this point the only change that has happened is the original full list of all shards is now missing a movement shard
+        //..
+        //now find the index of craftwork in our new enemy list & the index of whatever enemy we gave the movementshard to
+        //finally, for each enemy in the new list, assign it a shard from the inputed original shuffled shard list. with exceptions for craftwork and the move shard enemy we just found.
+        //now that the routine is over, throw away that new list? it should be gone, but magically it is somehow writing to the final file...??????
         public static void BasicEarlyShardPlacement(List<string> fulllistofshards, Random rndshard)
         {
-            List<EnemyDropTable> listofenemies = ShardRandomizer.CreateEnemyList();
+            List<EnemyDropTable> listofenemies2 = ShardRandomizer.CreateEnemyList();
 
             //Create a subset list of enemies in the early game for some base logic
-            List<EnemyDropTable> earlyenemieslist = ShardRandomizer.GenerateEarlyEnemiesList(listofenemies);
+            List<EnemyDropTable> earlyenemieslist = ShardRandomizer.GenerateEarlyEnemiesList(listofenemies2);
             //randomize the early enemies
             earlyenemieslist = earlyenemieslist.OrderBy(i => rndshard.Next()).ToList();
 
@@ -27,34 +37,38 @@ namespace textcopier2
 
             //now shuflle the movement shard list and assign one of them to whatever enemy is first in our earlyenemy list.
             mainmovementshards = mainmovementshards.OrderBy(i => rndshard.Next()).ToList();
-            earlyenemieslist[0].ShardId = mainmovementshards[0];
 
-            //also need to add in the removed shard somewhere....
+
+            //then set the early enemies shard equal to the first move shard in the randomized list.
+            earlyenemieslist[0].ShardId = mainmovementshards[0];
 
             //find the selected early shard and remove it from the list so it doesn't get placed twice.
             fulllistofshards.Remove(mainmovementshards[0]);
 
 
             //search for craftwork and find its id.
-            int indexofcraftwork = listofenemies.FindIndex(a => a.FriendlyName == "Craftwork");
+            int indexofcraftwork = listofenemies2.FindIndex(a => a.FriendlyName == "Craftwork");
             //search for the index of the enemy who has the same name as the enemy we set a move shard too
-            int indexofearlymove = listofenemies.FindIndex(a => a.FriendlyName == earlyenemieslist[0].FriendlyName);
+            int indexofearlymove = listofenemies2.FindIndex(a => a.FriendlyName == earlyenemieslist[0].FriendlyName);
+
             //write our shuffled shardlist to enemydroptable except for craftwork
-            for (int i = 0; i < listofenemies.Count(); i++)
+            for (int i = 0; i < listofenemies2.Count(); i++)
             {
                 if (i == indexofcraftwork)
                 {
-                    listofenemies[i].ShardId = "Shortcut";
+                    fulllistofshards.Add(fulllistofshards[i]);  //this adds the shard we are overwriting back to the pool
+                    listofenemies2[i].ShardId = "Shortcut";
+
                 }
                 else if (i == indexofearlymove)
                 {
-                    listofenemies[i].ShardId = mainmovementshards[0];
+                    fulllistofshards.Add(fulllistofshards[i]);  //this adds the shard we are overwriting back to the pool
+                    listofenemies2[i].ShardId = mainmovementshards[0];
 
-                    //spoilerarray.Add(listofenemies[i].FriendlyName + " " + mainmovementshards[0] + " check early move");   //ye olde spoiler log helper
                 }
                 else
                 {
-                    listofenemies[i].ShardId = fulllistofshards[i];
+                    listofenemies2[i].ShardId = fulllistofshards[i];
                 }
 
             }
@@ -127,6 +141,8 @@ namespace textcopier2
                         case 397: //tower
                         case 144: //tower
                         case 87: //gebels
+                        case 253: //carpenter
+                        case 382: //carpenter2
                             if (CheststoCheck[i].RareItemId == "Swordsman")
                             {
                                 ZImposible = true;
@@ -136,6 +152,11 @@ namespace textcopier2
                             {
                                 ZImposible = true;
                                 //poor check to make bromide also not in a zlock area.
+                            }
+                            if (CheststoCheck[i].RareItemId == "Keyofbacker1")
+                            {
+                                ZImposible = true;
+                                //no logic poor check to make sure carpenter key is not a lock
                             }
                             break;
                         case 207: //for extra safety lets make sure bomide cannot be on train too.

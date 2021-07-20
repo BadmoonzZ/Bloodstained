@@ -91,7 +91,17 @@ namespace textcopier2
                 fulllistofshards.Add("None");
                 fulllistofshards = fulllistofshards.OrderBy(i => rndshard.Next()).ToList();
 
-                //guarantee a movement shard to an early enemy.  (this also forces shortcut on craftwork)  //this may also remove a shard. need to check.
+                /*logging
+                spoilerarray.Add("*** shard checking ***");
+                for (int i = 0; i < fulllistofshards.Count(); i++)
+                {
+                    //print the current order of shards.
+                    spoilerarray.Add(fulllistofshards[i]);
+                }
+                spoilerarray.Add("");
+                */
+
+                //guarantee a movement shard to an early enemy.  (this also forces shortcut on craftwork)
                 //also this just happens to modify listofenemies somehow.
                 CheckLogic.BasicEarlyShardPlacement(fulllistofshards, rndshard);
 
@@ -186,11 +196,14 @@ namespace textcopier2
             spoilerarray.Add("");
             spoilerarray.Add("Unassigned:");
             unplacedshards.Add(revenantstoreshard);
+
+
+            spoilerarray.Add(revenantstoreshard);
             for (int i = listofenemies.Count(); i < fulllistofshards.Count() ; i++)
             {
                 unplacedshards.Add(fulllistofshards[i]);
-                if (Globals.shuffleShardsOn == true)
-                { spoilerarray.Add(fulllistofshards[i]); }
+                //if (Globals.shuffleShardsOn == true)
+                 spoilerarray.Add(fulllistofshards[i]); 
             }
             spoilerarray.Add("");
             spoilerarray.Add("");
@@ -284,10 +297,45 @@ namespace textcopier2
                         "IceSlewShoes" , "KongSword" , "ClockSowrd" , "LoveOfPizza" , "SwordOfTheMushroom", "SilverAndBlackSword",
                         "StickOfMagiGirl" , "DrillWideEnd" , "IcePillarSpear", "WhipsOfLightDarkness",
                     };
+
+                    //check for potatos
+                    if (ShuffledChestsList[0].RareIngreditentId == "SeedPotato")
+                    {
+
+                        //search for a capacity up to remove arbitrarily in the first 100 chests. change it to seeds.
+                        for (int i = 1; i < 100; i++)
+                        {
+                            if (ShuffledChestsList[i].RareItemId == "MaxBulletUP")
+                            {
+                                ShuffledChestsList[i].RareItemId = "SeedCorn";
+                                ShuffledChestsList[1].RareItemQuantity = "1";
+                                ShuffledChestsList[i].RareItemRate = "100";
+                                ShuffledChestsList[i].CommonItemId = "SeedRice";
+                                ShuffledChestsList[i].CommonItemQuantity = "1";
+                                ShuffledChestsList[i].CommonItemRate = "100";
+                                ShuffledChestsList[i].RareIngreditentId = "SeedPotato";
+                                ShuffledChestsList[i].RareIngreditentQuantity = "1";
+                                ShuffledChestsList[i].RareIngredientRate = "100";
+
+                                //then let's also blank the first chest
+                                ShuffledChestsList[0].RareItemId = "MaxBulletUP";
+                                ShuffledChestsList[0].RareItemQuantity = "1";
+                                ShuffledChestsList[0].RareItemRate = "100";
+                                ShuffledChestsList[0].CommonItemId = "None";
+                                ShuffledChestsList[0].CommonItemQuantity = "1";
+                                ShuffledChestsList[0].CommonItemRate = "100";
+
+                                i = 101;  //then end the routine so we only do this once.
+                                spoilerarray.Add("SeedPotato overwritten and moved to " + ShuffledChestsList[i].ChestName);
+                            }
+                        }
+
+                    }
+
                     //shuffle list
                     starterweapons = starterweapons.OrderBy(i => rndshard.Next()).ToList();
 
-                    ShuffledChestsList[0].RareIngreditentId = starterweapons[0]; //in a very rare case potatoseeds will be deleted.
+                    ShuffledChestsList[0].RareIngreditentId = starterweapons[0];
                     ShuffledChestsList[0].RareIngredientRate = "100.0";
                     ShuffledChestsList[0].RareIngreditentQuantity = "1";
 
@@ -309,7 +357,6 @@ namespace textcopier2
                 {
                     ChestShuffle.WriteTreasureChest(ChestShuffle.FindJsonWriteNumber(ChestShuffle.seed17791IDs[i]), ShuffledChestsList[i], arrLine);
                 }
-
 
 
 

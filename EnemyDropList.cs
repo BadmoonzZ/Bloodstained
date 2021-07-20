@@ -370,7 +370,7 @@ namespace textcopier2
             FriendlyName = "Killer Barber",
             DatatableLineNumber = 13941,
 
-            RareItemId = "WalaSoulimo",
+            RareItemId = "WalalSoulimo",
             RareItemQuantity = "1",
             RareItemRate = "4.0",
             CommonIngredientId = "SharpRazor",
@@ -1362,7 +1362,7 @@ namespace textcopier2
             FriendlyName = "Kamikaze",
             DatatableLineNumber = 15683,
 
-            RareItemId = "Tadanko",
+            RareItemId = "Tadanako",
             RareItemQuantity = "1",
             RareItemRate = "4.0",
             CommonItemId = "Silk",
