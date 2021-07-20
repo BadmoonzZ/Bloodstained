@@ -3,6 +3,14 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
+******************************
+Updates Jul 20 2021.
+* Two shards previously missing should be craftable now.
+* None shard will no longer be an input for crafting shards.
+* Log previously was missing a craftable shard.
+* Seeds chest can no longer show up as first chest if guaranteed weapon is enabled.
+* Dojigiri will drop off Kamikaze.
+
 Updates Jul 14 2021.
 * Added Guaranteed Weapon option to the first chest.  In a rare case this will overwrite potato seeds.
 * Added Chaos damage mode which will greatly enhance damage of 10% of the regular enemies.
