@@ -37,12 +37,26 @@ namespace textcopier2
             ToolTip ChaosDmgTip = new ToolTip();
             ChaosDmgTip.SetToolTip(this.ChaosDamageCheckBox, "Drastically increases the damage of 10% of regular enemies.");
 
+            if (Globals.chaosLevel == true)
+            {
+                this.EnemyLevelCheckbox.Checked = true;
+            }
+            ToolTip ChaosLevel = new ToolTip();
+            ChaosLevel.SetToolTip(this.EnemyLevelCheckbox, "Shuffle the level of all regular enemies.");
+
             if (Globals.earlyWeapon == true)
             {
                 this.WeaponsCheckbox.Checked = true;
             }
             ToolTip WeaponTip = new ToolTip();
             WeaponTip.SetToolTip(this.WeaponsCheckbox, "Places a select random weapon in the first chest.");
+
+            if (Globals.bookcasehints == true)
+            {
+                this.HintsCheckbox.Checked = true;
+            }
+            ToolTip HintsTip = new ToolTip();
+            HintsTip.SetToolTip(this.HintsCheckbox, "Adds occasionally helpful hints to the bookcases.");
 
         }
 
@@ -102,6 +116,46 @@ namespace textcopier2
         private void EnhancmentsCloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void HintsCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (HintsCheckbox.Checked == true)
+            {
+                Globals.bookcasehints = true;
+            }
+            else
+            {
+                Globals.bookcasehints = false;
+            }
+
+        }
+
+        private void EnemyLevelCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (EnemyLevelCheckbox.Checked == true)
+            {
+                Globals.chaosLevel = true;
+            }
+            else
+            {
+                Globals.chaosLevel = false;
+            }
+        }
+
+        private void InvertCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hundredCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MapRandoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

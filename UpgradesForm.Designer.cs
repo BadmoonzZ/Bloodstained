@@ -34,6 +34,11 @@
             this.RandomDebuffCheckBox = new System.Windows.Forms.CheckBox();
             this.WeaponsCheckbox = new System.Windows.Forms.CheckBox();
             this.EnhancmentsCloseButton = new System.Windows.Forms.Button();
+            this.HintsCheckbox = new System.Windows.Forms.CheckBox();
+            this.EnemyLevelCheckbox = new System.Windows.Forms.CheckBox();
+            this.InvertCheckBox = new System.Windows.Forms.CheckBox();
+            this.hundredCheckbox = new System.Windows.Forms.CheckBox();
+            this.MapRandoCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // NerfedChargeCheckBox
@@ -73,7 +78,7 @@
             // 
             this.RandomDebuffCheckBox.AutoSize = true;
             this.RandomDebuffCheckBox.Enabled = false;
-            this.RandomDebuffCheckBox.Location = new System.Drawing.Point(12, 171);
+            this.RandomDebuffCheckBox.Location = new System.Drawing.Point(12, 203);
             this.RandomDebuffCheckBox.Name = "RandomDebuffCheckBox";
             this.RandomDebuffCheckBox.Size = new System.Drawing.Size(106, 17);
             this.RandomDebuffCheckBox.TabIndex = 3;
@@ -102,11 +107,74 @@
             this.EnhancmentsCloseButton.UseVisualStyleBackColor = true;
             this.EnhancmentsCloseButton.Click += new System.EventHandler(this.EnhancmentsCloseButton_Click);
             // 
+            // HintsCheckbox
+            // 
+            this.HintsCheckbox.AutoSize = true;
+            this.HintsCheckbox.Location = new System.Drawing.Point(12, 158);
+            this.HintsCheckbox.Name = "HintsCheckbox";
+            this.HintsCheckbox.Size = new System.Drawing.Size(50, 17);
+            this.HintsCheckbox.TabIndex = 6;
+            this.HintsCheckbox.Text = "Hints";
+            this.HintsCheckbox.UseVisualStyleBackColor = true;
+            this.HintsCheckbox.CheckedChanged += new System.EventHandler(this.HintsCheckbox_CheckedChanged);
+            // 
+            // EnemyLevelCheckbox
+            // 
+            this.EnemyLevelCheckbox.AutoSize = true;
+            this.EnemyLevelCheckbox.Location = new System.Drawing.Point(12, 135);
+            this.EnemyLevelCheckbox.Name = "EnemyLevelCheckbox";
+            this.EnemyLevelCheckbox.Size = new System.Drawing.Size(143, 17);
+            this.EnemyLevelCheckbox.TabIndex = 7;
+            this.EnemyLevelCheckbox.Text = "Randomize Enemy Level";
+            this.EnemyLevelCheckbox.UseVisualStyleBackColor = true;
+            this.EnemyLevelCheckbox.CheckedChanged += new System.EventHandler(this.EnemyLevelCheckbox_CheckedChanged);
+            // 
+            // InvertCheckBox
+            // 
+            this.InvertCheckBox.AutoSize = true;
+            this.InvertCheckBox.Enabled = false;
+            this.InvertCheckBox.Location = new System.Drawing.Point(12, 226);
+            this.InvertCheckBox.Name = "InvertCheckBox";
+            this.InvertCheckBox.Size = new System.Drawing.Size(83, 17);
+            this.InvertCheckBox.TabIndex = 8;
+            this.InvertCheckBox.Text = "Invert Mode";
+            this.InvertCheckBox.UseVisualStyleBackColor = true;
+            this.InvertCheckBox.CheckedChanged += new System.EventHandler(this.InvertCheckBox_CheckedChanged);
+            // 
+            // hundredCheckbox
+            // 
+            this.hundredCheckbox.AutoSize = true;
+            this.hundredCheckbox.Enabled = false;
+            this.hundredCheckbox.Location = new System.Drawing.Point(12, 249);
+            this.hundredCheckbox.Name = "hundredCheckbox";
+            this.hundredCheckbox.Size = new System.Drawing.Size(88, 17);
+            this.hundredCheckbox.TabIndex = 9;
+            this.hundredCheckbox.Text = "100% Shards";
+            this.hundredCheckbox.UseVisualStyleBackColor = true;
+            this.hundredCheckbox.CheckedChanged += new System.EventHandler(this.hundredCheckbox_CheckedChanged);
+            // 
+            // MapRandoCheckBox
+            // 
+            this.MapRandoCheckBox.AutoSize = true;
+            this.MapRandoCheckBox.Enabled = false;
+            this.MapRandoCheckBox.Location = new System.Drawing.Point(12, 272);
+            this.MapRandoCheckBox.Name = "MapRandoCheckBox";
+            this.MapRandoCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.MapRandoCheckBox.TabIndex = 10;
+            this.MapRandoCheckBox.Text = "Doors";
+            this.MapRandoCheckBox.UseVisualStyleBackColor = true;
+            this.MapRandoCheckBox.CheckedChanged += new System.EventHandler(this.MapRandoCheckBox_CheckedChanged);
+            // 
             // Enhancements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 391);
+            this.Controls.Add(this.MapRandoCheckBox);
+            this.Controls.Add(this.hundredCheckbox);
+            this.Controls.Add(this.InvertCheckBox);
+            this.Controls.Add(this.EnemyLevelCheckbox);
+            this.Controls.Add(this.HintsCheckbox);
             this.Controls.Add(this.EnhancmentsCloseButton);
             this.Controls.Add(this.WeaponsCheckbox);
             this.Controls.Add(this.RandomDebuffCheckBox);
@@ -133,5 +201,10 @@
         private System.Windows.Forms.CheckBox RandomDebuffCheckBox;
         private System.Windows.Forms.CheckBox WeaponsCheckbox;
         private System.Windows.Forms.Button EnhancmentsCloseButton;
+        private System.Windows.Forms.CheckBox HintsCheckbox;
+        private System.Windows.Forms.CheckBox EnemyLevelCheckbox;
+        private System.Windows.Forms.CheckBox InvertCheckBox;
+        private System.Windows.Forms.CheckBox hundredCheckbox;
+        private System.Windows.Forms.CheckBox MapRandoCheckBox;
     }
 }

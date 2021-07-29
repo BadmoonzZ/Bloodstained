@@ -33,6 +33,9 @@ namespace textcopier2
             string vanillaUI = "Base\\baseUI.json";
             string modUIfile = "PBSystemStringTable.json";
 
+            string vanillaBookcase = "Base\\basebookcase.json";
+            string modBookcasefile = "PBMasterStringTable.json";
+
             string vanillaShardmaster = "Base\\baseshardmaster.json";
             string modshardmasterfile = "PB_DT_ShardMaster.json";
 
@@ -46,6 +49,7 @@ namespace textcopier2
             string[] questLine = File.ReadAllLines(vanillaquest);
             string[] roomLine = File.ReadAllLines(vanillaroom);
             string[] UILine = File.ReadAllLines(vanillaUI);
+            string[] BookcaseLine = File.ReadAllLines(vanillaBookcase);
             string[] shardmasterLine = File.ReadAllLines(vanillaShardmaster);
             string[] enemystatsLine = File.ReadAllLines(vanillaEnemystats);
 
@@ -244,25 +248,51 @@ namespace textcopier2
             //
             //*******************************************************
 
+
+            //start by getting two lists of all chests in the normal game.  One to shuffle, and another for comparison.
+            List<TreasureChest> ShuffledChestsList = new List<TreasureChest>();
+            ShuffledChestsList = ChestRandomizer.CreateChestList();
+            List<TreasureChest> SpoilerChestsList = new List<TreasureChest>();
+            SpoilerChestsList = ChestRandomizer.CreateChestList();
+
+            string bookcaseBurried = "";
+            string bookcaseUnderwater = "";
+            string bookcaseOrient = "";
+            string bookcaseShip = "";
+            string bookcaseValac = "";
+
             if (Globals.shuffleChestOn == true)
             {
-
-                //start by getting two lists of all chests in the normal game.  One to shuffle, and another for comparison.
-                List<TreasureChest> ShuffledChestsList = new List<TreasureChest>();
-                ShuffledChestsList = ChestRandomizer.CreateChestList();
-                List<TreasureChest> SpoilerChestsList = new List<TreasureChest>();
-                SpoilerChestsList = ChestRandomizer.CreateChestList();
-
-                //now check our shuffled list to see if Zangetsuto is in a dumb place and reshuffle until fixed.
+                //check our shuffled list to see if Zangetsuto is in a dumb place and reshuffle until fixed.
+                //this function also shuffles the chests.  should be separated.
                 ShuffledChestsList = CheckLogic.BasicZangetsutoPlacement(ShuffledChestsList, rndshard);
-
 
 
                 //create a spoiler. for each chest, write the base chestname then the shuffled item.
                 for (int i = 0; i < ChestShuffle.seed17791IDs.Count(); i++)
                 {
                     spoilerarray.Add(SpoilerChestsList[i].ChestName + ": " + ShuffledChestsList[i].ChestId.ToString() + " " + ShuffledChestsList[i].RareItemId);
-                }//may contain errors?
+                    if (i == 254)
+                    {
+                        bookcaseUnderwater = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 256)
+                    {
+                        bookcaseBurried = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 290)
+                    {
+                        bookcaseOrient = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 16)
+                    {
+                        bookcaseShip = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 136)
+                    {
+                        bookcaseValac = ShuffledChestsList[i].RareItemId;
+                    }
+                }
                 spoilerarray.Add(""); //white space
 
                 //
@@ -357,8 +387,6 @@ namespace textcopier2
                 {
                     ChestShuffle.WriteTreasureChest(ChestShuffle.FindJsonWriteNumber(ChestShuffle.seed17791IDs[i]), ShuffledChestsList[i], arrLine);
                 }
-
-
 
                 flagslabel += "Cs";
             }
@@ -644,7 +672,22 @@ namespace textcopier2
                 }
                 */
 
+                //craftowrk doors fix.  need to create a new entry for room m05SAN(1002)
+                /*
+                roomLine[7535] = "        \"m05SAN_014\",";
+                roomLine[7537] = "        \"m05SAN(1002)\"";
 
+                roomLine[7667] = "        \"m05SAN_012\"";
+                roomLine[7668] = "      ";
+                roomLine[7684] = "      \"OffsetX\": 705.6,";
+                roomLine[7685] = "      \"OffsetZ\": 72.0,";
+                roomLine[7690] = "        32";
+
+                roomLine[7854] = "        \"m05SAN_009\",";
+                roomLine[7855] = "        \"m05SAN(1002)\"";
+                roomLine[7871] = "      \"OffsetX\": 667.8,";
+                roomLine[7872] = "      \"OffsetZ\": 79.2,";
+                */
 
                 File.WriteAllLines(modroomfile, roomLine);
 
@@ -689,17 +732,71 @@ namespace textcopier2
             //*
             //**********************************************************
 
-            if (Globals.chaosDamage == true)
+            if (Globals.chaosDamage == true || Globals.chaosLevel == true)
             {
 
                 ChaosDamage.AllEnemies(enemystatsLine, rndshard);
 
-                spoilerarray.Add("***Chaos Damage enabled***");
+                spoilerarray.Add("");
+                if (Globals.chaosDamage == true)
+                {
+                    spoilerarray.Add("***Chaos Damage enabled***");
+                }
+                if (Globals.chaosLevel == true)
+                {
+                    spoilerarray.Add("***Enemy Levels shuffled***");
+                }
+                spoilerarray.Add("");
+
                 File.WriteAllLines(modEnemystatsfile, enemystatsLine);
             }
             else
             {
                 //do nothing.  maybe a log output
+            }
+
+            //**********************************************************
+            //*
+            //*Bookcase Hints
+            //*
+            //**********************************************************
+
+            if (Globals.bookcasehints == true)
+            {
+
+                int findeightbit = listofenemies.FindIndex(a => a.FriendlyName == "Eight Bit Overlord");
+                string eightbitshard = listofenemies[findeightbit].ShardId;
+                int findscythe = listofenemies.FindIndex(a => a.FriendlyName == "Scythe Mite");
+                string scythshard = listofenemies[findscythe].ShardId;
+                int findgrem = listofenemies.FindIndex(a => a.FriendlyName == "Gremory");
+                string gremshard = listofenemies[findgrem].ShardId;
+                int findkun = listofenemies.FindIndex(a => a.FriendlyName == "Kunekune");
+                string kuneshard = listofenemies[findkun].ShardId;
+                int findabys = listofenemies.FindIndex(a => a.FriendlyName == "Abyssal Dragon");
+                string abysshard = listofenemies[findabys].ShardId;
+                int findgaap = listofenemies.FindIndex(a => a.FriendlyName == "Gaap");
+                string gaapshard = listofenemies[findgaap].ShardId;
+                int findbm = listofenemies.FindIndex(a => a.FriendlyName == "Bomber Morte");
+                string bombshard = listofenemies[findbm].ShardId;
+                int findgc = listofenemies.FindIndex(a => a.FriendlyName == "Gussian Cannon"); //spelled wrong
+                string gcshard = listofenemies[findgc].ShardId;
+
+                /*
+                for item swaps I think it will be best to use the spoiler array.
+                more insentive to fix it.
+
+                */
+
+                Bookcase.BasicHints(BookcaseLine, rndshard, eightbitshard, scythshard, gremshard, kuneshard, abysshard, gaapshard, bombshard, gcshard, 
+                    bookcaseBurried, bookcaseUnderwater, bookcaseOrient, bookcaseShip, bookcaseValac);
+
+                spoilerarray.Add("");
+                spoilerarray.Add("!Hints enabled!");
+                File.WriteAllLines(modBookcasefile, BookcaseLine);
+            }
+            else
+            {
+                //do nothing
             }
 
             //**********************************************************
@@ -742,7 +839,7 @@ namespace textcopier2
             //**********************************************************
 
             //takes the seed number, and the files you are modifying, then does the work to create a mod.pak file
-            GeneratePak.Generate(recordseednumber, modfile, modcraftfile, modshopfile, modquestfile, modroomfile, modUIfile, modshardmasterfile, modEnemystatsfile);
+            GeneratePak.Generate(recordseednumber, modfile, modcraftfile, modshopfile, modquestfile, modroomfile, modUIfile, modshardmasterfile, modEnemystatsfile, modBookcasefile);
         }
     }
 }

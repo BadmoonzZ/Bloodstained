@@ -59,6 +59,7 @@
             this.checkBox_OpenOutput = new System.Windows.Forms.CheckBox();
             this.Accel_Checkbox = new System.Windows.Forms.CheckBox();
             this.EnhanceFormButton = new System.Windows.Forms.Button();
+            this.TournamentcheckBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Generate_Button
@@ -223,7 +224,7 @@
             this.version_label.Name = "version_label";
             this.version_label.Size = new System.Drawing.Size(47, 9);
             this.version_label.TabIndex = 14;
-            this.version_label.Text = "Version 0.52";
+            this.version_label.Text = "Version 0.55";
             // 
             // QuestsComboBox
             // 
@@ -406,11 +407,24 @@
             this.EnhanceFormButton.UseVisualStyleBackColor = true;
             this.EnhanceFormButton.Click += new System.EventHandler(this.EnhanceFormButton_Click);
             // 
+            // TournamentcheckBox1
+            // 
+            this.TournamentcheckBox1.AutoSize = true;
+            this.TournamentcheckBox1.Enabled = false;
+            this.TournamentcheckBox1.Location = new System.Drawing.Point(523, 355);
+            this.TournamentcheckBox1.Name = "TournamentcheckBox1";
+            this.TournamentcheckBox1.Size = new System.Drawing.Size(111, 17);
+            this.TournamentcheckBox1.TabIndex = 31;
+            this.TournamentcheckBox1.TabStop = false;
+            this.TournamentcheckBox1.Text = "Tournament Seed";
+            this.TournamentcheckBox1.UseVisualStyleBackColor = true;
+            // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TournamentcheckBox1);
             this.Controls.Add(this.EnhanceFormButton);
             this.Controls.Add(this.Accel_Checkbox);
             this.Controls.Add(this.checkBox_OpenOutput);
@@ -484,5 +498,6 @@
         private System.Windows.Forms.CheckBox checkBox_OpenOutput;
         private System.Windows.Forms.CheckBox Accel_Checkbox;
         private System.Windows.Forms.Button EnhanceFormButton;
+        private System.Windows.Forms.CheckBox TournamentcheckBox1;
     }
 }

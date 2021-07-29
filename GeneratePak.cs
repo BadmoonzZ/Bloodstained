@@ -11,11 +11,12 @@ namespace textcopier2
 {
     class GeneratePak
     {
-        public static void Generate(string recordseednumber, string dropfile, string craftfile, string shopfile, string questfile, string roomsfile, string UIfile, string shardmasterfile , string enemydmgfile)
+        public static void Generate(string recordseednumber, string dropfile, string craftfile, string shopfile, string questfile, string roomsfile, string UIfile, string shardmasterfile , string enemydmgfile , string hintsfile)
         {
             //Initilize.  Create directories and remove old files.
             new FileInfo("Edits\\item\\file.txt").Directory.Create();  //this creates the directories if they don't exist.
             new FileInfo("Edits\\enemy\\file.txt").Directory.Create();  //this creates the directories if they don't exist.
+            new FileInfo("Edits\\ui\\file.txt").Directory.Create();  //this creates the directories if they don't exist.
 
             //if it exists, get rid of the old .bin file.
             string desttemp = "Edits\\PB_DT_DropMaster.bin";
@@ -93,6 +94,21 @@ namespace textcopier2
                 File.Move(shardmasterfile, desttemp);
             }
 
+
+            desttemp = "Edits\\ui\\PBMasterStringTable.bin";
+            if (File.Exists(desttemp))
+            { File.Delete(desttemp); }
+            desttemp = "PakContents\\BloodstainedRotN\\Content\\L10N\\en\\Core\\StringTable\\PBMasterStringTable.uasset";
+            if (File.Exists(desttemp))
+            { File.Delete(desttemp); }
+            desttemp = "Edits\\ui\\" + hintsfile;
+            if (File.Exists(desttemp))
+            { File.Delete(desttemp); }
+            if (Globals.bookcasehints == true)
+            {
+                File.Move(hintsfile, desttemp);
+            }
+
             //*****
             desttemp = "Edits\\enemy\\PB_DT_CharacterParameterMaster.bin";
             if (File.Exists(desttemp))
@@ -116,7 +132,7 @@ namespace textcopier2
             }
             else { Debug.Write("did NOT delete json"); }
 
-            if (Globals.chaosDamage == true)
+            if (Globals.chaosDamage == true || Globals.chaosLevel == true)
             {
                 File.Move(enemydmgfile, desttemp);
             }
@@ -172,7 +188,7 @@ namespace textcopier2
                 File.Move(@"Edits\PB_DT_ShardMaster.bin", desttemp);
             }
 
-            if (Globals.chaosDamage == true)
+            if (Globals.chaosDamage == true || Globals.chaosLevel == true)
             {
                 desttemp = @"PakContents\BloodstainedRotN\Content\Core\DataTable\enemy\PB_DT_CharacterParameterMaster.uasset";
                 if (File.Exists(desttemp))
@@ -224,6 +240,27 @@ namespace textcopier2
             { File.Delete(desttemp); }
             File.Move(@"Edits\ui\PBSystemStringTable.bin", desttemp);
 
+
+            //bookcase UI
+            if (Globals.bookcasehints == true)
+            {
+                /*
+                desttemp = "Edits\\ui\\" + hintsfile;
+                if (File.Exists(desttemp))
+                { File.Delete(desttemp); }
+                File.Move(hintsfile, desttemp);*/
+
+                jsontoBin.StartInfo.FileName = "Tools\\Uasset2Json.exe";
+                jsontoBin.StartInfo.Arguments = @" -tobin .\Edits\ui\PBMasterStringTable.json";
+                jsontoBin.Start();
+                jsontoBin.WaitForExit();
+
+                desttemp = @"PakContents\BloodstainedRotN\Content\L10N\en\Core\StringTable\PBMasterStringTable.uasset";
+                if (File.Exists(desttemp))
+                { File.Delete(desttemp); }
+                File.Move(@"Edits\ui\PBMasterStringTable.bin", desttemp);
+            }
+            //
             
 
             //step 3.  run UnrealPak to create the .pak file.
