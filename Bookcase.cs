@@ -79,7 +79,7 @@ namespace textcopier2
             string ghint09 = "<span size=\\\"30\\\">Abyssal Dragon has the " + abysshard + " shard.</>";
             string ghint10 = "<span size=\\\"30\\\">Eight Bit Overlord has the " + eightbit + " shard.</>";
             string ghint11 = "<span size=\\\"30\\\">Scythe Mite has the " + scytheshard + " shard.</>";
-            string ghint12 = "<span size=\\\"30\\\">Gusian Canon has the " + gcannonshard + " shard.</>";
+            string ghint12 = "<span size=\\\"30\\\">Gusion Cannon has the " + gcannonshard + " shard.</>";
             string ghint13 = "<span size=\\\"30\\\">" + abovevalac + " can be found above Valac.</>";
 
             List<string> FakeHints = new List<string>
