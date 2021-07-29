@@ -4,6 +4,12 @@ Bloodstained Randomizer Enhancement
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
 ******************************
+Updates Jul 29 2021.
+* Bookcase hints will provide information about 25% of the time.
+* Hints use dev item names instead of localization name.
+* Randomized enemy levels mode added.
+
+******************************
 Updates Jul 20 2021.
 * Two shards previously missing should be craftable now.
 * None shard will no longer be an input for crafting shards.
