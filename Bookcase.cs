@@ -34,9 +34,9 @@ namespace textcopier2
 
             string hint01 = "Springball is behind Ridley.";
             string hint02 = "Gebel is not wearing his glasses.  They could be anywhere!";
-            string hint03 = "Eastmost peninsual has the secret.";
+            string hint03 = "Eastmost peninsula has the secret.";
             string hint04 = "I am Error.";
-            string hint05 = "A piece of heart and Hookshot can be found on the west side of Swamp palace.";
+            string hint05 = "A piece of heart and Hookshot can be found on the west side of Swamp Palace.";
             string hint06 = "Song of Storms can be found by staring into a cow ass.";
             string hint07 = "Doesn't even have accelerator?";
             string hint08 = "The times two dream!\\nThe times two dream!";
@@ -50,17 +50,17 @@ namespace textcopier2
             string hint16 = "Have you hit the shard yet?";
             string hint17 = "There are many ways to softlock on the Train.\\n\\nHave Zangetsu fall off the train.\\nFail to receive a shard from the Glutton Train.\\nHave a familiar attack Glutton Train in the final phase.\\nZangetsu sometimes will jump up and down instead of following you.";
             string hint18 = "The president can be found in Garden.";
-            string hint19 = "Many weapons in this game have a tecnique that can be used and mastered.";
+            string hint19 = "Many weapons in this game have a technique that can be used and mastered.";
             string hint20 = "Luminescent Elementals form while loitering atop bovine fauna.";
             string hint21 = "The Richter scale is a numerical expression for the magnitude of the protaganist in the Castlevania series.";
-            string hint22 = "Bookcase vaccuum occurs when you accidently or incidently press up in the vicinity of a nearby bookcase.";
+            string hint22 = "Bookcase vaccuum occurs when you accidentally or incidentally press up in the vicinity of a nearby bookcase.";
             string hint23 = "Adventurer's Tip:\\n Know your escape routes.  Sometimes one chest and a poison frog isn't worth it.";
             string hint24 = "Oishiiiiiiiiiiiiiiiiiiiiiiiiiiii\\nScrumptious!\\nHigh Ceeeeeeeeeeeeeee\\n\\nWhat's going on?\\nOh, Miriam is just eating.\\n\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee";
             string hint25 = "Mithridate!";
             string hint26 = "So what's on this card anyways?\\n\\nWait.\\nWhy is THAT there?!";
             string hint27 = "MEOW MEOW MEOW MEOW\\n  MEOW MEOW MEOW\\n    OH MY GOD";
             string hint28 = "The Bridge of Evil is neither a bridge, nor evil, nor an empire.";
-            string hint29 = "The Boots is in Ganon's Tower.\\n\\nWait.\\nShouldn't that be 'are' in Ganon's Tower.\\n\\nNope.  The Boots are progressive.  Thi is the location of only one of the boots.";
+            string hint29 = "The Boots is in Ganon's Tower.\\n\\nWait.\\nShouldn't that be 'are' in Ganon's Tower.\\n\\nNope.  The Boots are progressive.  This is the location of only one of the boots.";
             string hint30 = "Take a ride on the Chair Express.  It could elevate you to new (or maybe old) heights.";
             string hint31 = "Using Bloodsteal on Bloodless is more effective than the names imply.";
             string hint32 = "Stop giving Benjamin Waystones.  You're enabling him.";
@@ -73,7 +73,7 @@ namespace textcopier2
             string ghint03 = "<span size=\\\"30\\\">" + underbridge + " can be found under a bridge in the Oriental Sorcery Lab.</>";
             string ghint04 = "<span size=\\\"30\\\">" + highship + " can be found up high on the ship.</>";
             string ghint05 = "<span size=\\\"30\\\">Gaap has the " + gaapshard + " shard.</>";
-            string ghint06 = "<span size=\\\"30\\\">" + burriedsand + " can be found burried in the sand.</>";
+            string ghint06 = "<span size=\\\"30\\\">" + burriedsand + " can be found buried in the sand.</>";
             string ghint07 = "<span size=\\\"30\\\">Gremory has the " + gremshard + " shard.</>";
             string ghint08 = "<span size=\\\"30\\\">KuneKune has the " + kuneshard + " shard.</>";
             string ghint09 = "<span size=\\\"30\\\">Abyssal Dragon has the " + abysshard + " shard.</>";
