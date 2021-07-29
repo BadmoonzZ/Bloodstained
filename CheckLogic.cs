@@ -138,6 +138,7 @@ namespace textcopier2
                         case 517:
                         case 499:
                         case 509:
+                        case 450: //oriental bridge
                         case 397: //tower
                         case 144: //tower
                         case 87: //gebels
