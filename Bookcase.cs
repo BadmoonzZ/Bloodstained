@@ -8,9 +8,9 @@ namespace textcopier2
 {
     class Bookcase
     {
-        public static void BasicHints(string[] BookcaseLine , Random rndshard, 
-            string eightbit, string scytheshard, string gremshard, string kuneshard, string abysshard, string gaapshard, string bombshard, string gcannonshard, 
-            string burriedsand, string waterchest, string underbridge, string highship, string abovevalac)
+        public static void BasicHints(string[] BookcaseLine, Random rndshard,
+            string eightbit, string scytheshard, string gremshard, string kuneshard, string abysshard, string gaapshard, string bombshard, string gcannonshard,
+            string burriedsand, string waterchest, string waterchest2, string underbridge, string highship, string abovevalac)
         {
 
             //automate this
@@ -42,15 +42,15 @@ namespace textcopier2
             string hint08 = "The times two dream!\\nThe times two dream!";
             string hint09 = "OD is in the library.";
             string hint10 = "Did you know that reading books during a race can be considered a waste of time?";
-            string hint11 = "Did you know that there are 38 bookcases in the game.\\n\\nThere might even be more!";
+            string hint11 = "Did you know that there are 40 bookcases in the game.\\n\\nThere might even be more!";
             string hint12 = "Jass can be found in Desert";
             string hint13 = "Flame Mammoth is weak to Storm Eagle.";
-            string hint14 = "Pro Tip: Phantoon is weak to Super Missiles.";
+            string hint14 = "Pro Tip: Phantoon is weak to Super Missiles.\n\nNow you're playing with power!";
             string hint15 = "Carabosse will sing you a song if you are willing to play some piano for her.";
             string hint16 = "Have you hit the shard yet?";
             string hint17 = "There are many ways to softlock on the Train.\\n\\nHave Zangetsu fall off the train.\\nFail to receive a shard from the Glutton Train.\\nHave a familiar attack Glutton Train in the final phase.\\nZangetsu sometimes will jump up and down instead of following you.";
             string hint18 = "The president can be found in Garden.";
-            string hint19 = "Many weapons in this game have a technique that can be used and mastered.";
+            string hint19 = "Many weapons in this game have a technique that can be used and mastered.\\n\\n<image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> b a start";
             string hint20 = "Luminescent Elementals form while loitering atop bovine fauna.";
             string hint21 = "The Richter scale is a numerical expression for the magnitude of the protaganist in the Castlevania series.";
             string hint22 = "Bookcase vaccuum occurs when you accidentally or incidentally press up in the vicinity of a nearby bookcase.";
@@ -63,7 +63,7 @@ namespace textcopier2
             string hint29 = "The Boots is in Ganon's Tower.\\n\\nWait.\\nShouldn't that be 'are' in Ganon's Tower.\\n\\nNope.  The Boots are progressive.  This is the location of only one of the boots.";
             string hint30 = "Take a ride on the Chair Express.  It could elevate you to new (or maybe old) heights.";
             string hint31 = "Using Bloodsteal on Bloodless is more effective than the names imply.";
-            string hint32 = "Stop giving Benjamin Waystones.  You're enabling him.";
+            string hint32 = "Stop giving Benjamin Waystones.  You're enabling him.\n\nWaystone addiction, also called Waystone use disorder, is a disease that affects a person's brain and behavior and leads to an inability to control the use of legal or illegal waystone useage.";
             string hint33 = "Kefka can be found at the top of Kefka's Tower.";
             string hint34 = "EEEEEEEEEE... OOOOOOOOOO...\\n\\nWhat is that?\\nThe author must have died while writing this.\\nReally?\\nIf they were dying they wouldn't bother to write EEEEEEEEEE... OOOOOOOOOO..., they'd just say it.\\nPerhaps it was dictated.";
 
@@ -71,7 +71,7 @@ namespace textcopier2
             string ghint01 = "<span size=\\\"30\\\">Bomber Morte has the " + bombshard + " shard.</>";
             string ghint02 = "<span size=\\\"30\\\">" + waterchest + " can be found in an underwater locker.</>";
             string ghint03 = "<span size=\\\"30\\\">" + underbridge + " can be found under a bridge in the Oriental Sorcery Lab.</>";
-            string ghint04 = "<span size=\\\"30\\\">" + highship + " can be found up high on the ship.</>";
+            string ghint04 = "<span size=\\\"30\\\">" + highship + " can be just out of reach on the ship.</>";
             string ghint05 = "<span size=\\\"30\\\">Gaap has the " + gaapshard + " shard.</>";
             string ghint06 = "<span size=\\\"30\\\">" + burriedsand + " can be found buried in the sand.</>";
             string ghint07 = "<span size=\\\"30\\\">Gremory has the " + gremshard + " shard.</>";
@@ -81,6 +81,7 @@ namespace textcopier2
             string ghint11 = "<span size=\\\"30\\\">Scythe Mite has the " + scytheshard + " shard.</>";
             string ghint12 = "<span size=\\\"30\\\">Gusion Cannon has the " + gcannonshard + " shard.</>";
             string ghint13 = "<span size=\\\"30\\\">" + abovevalac + " can be found above Valac.</>";
+            string ghint14 = "<span size=\\\"30\\\">" + waterchest2 + " can be found in an underwater locker.</>";
 
             List<string> FakeHints = new List<string>
             {
@@ -89,7 +90,7 @@ namespace textcopier2
                 hint21, hint22, hint23, hint24, hint25, hint26, hint27, hint28, hint29, hint30,
                 hint31, hint32, hint33, hint34,
                 ghint01, ghint02, ghint03, ghint04, ghint05, ghint06, ghint07, ghint08, ghint09, ghint10,
-                ghint11, ghint12, ghint13
+                ghint11, ghint12, ghint13, ghint14
             };
             FakeHints = FakeHints.OrderBy(i => rndshard.Next()).ToList();
 
@@ -142,6 +143,9 @@ namespace textcopier2
             BookcaseLine[387] = "    \"DIARY_TXT_008_00\": \"" + FakeHints[15] + " \",";
             BookcaseLine[388] = "    \"DIARY_TXT_008_01\": \"\",";  //before gebel
 
+            BookcaseLine[410] = "    \"ARTS_TXT_004_00\": \"" + FakeHints[37] + " \",";  //before gebel 2
+            BookcaseLine[411] = "    \"ARTS_TXT_004_01\": \"\",";
+
             BookcaseLine[426] = "    \"ARTS_TXT_012_00\": \"" + FakeHints[16] + " \","; //after carrage
             BookcaseLine[427] = "    \"ARTS_TXT_012_01\": \"\",";
 
@@ -149,7 +153,7 @@ namespace textcopier2
             BookcaseLine[413] = "    \"ARTS_TXT_005_01\": \"\",";
 
             BookcaseLine[401] = "    \"DIARY_TXT_101_01\": \"" + FakeHints[18] + " \",";  //early garden
-            
+
             BookcaseLine[402] = "    \"DIARY_TXT_101_02\": \"" + FakeHints[19] + " \",";  //an unpleasant game of  is mid garden
 
             //TOWER
@@ -167,7 +171,7 @@ namespace textcopier2
 
             //LIBRE
             //there are certain doors that are opened   start of libre
-            
+
             BookcaseLine[377] = "    \"DIARY_TXT_003_00\": \"" + FakeHints[23] + " \",";  //pre andrea
             BookcaseLine[378] = "    \"DIARY_TXT_003_01\": \"\",";
 
@@ -221,6 +225,10 @@ namespace textcopier2
             //DEN
             BookcaseLine[395] = "    \"DIARY_TXT_012_00\": \"" + FakeHints[36] + " \",";  //pre valefar
             BookcaseLine[396] = "    \"DIARY_TXT_012_01\": \"\",";
+
+            BookcaseLine[397] = "    \"HELP_TXT_001_00\": \"" + FakeHints[38] + "  \",";  //tower gear
+            BookcaseLine[398] = "    \"HELP_TXT_002_00\": \"" + FakeHints[39] + "  \",";  //libre first
+
         }
     }
 }

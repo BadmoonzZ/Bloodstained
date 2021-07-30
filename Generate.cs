@@ -257,6 +257,7 @@ namespace textcopier2
 
             string bookcaseBurried = "";
             string bookcaseUnderwater = "";
+            string bookcaseUnderwater2 = "";
             string bookcaseOrient = "";
             string bookcaseShip = "";
             string bookcaseValac = "";
@@ -275,6 +276,10 @@ namespace textcopier2
                     if (i == 254)
                     {
                         bookcaseUnderwater = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 252)
+                    {
+                        bookcaseUnderwater2 = ShuffledChestsList[i].RareItemId;
                     }
                     else if (i == 256)
                     {
@@ -788,7 +793,7 @@ namespace textcopier2
                 */
 
                 Bookcase.BasicHints(BookcaseLine, rndshard, eightbitshard, scythshard, gremshard, kuneshard, abysshard, gaapshard, bombshard, gcshard, 
-                    bookcaseBurried, bookcaseUnderwater, bookcaseOrient, bookcaseShip, bookcaseValac);
+                    bookcaseBurried, bookcaseUnderwater, bookcaseUnderwater2, bookcaseOrient, bookcaseShip, bookcaseValac);
 
                 spoilerarray.Add("");
                 spoilerarray.Add("!Hints enabled!");
