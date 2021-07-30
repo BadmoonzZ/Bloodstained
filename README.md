@@ -4,6 +4,10 @@ Bloodstained Randomizer Enhancement
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
 ******************************
+Updates Jul 30 2021.
+* Minor text fixes
+
+******************************
 Updates Jul 29 2021.
 * Bookcase hints will provide information about 25% of the time.
 * Hints use dev item names instead of localization name.
