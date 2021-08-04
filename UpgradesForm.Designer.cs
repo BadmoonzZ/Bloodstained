@@ -39,6 +39,7 @@
             this.InvertCheckBox = new System.Windows.Forms.CheckBox();
             this.hundredCheckbox = new System.Windows.Forms.CheckBox();
             this.MapRandoCheckBox = new System.Windows.Forms.CheckBox();
+            this.StoopsCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // NerfedChargeCheckBox
@@ -165,11 +166,25 @@
             this.MapRandoCheckBox.UseVisualStyleBackColor = true;
             this.MapRandoCheckBox.CheckedChanged += new System.EventHandler(this.MapRandoCheckBox_CheckedChanged);
             // 
+            // StoopsCheckBox
+            // 
+            this.StoopsCheckBox.AutoSize = true;
+            this.StoopsCheckBox.Enabled = false;
+            this.StoopsCheckBox.Location = new System.Drawing.Point(12, 295);
+            this.StoopsCheckBox.Name = "StoopsCheckBox";
+            this.StoopsCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.StoopsCheckBox.TabIndex = 11;
+            this.StoopsCheckBox.TabStop = false;
+            this.StoopsCheckBox.Text = "Stoopsanity";
+            this.StoopsCheckBox.UseVisualStyleBackColor = true;
+            this.StoopsCheckBox.CheckedChanged += new System.EventHandler(this.StoopsCheckBox_CheckedChanged);
+            // 
             // Enhancements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 391);
+            this.Controls.Add(this.StoopsCheckBox);
             this.Controls.Add(this.MapRandoCheckBox);
             this.Controls.Add(this.hundredCheckbox);
             this.Controls.Add(this.InvertCheckBox);
@@ -206,5 +221,6 @@
         private System.Windows.Forms.CheckBox InvertCheckBox;
         private System.Windows.Forms.CheckBox hundredCheckbox;
         private System.Windows.Forms.CheckBox MapRandoCheckBox;
+        private System.Windows.Forms.CheckBox StoopsCheckBox;
     }
 }

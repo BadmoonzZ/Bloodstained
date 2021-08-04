@@ -521,7 +521,7 @@ namespace textcopier2
             ShardId = "EightBitFiree",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14901,
+            DatatableLineNumber = 14927,
             FriendlyName = "Eight Bit Skull",
         };
         public static EnemyDropTable EightBitOverlord = new EnemyDropTable
@@ -529,7 +529,7 @@ namespace textcopier2
             ShardId = "Nightmare8Bit",
             ShardRate = "4.0",
 
-            DatatableLineNumber = 14927,
+            DatatableLineNumber = 14901,
             FriendlyName = "Eight Bit Overlord",
         };
         public static EnemyDropTable LightElemental = new EnemyDropTable
@@ -1063,7 +1063,7 @@ namespace textcopier2
                 datatable[linenumbertowrite] = linetowrite;
 
                 //write line to spoiler
-                spoilerlog.Add( listofenemies[i].FriendlyName + " ***** " + listofenemies[i].ShardId);
+                spoilerlog.Add( listofenemies[i].FriendlyName + " ****** " + FriendlyString.Translate(listofenemies[i].ShardId));
             }
         }
 

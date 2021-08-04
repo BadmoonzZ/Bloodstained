@@ -56,6 +56,14 @@ namespace textcopier2
                 arrline[j + 14] = "      \"CommonIngredientRate\": " + listofenemies[i].CommonIngredientRate + ",";
 
                 spoilernotes.Add(listofenemies[i].FriendlyName + " - " + listofenemies[i].DatatableLineNumber); //this could be more clear.
+
+                //
+                //due to not knowing what I was going the local list of enemies is actually public
+                //because of this I cannot create another base version
+                //so either that needs to be fixed or we make this worse by just writing another check
+                //we want to take the datalinenumber and createa new lookup table because we overwrote the first one....
+                //
+
             }
             spoilernotes.Add("");//whitespace
 

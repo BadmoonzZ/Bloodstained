@@ -157,5 +157,10 @@ namespace textcopier2
         {
 
         }
+
+        private void StoopsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

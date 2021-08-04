@@ -222,9 +222,9 @@
             this.version_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.version_label.Location = new System.Drawing.Point(745, 432);
             this.version_label.Name = "version_label";
-            this.version_label.Size = new System.Drawing.Size(51, 9);
+            this.version_label.Size = new System.Drawing.Size(47, 9);
             this.version_label.TabIndex = 14;
-            this.version_label.Text = "Version 0.551";
+            this.version_label.Text = "Version 0.60";
             // 
             // QuestsComboBox
             // 

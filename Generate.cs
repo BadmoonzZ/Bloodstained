@@ -72,6 +72,17 @@ namespace textcopier2
             spoilerarray.Add(" seed number: " + recordseednumber);
             spoilerarray.Add("");
 
+            //create a new spoilerLog and make it public so it doesn't have to be passed into every single function
+            //can still be a list of strings, I assume this won't be a strain on resources
+            //need to empty the list here for rerolls
+            Bookcase.BookcaseHelper.Clear();
+
+            //create a new function called FriendlyrParse also public so any function can call it
+            //public static string FriendlyParse("acidgouche")
+            //function would take the input string and return an English friendly name
+            string vocabulary = "Base\\translate.txt";
+            string[] vv = File.ReadAllLines(vocabulary);
+            List<string> mynewlist3 = FriendlyString.CreateDatabase(vv);
 
 
             //*********************************************************
@@ -95,15 +106,6 @@ namespace textcopier2
                 fulllistofshards.Add("None");
                 fulllistofshards = fulllistofshards.OrderBy(i => rndshard.Next()).ToList();
 
-                /*logging
-                spoilerarray.Add("*** shard checking ***");
-                for (int i = 0; i < fulllistofshards.Count(); i++)
-                {
-                    //print the current order of shards.
-                    spoilerarray.Add(fulllistofshards[i]);
-                }
-                spoilerarray.Add("");
-                */
 
                 //guarantee a movement shard to an early enemy.  (this also forces shortcut on craftwork)
                 //also this just happens to modify listofenemies somehow.
@@ -207,7 +209,7 @@ namespace textcopier2
             {
                 unplacedshards.Add(fulllistofshards[i]);
                 //if (Globals.shuffleShardsOn == true)
-                 spoilerarray.Add(fulllistofshards[i]); 
+                 spoilerarray.Add(FriendlyString.Translate(fulllistofshards[i])); 
             }
             spoilerarray.Add("");
             spoilerarray.Add("");
@@ -256,10 +258,12 @@ namespace textcopier2
             SpoilerChestsList = ChestRandomizer.CreateChestList();
 
             string bookcaseBurried = "";
+            string bookcaseBurried2 = "";
             string bookcaseUnderwater = "";
             string bookcaseUnderwater2 = "";
             string bookcaseOrient = "";
             string bookcaseShip = "";
+            string bookcaseShip2 = "";
             string bookcaseValac = "";
 
             if (Globals.shuffleChestOn == true)
@@ -296,6 +300,14 @@ namespace textcopier2
                     else if (i == 136)
                     {
                         bookcaseValac = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 257)
+                    {
+                        bookcaseBurried2 = ShuffledChestsList[i].RareItemId;
+                    }
+                    else if (i == 29)
+                    {
+                        bookcaseShip2 = ShuffledChestsList[i].RareItemId;
                     }
                 }
                 spoilerarray.Add(""); //white space
@@ -789,8 +801,9 @@ namespace textcopier2
                 /*
                 for item swaps I think it will be best to use the spoiler array.
                 more insentive to fix it.
-
+                
                 */
+                spoilerarray.Contains("");
 
                 Bookcase.BasicHints(BookcaseLine, rndshard, eightbitshard, scythshard, gremshard, kuneshard, abysshard, gaapshard, bombshard, gcshard, 
                     bookcaseBurried, bookcaseUnderwater, bookcaseUnderwater2, bookcaseOrient, bookcaseShip, bookcaseValac);

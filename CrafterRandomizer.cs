@@ -155,7 +155,8 @@ namespace textcopier2
                     w.WriteLine("  },");
                     w.WriteLine("  {");
                 }
-                spoilerlog.Add(listtowrite[i] + " unlocked by: " + ingredients[i]);
+                spoilerlog.Add(FriendlyString.Translate(listtowrite[i]) + " unlocked by: " + FriendlyString.Translate(ingredients[i]));
+                Bookcase.BookcaseHelper.Add(FriendlyString.Translate(listtowrite[i]) + " unlocked by: " + FriendlyString.Translate(ingredients[i]));
             }
         }
 
@@ -280,7 +281,7 @@ namespace textcopier2
                     w.WriteLine("  {");
                 }
 
-                forspoiler.Add(i + " - " + listofitems[i] + " -Alk: " + rngalkhahest + " -- requires " + bookreq + " -- crafting costs : " +
+                forspoiler.Add(i + " - " + FriendlyString.Translate(listofitems[i]) + " -Alk: " + rngalkhahest + " -- requires " + bookreq + " -- crafting costs : " +
                 listofitems[firstingredient] + " (" + firstquantity + ") , " +
                 listofitems[secondingredient] + " (" + s2 + ") , " +
                 listofitems[thirdingredient] + " (" + s4 + ") , " +
