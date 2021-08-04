@@ -4,6 +4,12 @@ Bloodstained Randomizer Enhancement
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
 ******************************
+Updates Aug 04 2021.
+* Minor text fixes
+* Refactors for translation of dev name to in-game name.
+* Some chest hints are broken if they contain crafting materials.
+
+******************************
 Updates Jul 30 2021.
 * Minor text fixes
 
