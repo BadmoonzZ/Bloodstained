@@ -25,6 +25,7 @@ namespace textcopier2
 
         public static bool writeSpoilerLog = true;
 
+        public static bool tournyseed = false;
         public static int seednumber;
 
         public static void Initilize()

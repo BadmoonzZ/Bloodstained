@@ -14,13 +14,19 @@ namespace textcopier2
 
         public static void BasicHints(string[] BookcaseLine, Random rndshard,
             string eightbit, string scytheshard, string gremshard, string kuneshard, string abysshard, string gaapshard, string bombshard, string gcannonshard,
-            string burriedsand, string waterchest, string waterchest2, string underbridge, string highship, string abovevalac)
+            string burriedrocky, string burriedvepar, string waterchest, string clamsinkerchest, string underbridge, string shipcaptain, string shipdulla, string beforevalacchest, List<string> spoilerlog)
         {
 
             //automate this
-            if (burriedsand == "None")
+            //this has to be called in translate and needs some consitency for saying it's a chest
+            /*
+            if (burriedrocky == "None")
             {
-                burriedsand = "Some Money";
+                burriedrocky = "Some Money";
+            }
+            if (burriedvepar == "None")
+            {
+                burriedvepar = "Some Money";
             }
             if (waterchest == "None")
             {
@@ -30,11 +36,15 @@ namespace textcopier2
             {
                 underbridge = "Some Money";
             }
-            if (highship == "None")
+            if (shipcaptain == "None")
             {
-                highship = "Some Money";
+                shipcaptain = "Some Money";
             }
-
+            if (shipdulla == "None")
+            {
+                shipdulla = "Some Money";
+            }
+            */
 
             string hint01 = "Springball is behind Ridley.";
             string hint02 = "Gebel is not wearing his glasses.  They could be anywhere!";
@@ -62,7 +72,7 @@ namespace textcopier2
             string hint24 = "Oishiiiiiiiiiiiiiiiiiiiiiiiiiiii\\nScrumptious!\\nHigh Ceeeeeeeeeeeeeee\\n\\nWhat's going on?\\nOh, Miriam is just eating.\\n\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee";
             string hint25 = "Mithridate!\\n\\nMedicine for purging poison from the body.\\n\\nUseful after opening certain types of frogs.";
             string hint26 = "So what's on this card anyways?\\n\\nWait.\\nWhy is THAT there?!";
-            string hint27 = "MEOW MEOW MEOW MEOW\\n   MEOW MEOW MEOW\\n    OH MY GOD";
+            string hint27 = "  MEOW MEOW MEOW MEOW\\n     MEOW MEOW MEOW\\n        OH MY GOD";
             string hint28 = "The Bridge of Evil is neither a bridge, nor evil, nor an empire.";
             string hint29 = "The Boots is in Ganon's Tower.\\n\\nWait.\\nShouldn't that be 'are' in Ganon's Tower.\\n\\nNope.  The Boots are progressive.  This is the location of only one of the boots.";
             string hint30 = "Take a ride on the Chair Express.  It could elevate you to new (or maybe old) heights.";
@@ -76,25 +86,56 @@ namespace textcopier2
             string ghint01 = "<span size=\\\"30\\\">Bomber Morte has the " + FriendlyString.Translate(bombshard) + " shard.</>";
             string ghint02 = "<span size=\\\"30\\\">" + FriendlyString.Translate(waterchest) + " can be found in an underwater locker.</>";
             string ghint03 = "<span size=\\\"30\\\">" + FriendlyString.Translate(underbridge) + " can be found under a bridge in the Oriental Sorcery Lab.</>";
-            string ghint04 = "<span size=\\\"30\\\">" + FriendlyString.Translate(highship) + " can be just out of reach on the ship.</>";
+            string ghint04 = "<span size=\\\"30\\\">" + FriendlyString.Translate(shipcaptain) + " can be just out of reach on the ship.</>";
             string ghint05 = "<span size=\\\"30\\\">Gaap has the " + FriendlyString.Translate(gaapshard) + " shard.</>";
-            string ghint06 = "<span size=\\\"30\\\">" + FriendlyString.Translate(burriedsand) + " can be found buried in the sand.</>";
+            string ghint06 = "<span size=\\\"30\\\">" + FriendlyString.Translate(burriedrocky) + " can be found buried in the sand.</>";
             string ghint07 = "<span size=\\\"30\\\">Gremory has the " + FriendlyString.Translate(gremshard) + " shard.</>";
             string ghint08 = "<span size=\\\"30\\\">KuneKune has the " + FriendlyString.Translate(kuneshard) + " shard.</>";
             string ghint09 = "<span size=\\\"30\\\">Abyssal Dragon has the " + FriendlyString.Translate(abysshard) + " shard.</>";
             string ghint10 = "<span size=\\\"30\\\">Eight Bit Overlord has the " + FriendlyString.Translate(eightbit) + " shard.</>";
             string ghint11 = "<span size=\\\"30\\\">Scythe Mite has the " + FriendlyString.Translate(scytheshard) + " shard.</>";
             string ghint12 = "<span size=\\\"30\\\">Gusion Cannon has the " + FriendlyString.Translate(gcannonshard) + " shard.</>";
-            string ghint13 = "<span size=\\\"30\\\">" + FriendlyString.Translate(abovevalac) + " can be found above Valac.</>";
-            string ghint14 = "<span size=\\\"30\\\">" + FriendlyString.Translate(waterchest2) + " can be found in an underwater locker.</>";
-            string ghint15 = "<span size=\\\"30\\\">" + FriendlyString.Translate(highship) + " can be just out of reach on the ship.</>";
-            string ghint16 = "<span size=\\\"30\\\">" + FriendlyString.Translate(burriedsand) + " can be found buried in the sand.</>";
+            string ghint13 = "<span size=\\\"30\\\">" + FriendlyString.Translate(beforevalacchest) + " can be found above Valac.</>";
+            string ghint14 = "<span size=\\\"30\\\">" + FriendlyString.Translate(clamsinkerchest) + " can be found in an underwater locker.</>";
+            string ghint15 = "<span size=\\\"30\\\">" + FriendlyString.Translate(shipdulla) + " can be just out of reach on the ship.</>";
+            string ghint16 = "<span size=\\\"30\\\">" + FriendlyString.Translate(burriedvepar) + " can be found buried in the sand.</>";
             string ghint17 = "A shard recipe can be unlocked with some materials plus a shard.";
             if (Bookcase.BookcaseHelper.ElementAt(2) != null)
             {
                 //this will need to be improved in the future. for example the bookcase list will probably change over time.
                 ghint17 = "<span size=\\\"30\\\">A shard recipe can be unlocked with some materials plus the following transmute: " + Bookcase.BookcaseHelper[2] + ".</>";
             }
+            string ghint18 = "A shard recipe can be unlocked with some materials plus a shard.";
+            if (Bookcase.BookcaseHelper.ElementAt(4) != null)
+            {
+                ghint18 = "<span size=\\\"30\\\">A shard recipe can be unlocked with some materials plus the following transmute: " + Bookcase.BookcaseHelper[4] + ".</>";
+            }
+
+            //
+            spoilerlog.Add("");
+            spoilerlog.Add("");
+            spoilerlog.Add("**HINTS**");
+            spoilerlog.Add(ghint01);
+            spoilerlog.Add(ghint02 + " (a deepsinker chest?) - " + waterchest);
+            spoilerlog.Add(ghint03 + " - " + underbridge);
+            spoilerlog.Add(ghint04 + " (captains quarters) - " + shipcaptain);
+            spoilerlog.Add(ghint05);
+            spoilerlog.Add(ghint06 + " (by rocky) - " + burriedrocky);
+            spoilerlog.Add(ghint07);
+            spoilerlog.Add(ghint08);
+            spoilerlog.Add(ghint09);
+            spoilerlog.Add(ghint10);
+            spoilerlog.Add(ghint11);
+            spoilerlog.Add(ghint12);
+            spoilerlog.Add(ghint13);
+            spoilerlog.Add(ghint14 + " (clamsinker) - " + clamsinkerchest);
+            spoilerlog.Add(ghint15 + " (cargo hold) - " + shipdulla);
+            spoilerlog.Add(ghint16 + " (by vepar sand) - " + burriedvepar);
+            spoilerlog.Add(ghint17);
+            spoilerlog.Add(ghint18);
+            spoilerlog.Add("****");
+            spoilerlog.Add("");
+            //
 
             List<string> FakeHints = new List<string>
             {
@@ -103,19 +144,22 @@ namespace textcopier2
                 hint21, hint22, hint23, hint24, hint25, hint26, hint27, hint28, hint29, hint30,
                 hint31, hint32, hint33, hint34, hint35, hint36,
                 ghint01, ghint02, ghint03, ghint04, ghint05, ghint06, ghint07, ghint08, ghint09, ghint10,
-                ghint11, ghint12, ghint13, ghint14, ghint15, ghint16, ghint17
+                ghint11, ghint12, ghint13, ghint14, ghint15, ghint16, ghint17, ghint18
             };
             FakeHints = FakeHints.OrderBy(i => rndshard.Next()).ToList();
 
-            BookcaseLine[399] = "    \"HELP_TXT_003_00\": \"" + FakeHints[0] + " \",";  //ship
+            //SHIP
+            BookcaseLine[399] = "    \"HELP_TXT_003_00\": \"" + FakeHints[0] + " \",";  //ship1
             BookcaseLine[400] = "    \"HELP_TXT_003_01\": \"\",";
 
             BookcaseLine[428] = "    \"ARTS_TXT_013_00\": \"" + FakeHints[1] + " \",";  //ship second save
             BookcaseLine[429] = "    \"ARTS_TXT_013_01\": \"\",";
 
+            //TOWN
             BookcaseLine[406] = "    \"ARTS_TXT_002_00\": \"" + FakeHints[2] + " \",";  //halfway house
             BookcaseLine[407] = "    \"ARTS_TXT_002_01\": \"\",";
 
+            //ENTRANCE
             BookcaseLine[416] = "    \"ARTS_TXT_007_00\": \"" + FakeHints[3] + " \",";  //Forgotten bookcase
             BookcaseLine[417] = "    \"ARTS_TXT_007_01\": \"\",";
 
@@ -131,6 +175,7 @@ namespace textcopier2
             BookcaseLine[442] = "    \"ARTS_TXT_020_00\": \"" + FakeHints[7] + " \",";  //after Z1
             BookcaseLine[443] = "    \"ARTS_TXT_020_01\": \"\",";
 
+            //CATHEDRAL
             BookcaseLine[430] = "    \"ARTS_TXT_014_00\": \"" + FakeHints[8] + " \",";  //first cathedral save
             BookcaseLine[431] = "    \"ARTS_TXT_014_01\": \"\",";
 
@@ -144,21 +189,22 @@ namespace textcopier2
             BookcaseLine[448] = "    \"ARTS_TXT_023_00\": \"" + FakeHints[11] + " \",";  //cyreath orientalcathedral
             BookcaseLine[449] = "    \"ARTS_TXT_023_01\": \"\",";
 
-            BookcaseLine[393] = "    \"DIARY_TXT_011_00\": \"" + FakeHints[12] + " \",";
-            BookcaseLine[394] = "    \"DIARY_TXT_011_01\": \"\",";  //before z2
 
-            BookcaseLine[424] = "    \"ARTS_TXT_011_00\": \"" + FakeHints[13] + " \","; //pre bloodless
+
+            BookcaseLine[424] = "    \"ARTS_TXT_011_00\": \"" + FakeHints[12] + " \","; //pre bloodless
             BookcaseLine[425] = "    \"ARTS_TXT_011_01\": \"\",";
 
-            BookcaseLine[385] = "    \"DIARY_TXT_007_00\": \"" + FakeHints[14] + " \",";
+            //HALL
+            BookcaseLine[385] = "    \"DIARY_TXT_007_00\": \"" + FakeHints[13] + " \",";
             BookcaseLine[386] = "    \"DIARY_TXT_007_01\": \"\",";  //hall save
 
-            BookcaseLine[387] = "    \"DIARY_TXT_008_00\": \"" + FakeHints[15] + " \",";
+            BookcaseLine[387] = "    \"DIARY_TXT_008_00\": \"" + FakeHints[14] + " \",";
             BookcaseLine[388] = "    \"DIARY_TXT_008_01\": \"\",";  //before gebel
 
-            BookcaseLine[410] = "    \"ARTS_TXT_004_00\": \"" + FakeHints[37] + " \",";  //before gebel 2
+            BookcaseLine[410] = "    \"ARTS_TXT_004_00\": \"" + FakeHints[15] + " \",";  //before gebel 2
             BookcaseLine[411] = "    \"ARTS_TXT_004_01\": \"\",";
 
+            //GARDEN
             BookcaseLine[426] = "    \"ARTS_TXT_012_00\": \"" + FakeHints[16] + " \","; //after carrage
             BookcaseLine[427] = "    \"ARTS_TXT_012_01\": \"\",";
 
@@ -167,7 +213,7 @@ namespace textcopier2
 
             BookcaseLine[401] = "    \"DIARY_TXT_101_01\": \"" + FakeHints[18] + " \",";  //early garden
 
-            BookcaseLine[402] = "    \"DIARY_TXT_101_02\": \"" + FakeHints[19] + " \",";  //an unpleasant game of  is mid garden
+            BookcaseLine[402] = "    \"DIARY_TXT_101_02\": \"" + FakeHints[19] + " \",";  //mid garden
 
             //TOWER
 
@@ -180,65 +226,70 @@ namespace textcopier2
             BookcaseLine[434] = "    \"ARTS_TXT_016_00\": \"" + FakeHints[22] + " \",";  //before valac
             BookcaseLine[435] = "    \"ARTS_TXT_016_01\": \"\",";
 
-            //LIBRE
-            //there are certain doors that are opened   start of libre
+            BookcaseLine[397] = "    \"HELP_TXT_001_00\": \"" + FakeHints[23] + "  \",";  //tower gear
+            BookcaseLine[398] = "    \"HELP_TXT_002_00\": \"" + FakeHints[24] + "  \",";  //libre first
 
-            BookcaseLine[377] = "    \"DIARY_TXT_003_00\": \"" + FakeHints[23] + " \",";  //pre andrea
+            //LIBRE
+
+            BookcaseLine[377] = "    \"DIARY_TXT_003_00\": \"" + FakeHints[25] + " \",";  //pre andrea
             BookcaseLine[378] = "    \"DIARY_TXT_003_01\": \"\",";
 
-            BookcaseLine[436] = "    \"ARTS_TXT_017_00\": \"" + FakeHints[24] + " \",";  //jinrai  lance armor
+            BookcaseLine[436] = "    \"ARTS_TXT_017_00\": \"" + FakeHints[26] + " \",";  //jinrai  lance armor
             BookcaseLine[437] = "    \"ARTS_TXT_017_01\": \"\",";
 
-            BookcaseLine[383] = "    \"DIARY_TXT_006_00\": \"" + FakeHints[25] + " \",";  //i iy 1765 before abyssaal dragon
+            BookcaseLine[383] = "    \"DIARY_TXT_006_00\": \"" + FakeHints[27] + " \",";  //before abyssaal dragon
             BookcaseLine[384] = "    \"DIARY_TXT_006_01\": \"\",";
 
 
             //TRAIN
-            BookcaseLine[404] = "    \"ARTS_TXT_001_00\": \"" + FakeHints[26] + " \",";  //post train
+            BookcaseLine[404] = "    \"ARTS_TXT_001_00\": \"" + FakeHints[28] + " \",";  //post train
             BookcaseLine[405] = "    \"ARTS_TXT_001_01\": \"\",";
 
 
             //LAB
-            BookcaseLine[381] = "    \"DIARY_TXT_005_00\": \"" + FakeHints[27] + " \",";  //pre bathin
+            BookcaseLine[381] = "    \"DIARY_TXT_005_00\": \"" + FakeHints[29] + " \",";  //pre bathin
             BookcaseLine[382] = "    \"DIARY_TXT_005_01\": \"\",";
 
-            BookcaseLine[408] = "    \"ARTS_TXT_003_00\": \"" + FakeHints[28] + " \",";  //post bathin
+            BookcaseLine[408] = "    \"ARTS_TXT_003_00\": \"" + FakeHints[30] + " \",";  //post bathin
             BookcaseLine[409] = "    \"ARTS_TXT_003_01\": \"\",";
 
             //UNDERGROUND
-            BookcaseLine[432] = "    \"ARTS_TXT_015_00\": \"" + FakeHints[29] + " \",";  //under the well
+            BookcaseLine[432] = "    \"ARTS_TXT_015_00\": \"" + FakeHints[31] + " \",";  //under the well
             BookcaseLine[433] = "    \"ARTS_TXT_015_01\": \"\",";
 
-            BookcaseLine[422] = "    \"ARTS_TXT_010_00\": \"" + FakeHints[30] + " \",";  //first underground save
+            BookcaseLine[422] = "    \"ARTS_TXT_010_00\": \"" + FakeHints[32] + " \",";  //first underground save
             BookcaseLine[423] = "    \"ARTS_TXT_010_01\": \"\",";
 
-            BookcaseLine[440] = "    \"ARTS_TXT_019_00\": \"" + FakeHints[31] + " \",";  //shovel save
+            BookcaseLine[440] = "    \"ARTS_TXT_019_00\": \"" + FakeHints[33] + " \",";  //shovel save
             BookcaseLine[441] = "    \"ARTS_TXT_019_01\": \"\",";
 
 
             //DESERT
-            BookcaseLine[418] = "    \"ARTS_TXT_008_00\": \"" + FakeHints[32] + " \",";  //zepar algred
+            BookcaseLine[418] = "    \"ARTS_TXT_008_00\": \"" + FakeHints[34] + " \",";  //zepar algred
             BookcaseLine[419] = "    \"ARTS_TXT_008_01\": \"\",";
 
             //INFERNO
 
-            BookcaseLine[391] = "    \"DIARY_TXT_010_00\": \"" + FakeHints[33] + " \",";  //pre orobos
+            BookcaseLine[391] = "    \"DIARY_TXT_010_00\": \"" + FakeHints[35] + " \",";  //pre orobos
             BookcaseLine[392] = "    \"DIARY_TXT_010_01\": \"\",";
 
             //LAB
-            BookcaseLine[389] = "    \"DIARY_TXT_009_00\": \"" + FakeHints[34] + " \",";  //torture lab
+            BookcaseLine[389] = "    \"DIARY_TXT_009_00\": \"" + FakeHints[36] + " \",";  //torture lab
             BookcaseLine[390] = "    \"DIARY_TXT_009_01\": \"\",";
 
+            //ORIENTAL
+            BookcaseLine[393] = "    \"DIARY_TXT_011_00\": \"" + FakeHints[37] + " \",";
+            BookcaseLine[394] = "    \"DIARY_TXT_011_01\": \"\",";  //before z2
+
             //ICE
-            BookcaseLine[438] = "    \"ARTS_TXT_018_00\": \"" + FakeHints[35] + " \",";  //cresent stroke.  ice save
+            BookcaseLine[438] = "    \"ARTS_TXT_018_00\": \"" + FakeHints[38] + " \",";  //cresent stroke.  ice save
             BookcaseLine[439] = "    \"ARTS_TXT_018_01\": \"\",";
 
             //DEN
-            BookcaseLine[395] = "    \"DIARY_TXT_012_00\": \"" + FakeHints[36] + " \",";  //pre valefar
+            BookcaseLine[395] = "    \"DIARY_TXT_012_00\": \"" + FakeHints[39] + " \",";  //pre valefar
             BookcaseLine[396] = "    \"DIARY_TXT_012_01\": \"\",";
 
-            BookcaseLine[397] = "    \"HELP_TXT_001_00\": \"" + FakeHints[38] + "  \",";  //tower gear
-            BookcaseLine[398] = "    \"HELP_TXT_002_00\": \"" + FakeHints[39] + "  \",";  //libre first
+
 
         }
     }

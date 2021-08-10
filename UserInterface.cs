@@ -314,37 +314,87 @@ namespace textcopier2
         }
 
 
-        //new features!
-        private void RedHerring_CheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (RedHerring_CheckBox.Checked == true)
-            {
-                Globals.nerfCharge = true;
-            }
-            else
-            {
-                Globals.nerfCharge = false;
-            }
-        }
-
-        private void Accel_Checkbox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (Accel_Checkbox.Checked == true)
-            {
-                Globals.earlyAccel = true;
-            }
-            else
-            {
-                Globals.earlyAccel = false;
-            }
-        }
-
-        //
         private void EnhanceFormButton_Click(object sender, EventArgs e)
         {
             Enhancements child = new Enhancements();
             child.ShowDialog();
-            //need to add a way to make multiple of these not open.
+        }
+
+        private void TournamentcheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TournamentcheckBox1.Checked == true)
+            {
+                Globals.tournyseed = true;
+
+                //now enforce settings:
+
+                spoiler_checkBox.Enabled = false;
+                spoiler_checkBox.Checked = false;
+                Globals.writeSpoilerLog = false;
+
+
+                QuestsComboBox.SelectedIndex = 1;
+                Globals.shuffleQuestsOn = true;
+                QuestsComboBox.Enabled = false;
+
+                WarpsComboBox.SelectedIndex = 1;
+                Globals.shullfeSaveWarpOn = true;
+                SaveWarp.modeselection = 1;
+                WarpsComboBox.Enabled = false;  //may be extra things to check for this to reset properly
+
+                ShardComboBox.SelectedIndex = 1;
+                Globals.shuffleShardsOn = true;
+                ShardComboBox.Enabled = false;
+
+                CrafterComboBox.SelectedIndex = 1;
+                Globals.shuffleCraftOn = true;
+                CrafterComboBox.Enabled = false;
+
+                ShopComboBox.SelectedIndex = 1;
+                Globals.shuffleShopOn = true;
+                ShopComboBox.Enabled = false;
+
+                DropsComboBox.SelectedIndex = 1;
+                Globals.shuffleDropsOn = true;
+                DropsComboBox.Enabled = false;
+
+                ChestsomboBox.SelectedIndex = 1;
+                Globals.shuffleChestOn = true;
+                ChestsomboBox.Enabled = false;
+
+                //seed
+                SeedNumberTextBox.Enabled = false;
+                Globals.seednumber = 0; //this should ignore any previous input.
+
+                EnhanceFormButton.Enabled = false;
+                Globals.earlyAccel = true;
+                Globals.earlyWeapon = true;
+                Globals.bookcasehints = true;  //TBD
+
+                Globals.chaosDamage = false;  //this will not uncheck boxes, but will unset them.
+                Globals.chaosLevel = false;
+                Globals.nerfCharge = false;
+
+            }
+            else
+            {
+                Globals.tournyseed = false;
+
+                spoiler_checkBox.Enabled = true;
+
+                QuestsComboBox.Enabled = true;
+                WarpsComboBox.Enabled = true;
+                ShardComboBox.Enabled = true;
+                CrafterComboBox.Enabled = true;
+                ShopComboBox.Enabled = true;
+                DropsComboBox.Enabled = true;
+                ChestsomboBox.Enabled = true;
+
+                SeedNumberTextBox.Enabled = true;
+
+                EnhanceFormButton.Enabled = true;
+
+            }
         }
     }
 }

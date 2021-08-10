@@ -204,7 +204,7 @@ namespace textcopier2
             unplacedshards.Add(revenantstoreshard);
 
 
-            spoilerarray.Add(revenantstoreshard);
+            spoilerarray.Add(FriendlyString.Translate(revenantstoreshard));
             for (int i = listofenemies.Count(); i < fulllistofshards.Count() ; i++)
             {
                 unplacedshards.Add(fulllistofshards[i]);
@@ -260,10 +260,10 @@ namespace textcopier2
             string bookcaseBurried = "";
             string bookcaseBurried2 = "";
             string bookcaseUnderwater = "";
-            string bookcaseUnderwater2 = "";
+            string bookclamsinker = "";
             string bookcaseOrient = "";
-            string bookcaseShip = "";
-            string bookcaseShip2 = "";
+            string bookabovedullahammer = "";
+            string bookcaseShipcaptain = "";
             string bookcaseValac = "";
 
             if (Globals.shuffleChestOn == true)
@@ -276,14 +276,14 @@ namespace textcopier2
                 //create a spoiler. for each chest, write the base chestname then the shuffled item.
                 for (int i = 0; i < ChestShuffle.seed17791IDs.Count(); i++)
                 {
-                    spoilerarray.Add(SpoilerChestsList[i].ChestName + ": " + ShuffledChestsList[i].ChestId.ToString() + " " + ShuffledChestsList[i].RareItemId);
+                    spoilerarray.Add(SpoilerChestsList[i].ChestName + ": " + ShuffledChestsList[i].ChestId.ToString() + " " + FriendlyString.Translate(ShuffledChestsList[i].RareItemId));
                     if (i == 254)
                     {
                         bookcaseUnderwater = ShuffledChestsList[i].RareItemId;
                     }
                     else if (i == 252)
                     {
-                        bookcaseUnderwater2 = ShuffledChestsList[i].RareItemId;
+                        bookclamsinker = ShuffledChestsList[i].RareItemId;
                     }
                     else if (i == 256)
                     {
@@ -295,9 +295,9 @@ namespace textcopier2
                     }
                     else if (i == 16)
                     {
-                        bookcaseShip = ShuffledChestsList[i].RareItemId;
+                        bookabovedullahammer = ShuffledChestsList[i].RareItemId;
                     }
-                    else if (i == 136)
+                    else if (i == 357)//136
                     {
                         bookcaseValac = ShuffledChestsList[i].RareItemId;
                     }
@@ -305,9 +305,9 @@ namespace textcopier2
                     {
                         bookcaseBurried2 = ShuffledChestsList[i].RareItemId;
                     }
-                    else if (i == 29)
+                    else if (i == 25)
                     {
-                        bookcaseShip2 = ShuffledChestsList[i].RareItemId;
+                        bookcaseShipcaptain = ShuffledChestsList[i].RareItemId;
                     }
                 }
                 spoilerarray.Add(""); //white space
@@ -806,7 +806,7 @@ namespace textcopier2
                 spoilerarray.Contains("");
 
                 Bookcase.BasicHints(BookcaseLine, rndshard, eightbitshard, scythshard, gremshard, kuneshard, abysshard, gaapshard, bombshard, gcshard, 
-                    bookcaseBurried, bookcaseUnderwater, bookcaseUnderwater2, bookcaseOrient, bookcaseShip, bookcaseValac);
+                    bookcaseBurried, bookcaseBurried2, bookcaseUnderwater, bookclamsinker, bookcaseOrient, bookcaseShipcaptain, bookabovedullahammer, bookcaseValac, spoilerarray);
 
                 spoilerarray.Add("");
                 spoilerarray.Add("!Hints enabled!");
@@ -823,12 +823,19 @@ namespace textcopier2
             //*
             //**********************************************************
 
-            UILine[147] = "    \"SYS_SEN_Menu_RandomSeed\": \"Seed # {0}" + " Pak: " + recordseednumber + "\",";
+            string tournyprefix = "";
+            if (Globals.tournyseed == true)
+            { recordseednumber = recordseednumber.Substring(3);
+              tournyprefix = "TR";
+            }
 
-            //UILine[157] = "    \"SYS_SEN_RandomizerSelect_EnterSeed\": \"Did you enter 17791\",";
 
-            UILine[648] = "    \"TUTORIAL_START\": \"Begin a new game." + " Seed: " + recordseednumber + "\",";
-            UILine[649] = "    \"TUTORIAL_RESUME\": \"Resume this game where you left off." + " Seed: " + recordseednumber + "\",";
+            UILine[147] = "    \"SYS_SEN_Menu_RandomSeed\": \"Seed # {0}" + " Pak: " + tournyprefix + recordseednumber + "\",";
+
+            //UILine[157] = "    \"SYS_SEN_RandomizerSelect_EnterSeed\": \"Did you enter 17791\",";   //this crashes for some reason.
+
+            UILine[648] = "    \"TUTORIAL_START\": \"Begin a new game." + " Seed: " + tournyprefix + recordseednumber + "\",";
+            UILine[649] = "    \"TUTORIAL_RESUME\": \"Resume this game where you left off." + " Seed: " + tournyprefix + recordseednumber + "\",";
 
             File.WriteAllLines(modUIfile, UILine);
 

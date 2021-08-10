@@ -271,7 +271,13 @@ namespace textcopier2
             createPak.WaitForExit();
 
             //step 4.  rename the pak to identify the flags and seed number.
-            File.Move("PakContents.pak", "Output\\" + recordseednumber + "_Rando.pak");
+            string tprefix = "";  //ammend name for tourny seed
+            if (Globals.tournyseed == true)
+            {
+                tprefix = "TR";
+            }
+
+            File.Move("PakContents.pak", "Output\\" + tprefix + recordseednumber + "_Rando.pak");
         }
     }
 }

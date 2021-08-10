@@ -55,9 +55,7 @@
             this.label_loadscount = new System.Windows.Forms.Label();
             this.spoiler_checkBox = new System.Windows.Forms.CheckBox();
             this.label_savewarpSum = new System.Windows.Forms.Label();
-            this.RedHerring_CheckBox = new System.Windows.Forms.CheckBox();
             this.checkBox_OpenOutput = new System.Windows.Forms.CheckBox();
-            this.Accel_Checkbox = new System.Windows.Forms.CheckBox();
             this.EnhanceFormButton = new System.Windows.Forms.Button();
             this.TournamentcheckBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -224,7 +222,7 @@
             this.version_label.Name = "version_label";
             this.version_label.Size = new System.Drawing.Size(47, 9);
             this.version_label.TabIndex = 14;
-            this.version_label.Text = "Version 0.60";
+            this.version_label.Text = "Version 0.70";
             // 
             // QuestsComboBox
             // 
@@ -356,20 +354,6 @@
             this.label_savewarpSum.Text = "39";
             this.label_savewarpSum.Visible = false;
             // 
-            // RedHerring_CheckBox
-            // 
-            this.RedHerring_CheckBox.AutoSize = true;
-            this.RedHerring_CheckBox.Enabled = false;
-            this.RedHerring_CheckBox.Location = new System.Drawing.Point(565, 250);
-            this.RedHerring_CheckBox.Name = "RedHerring_CheckBox";
-            this.RedHerring_CheckBox.Size = new System.Drawing.Size(95, 17);
-            this.RedHerring_CheckBox.TabIndex = 27;
-            this.RedHerring_CheckBox.TabStop = false;
-            this.RedHerring_CheckBox.Text = "Nerfed Charge";
-            this.RedHerring_CheckBox.UseVisualStyleBackColor = true;
-            this.RedHerring_CheckBox.Visible = false;
-            this.RedHerring_CheckBox.CheckStateChanged += new System.EventHandler(this.RedHerring_CheckBox_CheckStateChanged);
-            // 
             // checkBox_OpenOutput
             // 
             this.checkBox_OpenOutput.AutoSize = true;
@@ -382,20 +366,6 @@
             this.checkBox_OpenOutput.TabStop = false;
             this.checkBox_OpenOutput.Text = "Open Output folder on Generate";
             this.checkBox_OpenOutput.UseVisualStyleBackColor = true;
-            // 
-            // Accel_Checkbox
-            // 
-            this.Accel_Checkbox.AutoSize = true;
-            this.Accel_Checkbox.Enabled = false;
-            this.Accel_Checkbox.Location = new System.Drawing.Point(565, 274);
-            this.Accel_Checkbox.Name = "Accel_Checkbox";
-            this.Accel_Checkbox.Size = new System.Drawing.Size(139, 17);
-            this.Accel_Checkbox.TabIndex = 29;
-            this.Accel_Checkbox.TabStop = false;
-            this.Accel_Checkbox.Text = "Guaranteed Accelerator";
-            this.Accel_Checkbox.UseVisualStyleBackColor = true;
-            this.Accel_Checkbox.Visible = false;
-            this.Accel_Checkbox.CheckedChanged += new System.EventHandler(this.Accel_Checkbox_CheckedChanged);
             // 
             // EnhanceFormButton
             // 
@@ -410,7 +380,6 @@
             // TournamentcheckBox1
             // 
             this.TournamentcheckBox1.AutoSize = true;
-            this.TournamentcheckBox1.Enabled = false;
             this.TournamentcheckBox1.Location = new System.Drawing.Point(523, 355);
             this.TournamentcheckBox1.Name = "TournamentcheckBox1";
             this.TournamentcheckBox1.Size = new System.Drawing.Size(111, 17);
@@ -418,6 +387,7 @@
             this.TournamentcheckBox1.TabStop = false;
             this.TournamentcheckBox1.Text = "Tournament Seed";
             this.TournamentcheckBox1.UseVisualStyleBackColor = true;
+            this.TournamentcheckBox1.CheckedChanged += new System.EventHandler(this.TournamentcheckBox1_CheckedChanged);
             // 
             // UserInterface
             // 
@@ -426,9 +396,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TournamentcheckBox1);
             this.Controls.Add(this.EnhanceFormButton);
-            this.Controls.Add(this.Accel_Checkbox);
             this.Controls.Add(this.checkBox_OpenOutput);
-            this.Controls.Add(this.RedHerring_CheckBox);
             this.Controls.Add(this.label_savewarpSum);
             this.Controls.Add(this.spoiler_checkBox);
             this.Controls.Add(this.label_loadscount);
@@ -494,9 +462,7 @@
         private System.Windows.Forms.Label label_loadscount;
         private System.Windows.Forms.CheckBox spoiler_checkBox;
         private System.Windows.Forms.Label label_savewarpSum;
-        private System.Windows.Forms.CheckBox RedHerring_CheckBox;
         private System.Windows.Forms.CheckBox checkBox_OpenOutput;
-        private System.Windows.Forms.CheckBox Accel_Checkbox;
         private System.Windows.Forms.Button EnhanceFormButton;
         private System.Windows.Forms.CheckBox TournamentcheckBox1;
     }
