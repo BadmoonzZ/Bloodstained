@@ -3,6 +3,14 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
+
+******************************
+Updates Aug 10 2021.
+* Tournament mode checkbox enabled.  Locks and sets settings for a tournament seed.
+* Updated some of the spoiler log to be more readable.
+* Fixed error in translating some chests contents.  Chests with only money (or garlic) will be listed as None.
+* Some of the chest hints still point to the wrong chest.
+
 ******************************
 Updates Aug 04 2021.
 * Minor text fixes
