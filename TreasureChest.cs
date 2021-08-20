@@ -37,6 +37,9 @@ namespace textcopier2
 
         public int ChestId { get; set; }
 
+        public string ShardID { get; set; }
+        public string ShardRate { get; set; }
+
         public bool RequiresZangetsuto { get; set; }
         public bool RequiresDeepSinker { get; set; }
 
@@ -66,6 +69,9 @@ namespace textcopier2
             CoinRate = "100.0";
 
             ChestId = 0;
+
+            ShardID = "None";
+            ShardRate = "0.0";
 
             RequiresZangetsuto = false;
             RequiresDeepSinker = false;

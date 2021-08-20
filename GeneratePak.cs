@@ -274,7 +274,7 @@ namespace textcopier2
             string tprefix = "";  //ammend name for tourny seed
             if (Globals.tournyseed == true)
             {
-                tprefix = "TR";
+                tprefix = "TO";
             }
 
             File.Move("PakContents.pak", "Output\\" + tprefix + recordseednumber + "_Rando.pak");

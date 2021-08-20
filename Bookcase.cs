@@ -18,8 +18,6 @@ namespace textcopier2
         {
 
             //automate this
-            //this has to be called in translate and needs some consitency for saying it's a chest
-            /*
             if (burriedrocky == "None")
             {
                 burriedrocky = "Some Money";
@@ -31,6 +29,10 @@ namespace textcopier2
             if (waterchest == "None")
             {
                 waterchest = "Some Money";
+            }
+            if (clamsinkerchest == "None")
+            {
+                clamsinkerchest = "Some Money";
             }
             if (underbridge == "None")
             {
@@ -44,47 +46,52 @@ namespace textcopier2
             {
                 shipdulla = "Some Money";
             }
-            */
+            if (beforevalacchest == "None")
+            {
+                beforevalacchest = "Some Money";
+            }
 
-            string hint01 = "Springball is behind Ridley.";
-            string hint02 = "Gebel is not wearing his glasses.  They could be anywhere!";
-            string hint03 = "Eastmost peninsula has the secret.";
-            string hint04 = "I am Error.";
-            string hint05 = "A piece of heart and Hookshot can be found on the west side of Swamp Palace.";
-            string hint06 = "Song of Storms can be found by staring into a cow ass.";
-            string hint07 = "Doesn't even have accelerator?";
-            string hint08 = "\\n\\nThe times two dream!\\n\\n\\nThe times two dream!";
-            string hint09 = "OD is in the library.";
-            string hint10 = "Did you know that reading books during a race can be considered a waste of time?";
-            string hint11 = "Did you know that there are 40 bookcases in the game.\\n\\nThere might even be more!";
-            string hint12 = "Jass can be found in Desert";
-            string hint13 = "Flame Mammoth is weak to Storm Eagle.";
-            string hint14 = "Pro Tip: Phantoon is weak to Super Missiles.\\n\\nNow you're playing with power!";
-            string hint15 = "Carabosse will sing you a song if you are willing to play some piano for her.";
-            string hint16 = "Have you hit the shard yet?";
-            string hint17 = "There are many ways to softlock on the Train.\\n\\nHave Zangetsu fall off the train.\\nFail to receive a shard from the Glutton Train.\\nHave a familiar attack Glutton Train in the final phase.\\nZangetsu sometimes will jump up and down instead of following you.";
-            string hint18 = "The president can be found in Garden.";
-            string hint19 = "Many weapons in this game have a technique that can be used and mastered.\\n\\n<image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> <span size=\\\"30\\\">B A START</>";
-            string hint20 = "Luminescent Elementals form while loitering atop bovine fauna.";
-            string hint21 = "The Richter scale is a numerical expression for the magnitude of the protaganist in the Castlevania series.";
-            string hint22 = "Bookcase vaccuum occurs when you accidentally or incidentally press up in the vicinity of a nearby bookcase.";
-            string hint23 = "Adventurer's Tip:\\n Know your escape routes.  Sometimes one chest and a poison frog isn't worth it.";
-            string hint24 = "Oishiiiiiiiiiiiiiiiiiiiiiiiiiiii\\nScrumptious!\\nHigh Ceeeeeeeeeeeeeee\\n\\nWhat's going on?\\nOh, Miriam is just eating.\\n\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee";
-            string hint25 = "Mithridate!\\n\\nMedicine for purging poison from the body.\\n\\nUseful after opening certain types of frogs.";
-            string hint26 = "So what's on this card anyways?\\n\\nWait.\\nWhy is THAT there?!";
-            string hint27 = "  MEOW MEOW MEOW MEOW\\n     MEOW MEOW MEOW\\n        OH MY GOD";
-            string hint28 = "The Bridge of Evil is neither a bridge, nor evil, nor an empire.";
-            string hint29 = "The Boots is in Ganon's Tower.\\n\\nWait.\\nShouldn't that be 'are' in Ganon's Tower.\\n\\nNope.  The Boots are progressive.  This is the location of only one of the boots.";
-            string hint30 = "Take a ride on the Chair Express.  It could elevate you to new (or maybe old) heights.";
-            string hint31 = "Using Bloodsteal on Bloodless is more effective than the names imply.";
-            string hint32 = "Stop giving Benjamin Waystones.  You're enabling him.\\n\\nWaystone addiction, also called Waystone use disorder, is a disease that affects a person's brain and behavior and leads to an inability to control the use of legal or illegal waystone useage.";
-            string hint33 = "Kefka can be found at the top of Kefka's Tower.";
-            string hint34 = "EEEEEEEEEE... OOOOOOOOOO...\\n\\nWhat is that?\\nThe author must have died while writing this.\\nReally?\\nIf they were dying they wouldn't bother to write EEEEEEEEEE... OOOOOOOOOO..., they'd just say it.\\nPerhaps it was dictated.";
-            string hint35 = "If it's on the card, put me down for:\\n\\nSpam those emotes in Wild's Chat.";
-            string hint36 = "Submit your story today!";
+            //perhaps move the css code out of the string....
+            //not sure how to get this to work.  span is the only thing it seems to recognize.  cannot combine. only one line.
+            string hint01 = "<span color=\\\"#999999\\\">Springball is behind Ridley.</>";
+            string hint02 = "<span color=\\\"#999999\\\">Gebel is not wearing his glasses.  They could be anywhere!</>";
+            string hint03 = "<span color=\\\"#999999\\\">Eastmost peninsula has the secret.</>";
+            string hint04 = "<span color=\\\"#999999\\\">I am Error.</>";
+            string hint05 = "<span color=\\\"#999999\\\">A piece of heart and Hookshot can be found on the west side of Swamp Palace.</>";
+            string hint06 = "<span color=\\\"#999999\\\">Song of Storms can be found by staring into a cow ass.</>";
+            string hint07 = "<span color=\\\"#999999\\\">Doesn't even have accelerator?</>";
+            string hint08 = "<span color=\\\"#999999\\\">\\n\\nThe times two dream!</>\\n\\n\\n<span color=\\\"#999999\\\">The times two dream!</>";
+            string hint09 = "<span color=\\\"#999999\\\">OD is in the library.</>";
+            string hint10 = "<span color=\\\"#999999\\\">Did you know that reading books during a race can be considered a waste of time?</>";
+            string hint11 = "<span color=\\\"#999999\\\">Did you know that there are 40 bookcases in the game.</>\\n\\n<span color=\\\"#999999\\\">There might even be more!</>";
+            string hint12 = "<span color=\\\"#999999\\\">Jass can be found in Desert.</>";
+            string hint13 = "<span color=\\\"#999999\\\">Flame Mammoth is weak to Storm Eagle.</>";
+            string hint14 = "<span color=\\\"#999999\\\">Pro Tip: Phantoon is weak to Super Missiles.</>\\n\\n<span color=\\\"#999999\\\">Now you're playing with power!</>";
+            string hint15 = "<span color=\\\"#999999\\\">Carabosse will sing you a song if you are willing to play some piano for her.</>";
+            string hint16 = "<span color=\\\"#999999\\\">Have you hit the shard yet?</>";
+            string hint17 = "<span color=\\\"#999999\\\">There are many ways to softlock on the Train.</>\\n\\n<span color=\\\"#999999\\\">Have Zangetsu fall off the train.</>\\n<span color=\\\"#999999\\\">Fail to receive a shard from the Glutton Train.</>\\n<span color=\\\"#999999\\\">Have a familiar attack Glutton Train in the final phase.</>\\n<span color=\\\"#999999\\\">Zangetsu sometimes will jump up and down instead of following you.</>";
+            string hint18 = "<span color=\\\"#999999\\\">The president can be found in Garden.</>";
+            string hint19 = "<span color=\\\"#999999\\\">Many weapons in this game have a technique that can be used and mastered.\\n\\n<image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> </>\\n <span size=\\\"30\\\">B A START</>";
+            string hint20 = "<span color=\\\"#999999\\\">Luminescent Elementals form while loitering atop bovine fauna.</>";
+            string hint21 = "<span color=\\\"#999999\\\">The Richter scale is a numerical expression for the magnitude of the protaganist in the Castlevania series.</>";
+            string hint22 = "<span color=\\\"#999999\\\">Bookcase vaccuum occurs when you accidentally or incidentally press up in the vicinity of a nearby bookcase.</>";
+            string hint23 = "<span color=\\\"#999999\\\">Adventurer's Tip:</>\\n<span color=\\\"#999999\\\">Know your escape routes.  Sometimes one chest and a poison frog isn't worth it.</>";
+            string hint24 = "<span color=\\\"#999999\\\">Oishiiiiiiiiiiiiiiiiiiiiiiiiiiii\\nScrumptious!\\nHigh Ceeeeeeeeeeeeeee\\n\\nWhat's going on?\\nOh, Miriam is just eating.\\n\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee</>";
+            string hint25 = "<span color=\\\"#999999\\\">Mithridate!\\n\\nMedicine for purging poison from the body.\\n\\nUseful after opening certain types of frogs.";
+            string hint26 = "<span color=\\\"#999999\\\">So what's on this card anyways?\\n\\nWait.\\nWhy is THAT there?!</>";
+            string hint27 = "<span color=\\\"#999999\\\">  MEOW MEOW MEOW MEOW</>\\n<span color=\\\"#999999\\\">     MEOW MEOW MEOW</>\\n<span color=\\\"#999999\\\">        OH MY GOD</>";
+            string hint28 = "<span color=\\\"#999999\\\">The Bridge of Evil is neither a bridge, nor evil, nor an empire.</>";
+            string hint29 = "<span color=\\\"#999999\\\">The Boots is in Ganon's Tower.</>\\n\\n<span color=\\\"#999999\\\">Wait.</>\\n<span color=\\\"#999999\\\">Shouldn't that be 'are' in Ganon's Tower.</>\\n\\n<span color=\\\"#999999\\\">Nope.  The Boots are progressive.  This is the location of only one of the boots.</>";
+            string hint30 = "<span color=\\\"#999999\\\">Take a ride on the Chair Express.  It could elevate you to new (or maybe old) heights.</>";
+            string hint31 = "<span color=\\\"#999999\\\">Using Bloodsteal on Bloodless is more effective than the names imply.</>";
+            string hint32 = "<span color=\\\"#999999\\\">Stop giving Benjamin Waystones.  You're enabling him.</>\\n\\n<span color=\\\"#999999\\\">Waystone addiction, also called Waystone use disorder, is a disease that affects a person's brain and behavior and leads to an inability to control the use of legal or illegal waystone useage.</>";
+            string hint33 = "<span color=\\\"#999999\\\">Kefka can be found at the top of Kefka's Tower.</>";
+            string hint34 = "<span color=\\\"#999999\\\">EEEEEEEEEE... OOOOOOOOOO...</>\\n\\n<span color=\\\"#999999\\\">What is that?</>\\n<span color=\\\"#999999\\\">The author must have died while writing this.</>\\n<span color=\\\"#999999\\\">Really?</>\\n<span color=\\\"#999999\\\">If they were dying they wouldn't bother to write EEEEEEEEEE... OOOOOOOOOO..., they'd just say it.</>\\n<span color=\\\"#999999\\\">Perhaps it was dictated.</>";
+            string hint35 = "<span color=\\\"#999999\\\">If it's on the card, put me down for:</>\\n\\n<span color=\\\"#999999\\\">Spam those emotes in Wild's Chat.</>";
+            string hint36 = "<span color=\\\"#999999\\\">Submit your story today!</>";
 
             string ghint01 = "<span size=\\\"30\\\">Bomber Morte has the " + FriendlyString.Translate(bombshard) + " shard.</>";
-            string ghint02 = "<span size=\\\"30\\\">" + FriendlyString.Translate(waterchest) + " can be found in an underwater locker.</>";
+            string ghint02 = "<span size=\\\"30\\\"> " + FriendlyString.Translate(waterchest) + " can be found in an underwater locker.</>";
             string ghint03 = "<span size=\\\"30\\\">" + FriendlyString.Translate(underbridge) + " can be found under a bridge in the Oriental Sorcery Lab.</>";
             string ghint04 = "<span size=\\\"30\\\">" + FriendlyString.Translate(shipcaptain) + " can be just out of reach on the ship.</>";
             string ghint05 = "<span size=\\\"30\\\">Gaap has the " + FriendlyString.Translate(gaapshard) + " shard.</>";

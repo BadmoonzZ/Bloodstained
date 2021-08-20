@@ -200,16 +200,21 @@ namespace textcopier2
             //create and write a list of everything that was not assigned
             List<string> unplacedshards = new List<string>();
             spoilerarray.Add("");
-            spoilerarray.Add("Unassigned:");
-            unplacedshards.Add(revenantstoreshard);
+            if (Globals.shuffleShardsOn == true)
+            {
+                spoilerarray.Add("Unassigned:");
 
+                unplacedshards.Add(revenantstoreshard);  //sloppy could lead to bugs later.
+                spoilerarray.Add(FriendlyString.Translate(revenantstoreshard));
+            }
 
-            spoilerarray.Add(FriendlyString.Translate(revenantstoreshard));
             for (int i = listofenemies.Count(); i < fulllistofshards.Count() ; i++)
             {
                 unplacedshards.Add(fulllistofshards[i]);
-                //if (Globals.shuffleShardsOn == true)
-                 spoilerarray.Add(FriendlyString.Translate(fulllistofshards[i])); 
+                if (Globals.shuffleShardsOn == true)
+                {
+                    spoilerarray.Add(FriendlyString.Translate(fulllistofshards[i]));
+                }
             }
             spoilerarray.Add("");
             spoilerarray.Add("");
@@ -584,6 +589,23 @@ namespace textcopier2
 
                 //also do this for shards.  First create a list and have it comprise of the unused shards plus some extra shards.
                 List<string> shardstocraft = new List<string>();
+
+                if (Globals.shuffleShardsOn == false)
+                {
+                    unplacedshards[0] = "TissRosain"; //tisro
+                    unplacedshards[1] = "FoldingTurb"; //fald taiab
+                    unplacedshards[2] = "Venomsmog"; //venom mist
+                    unplacedshards[3] = "LigaDoin"; //rigadohin
+                    unplacedshards[4] = "VaSka"; //va schia
+                    unplacedshards.Add("TepsSalenda"); //teps salendra
+                    unplacedshards.Add("GreatSwordMastery");  //greatsword
+                    unplacedshards.Add("JapanSwordMastery");  //japanswoed
+                    unplacedshards.Add("Regeneration");  //regener
+                    unplacedshards.Add("EnhancedGOLD");  //augment gold
+                    unplacedshards.Add("Resistmagic");  //resist magic
+                    unplacedshards.Add("HighJump");  //highjump
+                }
+
                 shardstocraft = CrafterRandomizer.FindCraftableShards(unplacedshards, fulllistofshards, rndshard);
 
 
@@ -787,7 +809,7 @@ namespace textcopier2
                 string scythshard = listofenemies[findscythe].ShardId;
                 int findgrem = listofenemies.FindIndex(a => a.FriendlyName == "Gremory");
                 string gremshard = listofenemies[findgrem].ShardId;
-                int findkun = listofenemies.FindIndex(a => a.FriendlyName == "Kunekune");
+                int findkun = listofenemies.FindIndex(a => a.FriendlyName == "KuneKune");
                 string kuneshard = listofenemies[findkun].ShardId;
                 int findabys = listofenemies.FindIndex(a => a.FriendlyName == "Abyssal Dragon");
                 string abysshard = listofenemies[findabys].ShardId;
@@ -795,7 +817,7 @@ namespace textcopier2
                 string gaapshard = listofenemies[findgaap].ShardId;
                 int findbm = listofenemies.FindIndex(a => a.FriendlyName == "Bomber Morte");
                 string bombshard = listofenemies[findbm].ShardId;
-                int findgc = listofenemies.FindIndex(a => a.FriendlyName == "Gussian Cannon"); //spelled wrong
+                int findgc = listofenemies.FindIndex(a => a.FriendlyName == "Gusion Cannon"); //spelled wrong
                 string gcshard = listofenemies[findgc].ShardId;
 
                 /*
@@ -826,7 +848,7 @@ namespace textcopier2
             string tournyprefix = "";
             if (Globals.tournyseed == true)
             { recordseednumber = recordseednumber.Substring(3);
-              tournyprefix = "TR";
+              tournyprefix = "TO";
             }
 
 

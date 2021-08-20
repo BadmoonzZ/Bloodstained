@@ -579,7 +579,7 @@ namespace textcopier2
 
         public static EnemyDropTable Malediction = new EnemyDropTable
         {
-            FriendlyName = "Maledtiction",
+            FriendlyName = "Malediction",
             DatatableLineNumber = 14305,
 
             RareItemId = "Halper",

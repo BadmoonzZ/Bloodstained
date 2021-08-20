@@ -364,14 +364,15 @@ namespace textcopier2
 
                 //seed
                 SeedNumberTextBox.Enabled = false;
-                Globals.seednumber = 0; //this should ignore any previous input.
+                Globals.seednumber = 0; //this should ignore any previous input...
 
                 EnhanceFormButton.Enabled = false;
                 Globals.earlyAccel = true;
                 Globals.earlyWeapon = true;
-                Globals.bookcasehints = true;  //TBD
 
-                Globals.chaosDamage = false;  //this will not uncheck boxes, but will unset them.
+                Globals.bookcasehints = false;  //TBD
+
+                Globals.chaosDamage = false;
                 Globals.chaosLevel = false;
                 Globals.nerfCharge = false;
 

@@ -386,7 +386,7 @@ namespace textcopier2
             ShardRate = "12.0",
 
             DatatableLineNumber = 14459,
-            FriendlyName = "Kunekune",
+            FriendlyName = "KuneKune",
         };
         public static EnemyDropTable PoisonToad = new EnemyDropTable
         {
@@ -426,7 +426,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 14589,
-            FriendlyName = "Gusian",
+            FriendlyName = "Puppy",
         };
         public static EnemyDropTable ChairMimic = new EnemyDropTable
         {
@@ -442,7 +442,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 14641,
-            FriendlyName = "Lierja",
+            FriendlyName = "Leraje",
         };
         public static EnemyDropTable BloodBringer = new EnemyDropTable
         {
@@ -466,7 +466,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 14719,
-            FriendlyName = "Tomoko Death",
+            FriendlyName = "Tomoko-Death",
         };
         public static EnemyDropTable TriwheelBuer = new EnemyDropTable
         {
@@ -554,7 +554,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 15005,
-            FriendlyName = "Cyreath",
+            FriendlyName = "Cyhyraeth",
         };
         public static EnemyDropTable Clam = new EnemyDropTable
         {
@@ -562,7 +562,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 15031,
-            FriendlyName = "Clam",
+            FriendlyName = "Scylla",
         };
         public static EnemyDropTable Forneus = new EnemyDropTable
         {
@@ -578,7 +578,7 @@ namespace textcopier2
             ShardRate = "10.0",
 
             DatatableLineNumber = 15083,
-            FriendlyName = "Deaseama",
+            FriendlyName = "Deeseama",
         };
         public static EnemyDropTable WaterLeaper = new EnemyDropTable
         {
@@ -594,7 +594,7 @@ namespace textcopier2
             ShardRate = "5.0",
 
             DatatableLineNumber = 15135,
-            FriendlyName = "Glyshlyn",
+            FriendlyName = "Glashtyn",
         };
         public static EnemyDropTable Seeker = new EnemyDropTable
         {
@@ -626,7 +626,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 15239,
-            FriendlyName = "Firebuer",
+            FriendlyName = "Allocer",
         };
         public static EnemyDropTable Vulsha = new EnemyDropTable
         {
@@ -650,7 +650,7 @@ namespace textcopier2
             ShardRate = "5.0",
 
             DatatableLineNumber = 15317,
-            FriendlyName = "Living Fossle",
+            FriendlyName = "Living Fossil",
         };
         public static EnemyDropTable DarkElemental = new EnemyDropTable
         {
@@ -730,7 +730,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 15577,
-            FriendlyName = "Gusian",
+            FriendlyName = "Gusion",
         };
         public static EnemyDropTable Gapp = new EnemyDropTable
         {
@@ -762,7 +762,7 @@ namespace textcopier2
             ShardRate = "5.0",
 
             DatatableLineNumber = 15681,
-            FriendlyName = "Kamikazi",
+            FriendlyName = "Kamikaze",
         };
         public static EnemyDropTable GiantMocoWeed = new EnemyDropTable
         {
@@ -874,7 +874,7 @@ namespace textcopier2
             ShardRate = "4.0",
 
             DatatableLineNumber = 16045,
-            FriendlyName = "Gussian Cannon",
+            FriendlyName = "Gusion Cannon",
         };
         public static EnemyDropTable GAxeOutsider = new EnemyDropTable
         {

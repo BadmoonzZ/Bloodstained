@@ -89,7 +89,7 @@ namespace textcopier2
         public static TreasureChest Ship_LeftTreasureRoom2 = new TreasureChest
         {
             ChestName = "Ship_LeftTreasureRoom2",
-            RareItemId = "SoftPoint",
+            RareItemId = "Softpoint",
             RareItemQuantity = "5",
             RareItemRate = "100.0",
             ChestId = 61
@@ -2129,9 +2129,10 @@ namespace textcopier2
             ChestId = 281,
             RequiresDeepSinker = true,
         };
-        public static TreasureChest UG_DemonSideroom = new TreasureChest
+        public static TreasureChest UG_DemonAboveShovelWall = new TreasureChest
         {
-            ChestName = "UG_DemonSideroom",
+            //was UG_DemonSideroom
+            ChestName = "UG_DemonAboveShovelWall",
             RareItemId = "ArmsRecipe003",
             RareItemQuantity = "1",
             RareItemRate = "100.0",
@@ -2191,25 +2192,28 @@ namespace textcopier2
             CoinRate = "100.0",
             ChestId = 287,
         };
-        public static TreasureChest UG_EasytomissRoom = new TreasureChest
+        public static TreasureChest UG_DemonRightofBigRoom = new TreasureChest
         {
-            ChestName = "UG_EasytomissRoom",
+            //was called EasytomissRoom
+            ChestName = "UG_DemonRightofBigRoom",
             RareItemId = "Walkerking",
             RareItemQuantity = "1",
             RareItemRate = "100.0",
             ChestId = 288,
         };
-        public static TreasureChest UG_PoisonToad = new TreasureChest
+        public static TreasureChest UG_AboveBigRoom = new TreasureChest
         {
-            ChestName = "UG_PoisonToad",
+            //was PoisonToad
+            ChestName = "UG_AboveBigRoom",
             RareItemId = hpup,
             RareItemQuantity = "1",
             RareItemRate = "100.0",
             ChestId = 289,
         };
-        public static TreasureChest UG_EntranceSinker = new TreasureChest
+        public static TreasureChest UG_SingleSinker = new TreasureChest
         {
-            ChestName = "UG_EntranceSinker",
+            //was EntranceSinker
+            ChestName = "UG_SingleSinker",
             RareItemId = "FriedFish",
             RareItemQuantity = "2",
             RareItemRate = "40.0",
@@ -2314,9 +2318,10 @@ namespace textcopier2
             ChestId = 308,
             RequiresDeepSinker = true,
         };
-        public static TreasureChest UG_ToadRoom = new TreasureChest
+        public static TreasureChest UG_PoisonToadRoom = new TreasureChest
         {
-            ChestName = "UG_ToadRoom",
+            //was ToadRoom
+            ChestName = "UG_PoisonToadRoom",
             RareItemId = "FriedFish",
             RareItemQuantity = "1",
             RareItemRate = "40.0",
@@ -2476,9 +2481,10 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 326,
         };
-        public static TreasureChest UG_DeepDeepSinker = new TreasureChest
+        public static TreasureChest UG_DeseemaSinker = new TreasureChest
         {
-            ChestName = "UG_DeepDeepSinker",
+            //was DeepDeepSinker
+            ChestName = "UG_DeeseemaSinker",
             RareItemId = "FriedFish",
             RareItemQuantity = "1",
             RareItemRate = "40.0",
@@ -2681,9 +2687,10 @@ namespace textcopier2
             RareItemRate = "100.0",
             ChestId = 528,
         };
-        public static TreasureChest UG_UnnamedWall = new TreasureChest
+        public static TreasureChest UG_BuerArmorWall = new TreasureChest
         {
-            ChestName = "UG_UnnamedWall",
+            //was UnnamedWall
+            ChestName = "UG_BuerArmorWall",
             RareItemId = "Transformationmask",
             RareItemQuantity = "1",
             RareItemRate = "100.0",
@@ -2705,17 +2712,19 @@ namespace textcopier2
             RareItemRate = "100.0",
             ChestId = 531,
         };
-        public static TreasureChest UG_JustWall = new TreasureChest
+        public static TreasureChest UG_WallBelowEyeballSlide = new TreasureChest
         {
-            ChestName = "UG_JustWall",
+            //was JustWall
+            ChestName = "UG_WallBelowEyeballSlide",
             RareItemId = mpup,
             RareItemQuantity = "1",
             RareItemRate = "100.0",
             ChestId = 532,
         };
-        public static TreasureChest UG_TopClamRoom = new TreasureChest
+        public static TreasureChest UG_TopClamRoomWall = new TreasureChest
         {
-            ChestName = "UG_TopClamRoom",
+            //was TopClamRoom
+            ChestName = "UG_TopClamRoomWall",
             RareItemId = "PlunderersRing",
             RareItemQuantity = "1",
             RareItemRate = "100.0",
@@ -4170,14 +4179,14 @@ namespace textcopier2
                 Hall_FirstroomWall, Hall_TitaniaWall, //21
 
                 UG_BuerSideRoom, UG_NearWaterfallWall, UG_WaterfallRight, UG_WaterfallLeft, UG_WaterfallTop, UG_BigSinkerLeft, UG_BigSinkerRight, //7
-                UG_DemonSideroom, UG_BigRoomShovel, UG_BigRoomCandle, UG_BigRoomCenterLeft, UG_BigRoomTopLeft, UG_EasytomissRoom, UG_PoisonToad, UG_EntranceSinker, //15
+                UG_DemonAboveShovelWall, UG_BigRoomShovel, UG_BigRoomCandle, UG_BigRoomCenterLeft, UG_BigRoomTopLeft, UG_DemonRightofBigRoom, UG_AboveBigRoom, UG_SingleSinker, //15
                 UG_BermudaTriangleSinkerLeft, UG_BermudaTriangleSinkerTopRight, UG_BermudaTriangleSinkerBotRight, //18
                 UG_SinkerTrioTop, UG_SinkerTrioMid, UG_SinkerTrioBottom, //21
-                UG_ToadRoom, UG_Batsman, UG_RideLeft, UG_RideRight, UG_FirstForneusSinker, UG_FirstForneusAboveWater, UG_EyeballSlideRoom, //28
+                UG_PoisonToadRoom, UG_Batsman, UG_RideLeft, UG_RideRight, UG_FirstForneusSinker, UG_FirstForneusAboveWater, UG_EyeballSlideRoom, //28
                 UG_FishPond, UG_HorseSinkerItem, UG_HorseSinkerChest, UG_WhiteShardRoom, UG_AcrossWaterfallRoom, UG_RightBottomPastWaterfall, //34
                 UG_VeryOverCat, UG_OverCatTop, UG_OverCatBottom, UG_Cat, UG_UnderCat, UG_AcrossCat, //40
-                UG_ShiftLeverWall, UG_WaterfallWall, UG_ShovelKnightWall, UG_WellEntranceWall, UG_RideWall, UG_JustWall, UG_TopClamRoom, UG_InfernoInvertWall, //48
-                UG_SmallEyeRoom, UG_DeepDeepSinker, UG_ClamTop, UG_ClamSinker, UG_UnnamedWall, //53
+                UG_ShiftLeverWall, UG_WaterfallWall, UG_ShovelKnightWall, UG_WellEntranceWall, UG_RideWall, UG_WallBelowEyeballSlide, UG_TopClamRoomWall, UG_InfernoInvertWall, //48
+                UG_SmallEyeRoom, UG_DeseemaSinker, UG_ClamTop, UG_ClamSinker, UG_BuerArmorWall, //53
 
                 Desert_DogBurried, Desert_VeparBurried, Desert_BeforeDog, Desert_VulshaPuzzle, Desert_OverAmeRight, Desert_OverAmeLeft, //6
                 Desert_Deserty, Desert_RoomBottom, Desert_RoomTop, Desert_DeadendDragon, Desert_Softlock, //11
