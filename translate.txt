@@ -1,3 +1,5 @@
+None
+None
 N3003
 Morte
 N3006
@@ -1892,3 +1894,5 @@ FamiliaSilverKnight
 Silver Knight Familiar
 FamiliaArcher
 Archer Familiar
+Some Money
+Some Money
