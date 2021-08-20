@@ -3,6 +3,15 @@ Bloodstained Randomizer Enhancement
 
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
+******************************
+Updates Aug 19 2021. - Version 0.7.2
+* Tournament mode no longer includes hints.
+* Updated fake hints to have greyed text.
+* Remapped and renamed chests in Underground for spoiler and hint accuracy.
+* Default shards plus random shop will place the missing default shards into the random shop.
+* Fixed hints refering to None instead of Money
+* Fixed a chest that was empty and not dropping SP Ammo
+* Various spoiler log improvments.
 
 ******************************
 Updates Aug 10 2021. - Version 0.70
