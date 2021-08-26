@@ -222,7 +222,7 @@
             this.version_label.Name = "version_label";
             this.version_label.Size = new System.Drawing.Size(47, 9);
             this.version_label.TabIndex = 14;
-            this.version_label.Text = "Version 0.72";
+            this.version_label.Text = "Version 0.99";
             // 
             // QuestsComboBox
             // 

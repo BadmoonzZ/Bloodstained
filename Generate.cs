@@ -178,6 +178,12 @@ namespace textcopier2
                 int rev1index = listofenemies.FindIndex(a => a.FriendlyName == "Revenant");
                 listofenemies[rev2index].ShardId = listofenemies[rev1index].ShardId;
 
+                //int millionair2index = 
+                //millionairestoredshard = 
+                //int millionair1index =
+                //listofenemies[millionair2index].ShardId = 
+                //I don't think there is a list for millionaire two...
+
 
                 //write the files
                 spoilerarray.Add("");
@@ -317,6 +323,7 @@ namespace textcopier2
                 }
                 spoilerarray.Add(""); //white space
 
+                spoilerarray.Add("[Enhancments]");
                 //
                 // INSERT FOR EARLY ACCEL
                 //
@@ -328,7 +335,6 @@ namespace textcopier2
                     ShuffledChestsList[0].CommonIngredientQuantity = "1";
 
                     spoilerarray.Add("**Early Accelerator enabled**");
-                    spoilerarray.Add("");
                 }
                 else
                 {
@@ -476,8 +482,11 @@ namespace textcopier2
                 List<string> listofitems = ItemList.GenerateItemList();
                 listofitems = listofitems.OrderBy(i => rndshard.Next()).ToList();
 
-                spoilerarray.Add(listofitems.Count.ToString());
                 spoilerarray.Add(""); //whitespace
+                spoilerarray.Add(""); //whitespace
+                spoilerarray.Add("[Crafter]");
+                //spoilerarray.Add(listofitems.Count.ToString());   //this was an old check to see how many items exist
+                //spoilerarray.Add(""); //whitespace
 
 
                 //give specific item numbers to modify

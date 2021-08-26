@@ -2760,17 +2760,17 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 351,
         };
-        public static TreasureChest Desert_VeparBurried = new TreasureChest
+        public static TreasureChest Desert_ZeparBurried = new TreasureChest
         {
-            ChestName = "Desert_VeparBurried",
+            ChestName = "Desert_ZeparBurried",
             RareItemId = "Flightcapoftraveler",
             RareItemQuantity = "1",
             RareItemRate = "100.0",
             ChestId = 352,
         };
-        public static TreasureChest Desert_BeforeDog = new TreasureChest
+        public static TreasureChest Desert_SmallStonePass = new TreasureChest
         {
-            ChestName = "Desert_BeforeDog",
+            ChestName = "Desert_SmallStonePass",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2811,9 +2811,9 @@ namespace textcopier2
             RareItemRate = "100.0",
             ChestId = 358,
         };
-        public static TreasureChest Desert_Deserty = new TreasureChest
+        public static TreasureChest Desert_LargeStonePass = new TreasureChest
         {
-            ChestName = "Desert_Deserty",
+            ChestName = "Desert_LargeStonePass",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2830,9 +2830,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 359,
         };
-        public static TreasureChest Desert_RoomBottom = new TreasureChest
+        public static TreasureChest Desert_LeftPathBottom = new TreasureChest
         {
-            ChestName = "Desert_RoomBottom",
+            ChestName = "Desert_LeftPathBottom",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2849,9 +2849,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 360,
         };
-        public static TreasureChest Desert_RoomTop = new TreasureChest
+        public static TreasureChest Desert_LeftPathTop = new TreasureChest
         {
-            ChestName = "Desert_RoomTop",
+            ChestName = "Desert_LeftPathTop",
             RareItemId = mpup,
             RareItemQuantity = "1",
             RareItemRate = "100.0",
@@ -2876,9 +2876,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 364,
         };
-        public static TreasureChest Desert_Softlock = new TreasureChest
+        public static TreasureChest Desert_SoftlockTrap = new TreasureChest
         {
-            ChestName = "Desert_Softlock",
+            ChestName = "Desert_SoftlockTrap",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2895,17 +2895,17 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 366,
         };
-        public static TreasureChest Desert_BrokenSands = new TreasureChest
+        public static TreasureChest Desert_AmySinkhole = new TreasureChest
         {
-            ChestName = "Desert_BrokenSands",
+            ChestName = "Desert_AmySinkhole",
             RareItemId = hpup,
             RareItemQuantity = "1",
             RareItemRate = "100.0",
             ChestId = 367,
         };
-        public static TreasureChest Desert_Noname1 = new TreasureChest
+        public static TreasureChest Desert_AccelDupeChest = new TreasureChest
         {
-            ChestName = "Desert_Noname1",
+            ChestName = "Desert_AccelDupeChest",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2922,9 +2922,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 368,
         };
-        public static TreasureChest Desert_Noname2 = new TreasureChest
+        public static TreasureChest Desert_Cuby = new TreasureChest
         {
-            ChestName = "Desert_Noname2",
+            ChestName = "Desert_Cuby",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2941,9 +2941,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 369,
         };
-        public static TreasureChest Desert_Sideroom = new TreasureChest
+        public static TreasureChest Desert_ChestbyWall = new TreasureChest
         {
-            ChestName = "Desert_Sideroom",
+            ChestName = "Desert_ChestbyWall",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2960,9 +2960,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 370,
         };
-        public static TreasureChest Desert_NotSoftlock = new TreasureChest
+        public static TreasureChest Desert_SoftlockBigRoom = new TreasureChest
         {
-            ChestName = "Desert_NotSoftlock",
+            ChestName = "Desert_SoftlockBigRoom",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -2979,9 +2979,9 @@ namespace textcopier2
             CoinOverride = "500",
             ChestId = 371,
         };
-        public static TreasureChest Desert_VeparVisible = new TreasureChest
+        public static TreasureChest Desert_ZeparVisible = new TreasureChest
         {
-            ChestName = "Desert_VeparVisible",
+            ChestName = "Desert_ZeparVisible",
             RareItemId = "Mithridate",
             RareItemQuantity = "1",
             RareItemRate = "50.0",
@@ -3025,9 +3025,9 @@ namespace textcopier2
             RareItemRate = "100.0",
             ChestId = 536,
         };
-        public static TreasureChest Desert_NowhereCornerWall = new TreasureChest
+        public static TreasureChest Desert_WallNearChest = new TreasureChest
         {
-            ChestName = "Desert_NowhereCornerWall",
+            ChestName = "Desert_WallNearChest",
             RareItemId = capacityup,
             RareItemQuantity = "1",
             RareItemRate = "100.0",
@@ -4188,10 +4188,10 @@ namespace textcopier2
                 UG_ShiftLeverWall, UG_WaterfallWall, UG_ShovelKnightWall, UG_WellEntranceWall, UG_RideWall, UG_WallBelowEyeballSlide, UG_TopClamRoomWall, UG_InfernoInvertWall, //48
                 UG_SmallEyeRoom, UG_DeseemaSinker, UG_ClamTop, UG_ClamSinker, UG_BuerArmorWall, //53
 
-                Desert_DogBurried, Desert_VeparBurried, Desert_BeforeDog, Desert_VulshaPuzzle, Desert_OverAmeRight, Desert_OverAmeLeft, //6
-                Desert_Deserty, Desert_RoomBottom, Desert_RoomTop, Desert_DeadendDragon, Desert_Softlock, //11
-                Desert_BrokenSands, Desert_Noname1, Desert_Noname2, Desert_Sideroom, Desert_NotSoftlock, Desert_VeparVisible, Desert_AlfredStash, //18
-                Desert_DragonWall, Desert_NowhereCornerWall, //20
+                Desert_DogBurried, Desert_ZeparBurried, Desert_SmallStonePass, Desert_VulshaPuzzle, Desert_OverAmeRight, Desert_OverAmeLeft, //6
+                Desert_LargeStonePass, Desert_LeftPathBottom, Desert_LeftPathTop, Desert_DeadendDragon, Desert_SoftlockTrap, //11
+                Desert_AmySinkhole, Desert_AccelDupeChest, Desert_Cuby, Desert_ChestbyWall, Desert_SoftlockBigRoom, Desert_ZeparVisible, Desert_AlfredStash, //18
+                Desert_DragonWall, Desert_WallNearChest, //20
 
                 Sorcery_FirstRoom, Sorcery_PoisonToads, Sorcery_ArcaneCat, Sorcery_ArcaneCandle, //4
                 Sorcery_AfterBathinTop, Sorcery_AfterBathinBottom, Sorcery_SecretFloorLeft, Sorcery_SecretFloorRight, //8

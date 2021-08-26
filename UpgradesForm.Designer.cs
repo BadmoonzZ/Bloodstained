@@ -49,6 +49,7 @@
             this.NerfedChargeCheckBox.Name = "NerfedChargeCheckBox";
             this.NerfedChargeCheckBox.Size = new System.Drawing.Size(95, 17);
             this.NerfedChargeCheckBox.TabIndex = 0;
+            this.NerfedChargeCheckBox.TabStop = false;
             this.NerfedChargeCheckBox.Text = "Nerfed Charge";
             this.NerfedChargeCheckBox.UseVisualStyleBackColor = true;
             this.NerfedChargeCheckBox.CheckedChanged += new System.EventHandler(this.NerfedChargeCheckBox_CheckedChanged);
@@ -60,6 +61,7 @@
             this.ChaosDamageCheckBox.Name = "ChaosDamageCheckBox";
             this.ChaosDamageCheckBox.Size = new System.Drawing.Size(99, 17);
             this.ChaosDamageCheckBox.TabIndex = 1;
+            this.ChaosDamageCheckBox.TabStop = false;
             this.ChaosDamageCheckBox.Text = "Chaos Damage";
             this.ChaosDamageCheckBox.UseVisualStyleBackColor = true;
             this.ChaosDamageCheckBox.CheckedChanged += new System.EventHandler(this.ChaosDamageCheckBox_CheckedChanged);
@@ -71,6 +73,7 @@
             this.AcceleratorCheckBox.Name = "AcceleratorCheckBox";
             this.AcceleratorCheckBox.Size = new System.Drawing.Size(139, 17);
             this.AcceleratorCheckBox.TabIndex = 2;
+            this.AcceleratorCheckBox.TabStop = false;
             this.AcceleratorCheckBox.Text = "Guaranteed Accelerator";
             this.AcceleratorCheckBox.UseVisualStyleBackColor = true;
             this.AcceleratorCheckBox.CheckedChanged += new System.EventHandler(this.AcceleratorCheckBox_CheckedChanged);
@@ -83,8 +86,10 @@
             this.RandomDebuffCheckBox.Name = "RandomDebuffCheckBox";
             this.RandomDebuffCheckBox.Size = new System.Drawing.Size(106, 17);
             this.RandomDebuffCheckBox.TabIndex = 3;
+            this.RandomDebuffCheckBox.TabStop = false;
             this.RandomDebuffCheckBox.Text = "Random Debuffs";
             this.RandomDebuffCheckBox.UseVisualStyleBackColor = true;
+            this.RandomDebuffCheckBox.Visible = false;
             this.RandomDebuffCheckBox.CheckedChanged += new System.EventHandler(this.RandomDebuffCheckBox_CheckedChanged);
             // 
             // WeaponsCheckbox
@@ -94,6 +99,7 @@
             this.WeaponsCheckbox.Name = "WeaponsCheckbox";
             this.WeaponsCheckbox.Size = new System.Drawing.Size(126, 17);
             this.WeaponsCheckbox.TabIndex = 4;
+            this.WeaponsCheckbox.TabStop = false;
             this.WeaponsCheckbox.Text = "Guaranteed Weapon";
             this.WeaponsCheckbox.UseVisualStyleBackColor = true;
             this.WeaponsCheckbox.CheckedChanged += new System.EventHandler(this.WeaponsCheckbox_CheckedChanged);
@@ -115,6 +121,7 @@
             this.HintsCheckbox.Name = "HintsCheckbox";
             this.HintsCheckbox.Size = new System.Drawing.Size(50, 17);
             this.HintsCheckbox.TabIndex = 6;
+            this.HintsCheckbox.TabStop = false;
             this.HintsCheckbox.Text = "Hints";
             this.HintsCheckbox.UseVisualStyleBackColor = true;
             this.HintsCheckbox.CheckedChanged += new System.EventHandler(this.HintsCheckbox_CheckedChanged);
@@ -126,6 +133,7 @@
             this.EnemyLevelCheckbox.Name = "EnemyLevelCheckbox";
             this.EnemyLevelCheckbox.Size = new System.Drawing.Size(143, 17);
             this.EnemyLevelCheckbox.TabIndex = 7;
+            this.EnemyLevelCheckbox.TabStop = false;
             this.EnemyLevelCheckbox.Text = "Randomize Enemy Level";
             this.EnemyLevelCheckbox.UseVisualStyleBackColor = true;
             this.EnemyLevelCheckbox.CheckedChanged += new System.EventHandler(this.EnemyLevelCheckbox_CheckedChanged);
@@ -138,8 +146,10 @@
             this.InvertCheckBox.Name = "InvertCheckBox";
             this.InvertCheckBox.Size = new System.Drawing.Size(83, 17);
             this.InvertCheckBox.TabIndex = 8;
+            this.InvertCheckBox.TabStop = false;
             this.InvertCheckBox.Text = "Invert Mode";
             this.InvertCheckBox.UseVisualStyleBackColor = true;
+            this.InvertCheckBox.Visible = false;
             this.InvertCheckBox.CheckedChanged += new System.EventHandler(this.InvertCheckBox_CheckedChanged);
             // 
             // hundredCheckbox
@@ -150,8 +160,10 @@
             this.hundredCheckbox.Name = "hundredCheckbox";
             this.hundredCheckbox.Size = new System.Drawing.Size(88, 17);
             this.hundredCheckbox.TabIndex = 9;
+            this.hundredCheckbox.TabStop = false;
             this.hundredCheckbox.Text = "100% Shards";
             this.hundredCheckbox.UseVisualStyleBackColor = true;
+            this.hundredCheckbox.Visible = false;
             this.hundredCheckbox.CheckedChanged += new System.EventHandler(this.hundredCheckbox_CheckedChanged);
             // 
             // MapRandoCheckBox
@@ -162,8 +174,10 @@
             this.MapRandoCheckBox.Name = "MapRandoCheckBox";
             this.MapRandoCheckBox.Size = new System.Drawing.Size(54, 17);
             this.MapRandoCheckBox.TabIndex = 10;
+            this.MapRandoCheckBox.TabStop = false;
             this.MapRandoCheckBox.Text = "Doors";
             this.MapRandoCheckBox.UseVisualStyleBackColor = true;
+            this.MapRandoCheckBox.Visible = false;
             this.MapRandoCheckBox.CheckedChanged += new System.EventHandler(this.MapRandoCheckBox_CheckedChanged);
             // 
             // StoopsCheckBox
@@ -177,6 +191,7 @@
             this.StoopsCheckBox.TabStop = false;
             this.StoopsCheckBox.Text = "Stoopsanity";
             this.StoopsCheckBox.UseVisualStyleBackColor = true;
+            this.StoopsCheckBox.Visible = false;
             this.StoopsCheckBox.CheckedChanged += new System.EventHandler(this.StoopsCheckBox_CheckedChanged);
             // 
             // Enhancements

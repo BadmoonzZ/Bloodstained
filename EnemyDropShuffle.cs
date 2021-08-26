@@ -39,6 +39,7 @@ namespace textcopier2
             //for each enemy in list of enemies
             //read the DatatableLineNumber
             //write the lines based on it.
+            spoilernotes.Add("[Drop Table Shuffle]");
             for (int i = 0; i < listofenemies.Count(); i++)
             {
                 int j = listofenemies[i].DatatableLineNumber;
@@ -55,7 +56,7 @@ namespace textcopier2
                 arrline[j + 13] = "      \"CommonIngredientQuantity\": " + listofenemies[i].CommonIngredientQuantity + ",";
                 arrline[j + 14] = "      \"CommonIngredientRate\": " + listofenemies[i].CommonIngredientRate + ",";
 
-                spoilernotes.Add(listofenemies[i].FriendlyName + " - " + listofenemies[i].DatatableLineNumber); //this could be more clear.
+                spoilernotes.Add(listofenemies[i].FriendlyName + " -----> " + FriendlyString.Translate((listofenemies[i].DatatableLineNumber).ToString())); //this could be more clear.
 
                 //
                 //due to not knowing what I was going the local list of enemies is actually public

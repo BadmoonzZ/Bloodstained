@@ -14,7 +14,7 @@ namespace textcopier2
 
         public static void BasicHints(string[] BookcaseLine, Random rndshard,
             string eightbit, string scytheshard, string gremshard, string kuneshard, string abysshard, string gaapshard, string bombshard, string gcannonshard,
-            string burriedrocky, string burriedvepar, string waterchest, string clamsinkerchest, string underbridge, string shipcaptain, string shipdulla, string beforevalacchest, List<string> spoilerlog)
+            string burriedrocky, string burriedzepar, string waterchest, string clamsinkerchest, string underbridge, string shipcaptain, string shipdulla, string beforevalacchest, List<string> spoilerlog)
         {
 
             //automate this
@@ -22,9 +22,9 @@ namespace textcopier2
             {
                 burriedrocky = "Some Money";
             }
-            if (burriedvepar == "None")
+            if (burriedzepar == "None")
             {
-                burriedvepar = "Some Money";
+                burriedzepar = "Some Money";
             }
             if (waterchest == "None")
             {
@@ -60,7 +60,7 @@ namespace textcopier2
             string hint05 = "<span color=\\\"#999999\\\">A piece of heart and Hookshot can be found on the west side of Swamp Palace.</>";
             string hint06 = "<span color=\\\"#999999\\\">Song of Storms can be found by staring into a cow ass.</>";
             string hint07 = "<span color=\\\"#999999\\\">Doesn't even have accelerator?</>";
-            string hint08 = "<span color=\\\"#999999\\\">\\n\\nThe times two dream!</>\\n\\n\\n<span color=\\\"#999999\\\">The times two dream!</>";
+            string hint08 = "<span color=\\\"#999999\\\">The times two dream!</>\\n\\n\\n<span color=\\\"#999999\\\">The times two dream!</>";
             string hint09 = "<span color=\\\"#999999\\\">OD is in the library.</>";
             string hint10 = "<span color=\\\"#999999\\\">Did you know that reading books during a race can be considered a waste of time?</>";
             string hint11 = "<span color=\\\"#999999\\\">Did you know that there are 40 bookcases in the game.</>\\n\\n<span color=\\\"#999999\\\">There might even be more!</>";
@@ -71,14 +71,14 @@ namespace textcopier2
             string hint16 = "<span color=\\\"#999999\\\">Have you hit the shard yet?</>";
             string hint17 = "<span color=\\\"#999999\\\">There are many ways to softlock on the Train.</>\\n\\n<span color=\\\"#999999\\\">Have Zangetsu fall off the train.</>\\n<span color=\\\"#999999\\\">Fail to receive a shard from the Glutton Train.</>\\n<span color=\\\"#999999\\\">Have a familiar attack Glutton Train in the final phase.</>\\n<span color=\\\"#999999\\\">Zangetsu sometimes will jump up and down instead of following you.</>";
             string hint18 = "<span color=\\\"#999999\\\">The president can be found in Garden.</>";
-            string hint19 = "<span color=\\\"#999999\\\">Many weapons in this game have a technique that can be used and mastered.\\n\\n<image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> </>\\n <span size=\\\"30\\\">B A START</>";
+            string hint19 = "<span color=\\\"#999999\\\">Many weapons in this game have a technique that can be used and mastered.</>\\n\\n<image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Up\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Down\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> <image id=\\\"Text_Command_Arrow_Left\\\"/> <image id=\\\"Text_Command_Arrow_Right\\\"/> \\n <span size=\\\"30\\\">B A START</>";
             string hint20 = "<span color=\\\"#999999\\\">Luminescent Elementals form while loitering atop bovine fauna.</>";
             string hint21 = "<span color=\\\"#999999\\\">The Richter scale is a numerical expression for the magnitude of the protaganist in the Castlevania series.</>";
             string hint22 = "<span color=\\\"#999999\\\">Bookcase vaccuum occurs when you accidentally or incidentally press up in the vicinity of a nearby bookcase.</>";
             string hint23 = "<span color=\\\"#999999\\\">Adventurer's Tip:</>\\n<span color=\\\"#999999\\\">Know your escape routes.  Sometimes one chest and a poison frog isn't worth it.</>";
             string hint24 = "<span color=\\\"#999999\\\">Oishiiiiiiiiiiiiiiiiiiiiiiiiiiii\\nScrumptious!\\nHigh Ceeeeeeeeeeeeeee\\n\\nWhat's going on?\\nOh, Miriam is just eating.\\n\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee\\nHigh Ceeeeeeeeeeeeeee</>";
             string hint25 = "<span color=\\\"#999999\\\">Mithridate!\\n\\nMedicine for purging poison from the body.\\n\\nUseful after opening certain types of frogs.";
-            string hint26 = "<span color=\\\"#999999\\\">So what's on this card anyways?\\n\\nWait.\\nWhy is THAT there?!</>";
+            string hint26 = "<span color=\\\"#999999\\\">So what's on this card anyways?  Wait.  Why is THAT there?!</>";
             string hint27 = "<span color=\\\"#999999\\\">  MEOW MEOW MEOW MEOW</>\\n<span color=\\\"#999999\\\">     MEOW MEOW MEOW</>\\n<span color=\\\"#999999\\\">        OH MY GOD</>";
             string hint28 = "<span color=\\\"#999999\\\">The Bridge of Evil is neither a bridge, nor evil, nor an empire.</>";
             string hint29 = "<span color=\\\"#999999\\\">The Boots is in Ganon's Tower.</>\\n\\n<span color=\\\"#999999\\\">Wait.</>\\n<span color=\\\"#999999\\\">Shouldn't that be 'are' in Ganon's Tower.</>\\n\\n<span color=\\\"#999999\\\">Nope.  The Boots are progressive.  This is the location of only one of the boots.</>";
@@ -105,7 +105,7 @@ namespace textcopier2
             string ghint13 = "<span size=\\\"30\\\">" + FriendlyString.Translate(beforevalacchest) + " can be found above Valac.</>";
             string ghint14 = "<span size=\\\"30\\\">" + FriendlyString.Translate(clamsinkerchest) + " can be found in an underwater locker.</>";
             string ghint15 = "<span size=\\\"30\\\">" + FriendlyString.Translate(shipdulla) + " can be just out of reach on the ship.</>";
-            string ghint16 = "<span size=\\\"30\\\">" + FriendlyString.Translate(burriedvepar) + " can be found buried in the sand.</>";
+            string ghint16 = "<span size=\\\"30\\\">" + FriendlyString.Translate(burriedzepar) + " can be found buried in the sand.</>";
             string ghint17 = "A shard recipe can be unlocked with some materials plus a shard.";
             if (Bookcase.BookcaseHelper.ElementAt(2) != null)
             {
@@ -137,7 +137,7 @@ namespace textcopier2
             spoilerlog.Add(ghint13);
             spoilerlog.Add(ghint14 + " (clamsinker) - " + clamsinkerchest);
             spoilerlog.Add(ghint15 + " (cargo hold) - " + shipdulla);
-            spoilerlog.Add(ghint16 + " (by vepar sand) - " + burriedvepar);
+            spoilerlog.Add(ghint16 + " (by zepar sand) - " + burriedzepar);
             spoilerlog.Add(ghint17);
             spoilerlog.Add(ghint18);
             spoilerlog.Add("****");

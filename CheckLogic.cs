@@ -35,21 +35,20 @@ namespace textcopier2
                 "Invert", "Doublejump", "Dimensionshift", "HighJump", "Reflectionray", "Demoniccapture",
             };
 
-            //now shuflle the movement shard list and assign one of them to whatever enemy is first in our earlyenemy list.
+            //shuflle the movement shard list and assign one of them to whatever enemy is first in our earlyenemy list.
             mainmovementshards = mainmovementshards.OrderBy(i => rndshard.Next()).ToList();
-
-
-            //then set the early enemies shard equal to the first move shard in the randomized list.
             earlyenemieslist[0].ShardId = mainmovementshards[0];
+            earlyenemieslist[1].ShardId = "Aquastream";    //****
 
             //find the selected early shard and remove it from the list so it doesn't get placed twice.
             fulllistofshards.Remove(mainmovementshards[0]);
-
+            fulllistofshards.Remove("Aquastream");  //****
 
             //search for craftwork and find its id.
             int indexofcraftwork = listofenemies2.FindIndex(a => a.FriendlyName == "Craftwork");
             //search for the index of the enemy who has the same name as the enemy we set a move shard too
             int indexofearlymove = listofenemies2.FindIndex(a => a.FriendlyName == earlyenemieslist[0].FriendlyName);
+            int indexofearlymove2 = listofenemies2.FindIndex(a => a.FriendlyName == earlyenemieslist[1].FriendlyName);  //****
 
             //write our shuffled shardlist to enemydroptable except for craftwork
             for (int i = 0; i < listofenemies2.Count(); i++)
@@ -64,7 +63,11 @@ namespace textcopier2
                 {
                     fulllistofshards.Add(fulllistofshards[i]);  //this adds the shard we are overwriting back to the pool
                     listofenemies2[i].ShardId = mainmovementshards[0];
-
+                }
+                else if (i == indexofearlymove2)
+                {
+                    fulllistofshards.Add(fulllistofshards[i]);  //this adds the shard we are overwriting back to the pool
+                    listofenemies2[i].ShardId = "Aquastream";
                 }
                 else
                 {
