@@ -451,6 +451,7 @@ namespace textcopier2
 
             DatatableLineNumber = 14667,
             FriendlyName = "Bloodbringer",
+            EarlyEnemy = true,
         };
         public static EnemyDropTable LanceArmor = new EnemyDropTable
         {
@@ -555,6 +556,7 @@ namespace textcopier2
 
             DatatableLineNumber = 15005,
             FriendlyName = "Cyhyraeth",
+            EarlyEnemy = true,
         };
         public static EnemyDropTable Clam = new EnemyDropTable
         {
@@ -571,6 +573,7 @@ namespace textcopier2
 
             DatatableLineNumber = 15057,
             FriendlyName = "Forneus",
+            EarlyEnemy = true,
         };
         public static EnemyDropTable Deaseama = new EnemyDropTable
         {
