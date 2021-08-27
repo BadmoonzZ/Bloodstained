@@ -1896,3 +1896,213 @@ FamiliaArcher
 Archer Familiar
 Some Money
 Some Money
+13447
+Aello
+13395
+Cannon Morte
+13343
+Seama
+13473
+Ghost
+13499
+Dullahammer
+13525
+Giant Rat
+13551
+Bone Morte
+13577
+Bat
+13603
+Gieremund
+13629
+Blood Grinder Knight
+13655
+Sabnock
+13681
+Moco Weed
+13707
+Toad
+13733
+Plume Parma
+13759
+Barbatos
+13785
+Carabose
+13811
+Simian
+13837
+Zagan
+13863
+Poltergeist
+13889
+Ordog
+13915
+Gargoyle
+13941
+Killer Barber
+13967
+Demon
+13993
+Buer
+14019
+Nyabon
+14045
+Scythe Mite
+14071
+Dullahammer Head
+14097
+Buer Armor
+14123
+Wolfman
+14149
+Decarabia
+14175
+Shovel Armor
+14201
+Thunder Elemental
+14227
+Carriage Morte
+14253
+Dantalion
+14279
+Rul'Sha
+14305
+Malediction
+14331
+Celaeno
+14357
+Shield Outsider
+14383
+Lili
+14409
+Assassin
+14435
+Dragon
+14461
+KuneKune
+14487
+Poison Toad
+14513
+Sidhe
+14539
+Bomber Morte
+14565
+Mimic
+14591
+Puppy
+14617
+Chair Mimic
+14643
+Leraje
+14669
+Blood Bringer
+14695
+Lance Armor
+14721
+Tomoko-Death
+14747
+Triwheel Buer
+14773
+Gamigin
+14799
+Titania
+14825
+Axe Outsider
+14851
+Eight Bit Zombie
+14877
+Eight Bit Ghost
+14903
+Eight Bit Overlord
+14929
+Eight Bit Skull
+14955
+Light Elemental
+14981
+Ocypete
+15007
+Cyhyreath
+15033
+Scylla
+15059
+Forneus
+15085
+Deeseama
+15111
+Water Leaper
+15137
+Glashtyn
+15163
+Seeker
+15189
+Arch Demon
+15215
+Amy
+15241
+Allocer
+15267
+Vul'sha
+15293
+Rocky
+15319
+Living Fossil
+15345
+Dark Elemental
+15371
+Lamashtu
+15397
+Macaron
+15423
+Blood Bug
+15449
+Fire Elemental
+15475
+Volcano Morte
+15501
+Hellhound
+15527
+Zepar
+15553
+Deathtrap
+15579
+Gusion
+15605
+Gaap
+15631
+Haagenti
+15657
+Ninja
+15683
+Kamikaze
+15709
+Giant Moco Weed
+15735
+Giant Bat
+15761
+Giant Toad
+15787
+Giant Cannon
+15813
+Giant Morte
+15839
+Giant Buer
+15865
+Silver Wolfman
+15891
+Abyssal Dragon
+15917
+Marbas
+15943
+Harrier
+15969
+Chariot Buer
+15995
+Ice Elemental
+16021
+Tracer
+16047
+Gusion Cannon
+16073
+G Axe Outsider
+16099
+Demon Lord
