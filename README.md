@@ -4,6 +4,14 @@ Bloodstained Randomizer Enhancement
 Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
 
 ******************************
+Updates Aug 27 2021. - Version 1.0
+* Hint formatting text fixes.
+* Fixed a crash caused by some hints.
+* Renamed Desert treasure chests to be slighly more helpful.
+* Spoiler log fixes.
+* Bloodbringer added to early enemies list.
+
+******************************
 Updates Aug 19 2021. - Version 0.7.2
 * Tournament mode no longer includes hints.
 * Updated fake hints to have greyed text.
