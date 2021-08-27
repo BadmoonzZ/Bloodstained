@@ -10,7 +10,7 @@ namespace textcopier2
     
     public class CheckLogic
     {
-        //take the first entry in earlylogicenemies (whatever it is) and assign it one of the 6 main movementshards.
+        //take the first entry in earlylogicenemies and assign it one of the 6 main movementshards.
         //this takes a list of shard strings, and makes a new list of movement starhds
         //then it creates a new list of all the enemies and a new list of the early enemies
         //next shuffle the early enemies and list of movement shards
@@ -18,9 +18,8 @@ namespace textcopier2
         //next modify the list of shards strings by removing the movement shard we added to the early list to prevent duplication
         //at this point the only change that has happened is the original full list of all shards is now missing a movement shard
         //..
-        //now find the index of craftwork in our new enemy list & the index of whatever enemy we gave the movementshard to
+        //find the index of craftwork in our new enemy list & the index of whatever enemy we gave the movementshard to
         //finally, for each enemy in the new list, assign it a shard from the inputed original shuffled shard list. with exceptions for craftwork and the move shard enemy we just found.
-        //now that the routine is over, throw away that new list? it should be gone, but magically it is somehow writing to the final file...??????
         public static void BasicEarlyShardPlacement(List<string> fulllistofshards, Random rndshard)
         {
             List<EnemyDropTable> listofenemies2 = ShardRandomizer.CreateEnemyList();
@@ -38,17 +37,17 @@ namespace textcopier2
             //shuflle the movement shard list and assign one of them to whatever enemy is first in our earlyenemy list.
             mainmovementshards = mainmovementshards.OrderBy(i => rndshard.Next()).ToList();
             earlyenemieslist[0].ShardId = mainmovementshards[0];
-            earlyenemieslist[1].ShardId = "Aquastream";    //****
+            //earlyenemieslist[1].ShardId = "Aquastream";    //****CODE FOR EARLY AQUASTREAM
 
             //find the selected early shard and remove it from the list so it doesn't get placed twice.
             fulllistofshards.Remove(mainmovementshards[0]);
-            fulllistofshards.Remove("Aquastream");  //****
+            //fulllistofshards.Remove("Aquastream");  //****CODE FOR EARLY AQUASTREAM
 
             //search for craftwork and find its id.
             int indexofcraftwork = listofenemies2.FindIndex(a => a.FriendlyName == "Craftwork");
             //search for the index of the enemy who has the same name as the enemy we set a move shard too
             int indexofearlymove = listofenemies2.FindIndex(a => a.FriendlyName == earlyenemieslist[0].FriendlyName);
-            int indexofearlymove2 = listofenemies2.FindIndex(a => a.FriendlyName == earlyenemieslist[1].FriendlyName);  //****
+            //int indexofearlymove2 = listofenemies2.FindIndex(a => a.FriendlyName == earlyenemieslist[1].FriendlyName);  //****
 
             //write our shuffled shardlist to enemydroptable except for craftwork
             for (int i = 0; i < listofenemies2.Count(); i++)
@@ -64,11 +63,11 @@ namespace textcopier2
                     fulllistofshards.Add(fulllistofshards[i]);  //this adds the shard we are overwriting back to the pool
                     listofenemies2[i].ShardId = mainmovementshards[0];
                 }
-                else if (i == indexofearlymove2)
+                /*else if (i == indexofearlymove2) //****BLOCK FOR EARLY AQUASTREAM
                 {
                     fulllistofshards.Add(fulllistofshards[i]);  //this adds the shard we are overwriting back to the pool
                     listofenemies2[i].ShardId = "Aquastream";
-                }
+                }*/
                 else
                 {
                     listofenemies2[i].ShardId = fulllistofshards[i];

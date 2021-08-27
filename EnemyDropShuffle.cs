@@ -56,7 +56,7 @@ namespace textcopier2
                 arrline[j + 13] = "      \"CommonIngredientQuantity\": " + listofenemies[i].CommonIngredientQuantity + ",";
                 arrline[j + 14] = "      \"CommonIngredientRate\": " + listofenemies[i].CommonIngredientRate + ",";
 
-                spoilernotes.Add(listofenemies[i].FriendlyName + " -----> " + FriendlyString.Translate((listofenemies[i].DatatableLineNumber).ToString())); //this could be more clear.
+                spoilernotes.Add(FriendlyString.Translate((listofenemies[i].DatatableLineNumber).ToString()) + " --has-- " + listofenemies[i].FriendlyName); //this could be more clear.
 
                 //
                 //due to not knowing what I was going the local list of enemies is actually public
