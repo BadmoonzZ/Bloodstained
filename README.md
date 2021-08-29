@@ -1,7 +1,8 @@
 # Bloodstained
 Bloodstained Randomizer Enhancement
 
-Collection of C# scripts that will change the way the Bloodstained Randomizer behaves.
+Visit the wiki for mor information:
+https://github.com/BadmoonzZ/Bloodstained/wiki
 
 ******************************
 Updates Aug 27 2021. - Version 1.0
